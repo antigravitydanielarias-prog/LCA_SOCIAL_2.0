@@ -1,0 +1,377 @@
+REPRESENTACIÓN ESQUEMÁTICA DEL MODELO
+═════════════════════════════════════════════════════════════════════════════
+
+VISTA 1: ARQUITECTURA GENERAL (CAPAS CONCÉNTRICAS)
+────────────────────────────────────────────────────────────────────────────
+
+                        ┌─────────────────────────────┐
+                        │   PANEL 0: PROTAGONISTAS    │  ← TRANSVERSAL
+                        │ (5 actores × Readiness)     │     (existe siempre)
+                        └──────────┬──────────────────┘
+                                   │
+              ┌────────────────────┼────────────────────┐
+              │                    │                    │
+          ┌───▼────────┐    ┌─────▼────────┐   ┌──────▼──────┐
+          │  FASE 1    │    │  FASE 2      │   │  FASE 3     │
+          │PREPARACIÓN │    │EJECUCIÓN     │   │SOSTENIBILIDAD│
+          └───┬────────┘    └─────┬────────┘   └──────┬──────┘
+              │                    │                    │
+          ┌───┴──────────────────┐ │ ┌──────────────────┴───┐
+          │                      │ │ │                      │
+      ┌───▼──┐  ┌───┬──┐  ┌───┬─▼─▼─┬───┐  ┌───┬──┐  ┌───▼──┐
+      │1A    │  │1B │1C│  │2A │2B│2C│    │  │3A │3B│  │3C    │
+      │Rec.  │  │Eva│Ali│  │Dis│Adi│Pue│    │  │Ope│Mon│Eva+  │
+      └───┬──┘  └───┴──┘  └───┴──┬──┘    │  │   │  │  └──┬───┘
+          │                     │       │  │   │  │     │
+          └─────────┬───────────┴───────┴──┴───┴──┴─────┘
+                    │
+        ┌───────────▼───────────────────────────────────┐
+        │   8 DIMENSIONES COGNITIVAS (en paralelo)      │
+        │                                               │
+        │  IA │ IAT │ ICI │ IVC │ IME │ IIN │ IPRA │ICS│
+        │                                               │
+        └───────────┬───────────────────────────────────┘
+                    │
+        ┌───────────▼──────────────────────────┐
+        │  VARIABLES × INDICADORES TERRITORIALES│
+        │  (5-6 preguntas + contexto DANE)     │
+        └───────────┬──────────────────────────┘
+                    │
+        ┌───────────▼──────────────────────────┐
+        │  MATRIZ DE EVALUACIÓN + CONCLUSIÓN   │
+        │  (Recomendaciones para la fase)      │
+        └──────────────────────────────────────┘
+
+
+════════════════════════════════════════════════════════════════════════════════
+
+VISTA 2: "CORTE" DE UNA MICRO-RED (Un ejemplo expandido)
+────────────────────────────────────────────────────────────────────────────
+
+Stakeholder: COMUNIDAD
+Fase: 1
+Subcapa: 1A
+
+┌──────────────────────────────────────────────────────────────────────┐
+│                    MICRO-RED COMUNIDAD_1A                            │
+├──────────────────────────────────────────────────────────────────────┤
+│                                                                      │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐             │
+│  │   IA     │  │   IAT    │  │   ICI    │  │   IVC    │  ...        │
+│  │Aspiració │  │Tecnología│  │Confianza │  │Identidad │             │
+│  │  45/100  │  │  38/100  │  │  28/100  │  │  72/100  │             │
+│  └─────┬────┘  └────┬─────┘  └────┬─────┘  └────┬─────┘             │
+│        │            │             │             │                   │
+│   [5 vars]      [5 vars]      [5 vars]      [5 vars]                │
+│     Likert        Likert        Likert        Likert                 │
+│        │            │             │             │                   │
+│        └────┬───────┴─────┬───────┴─────┬───────┘                   │
+│             │             │             │                           │
+│      ┌──────▼──────┬──────▼──────┬─────▼──────┐                     │
+│      │ CONTEXTO    │ CONTEXTO    │ CONTEXTO   │                     │
+│      │ TERRITORIAL │ TERRITORIAL │ TERRITORIAL│                     │
+│      │ (DANE)      │ (DANE)      │ (DANE)     │                     │
+│      └──────┬──────┴──────┬──────┴─────┬──────┘                     │
+│             │             │             │                           │
+│      ┌──────▼─────────────▼─────────────▼──────┐                    │
+│      │  PUENTE INTERPRETATIVO                  │                    │
+│      │  (Conecta lo cognitivo con territorial) │                    │
+│      └──────┬──────────────────────────────────┘                    │
+│             │                                                       │
+│      ┌──────▼──────────────────────────────────┐                    │
+│      │  MATRIZ DE CONCLUSIONES 1A              │                    │
+│      │  ├─ Barreras principales                │                    │
+│      │  ├─ Activos a aprovechar                │                    │
+│      │  └─ Acciones para 1A → 1B               │                    │
+│      └──────────────────────────────────────────┘                    │
+│                                                                      │
+└──────────────────────────────────────────────────────────────────────┘
+
+
+════════════════════════════════════════════════════════════════════════════════
+
+VISTA 3: FLUJO DE INFORMACIÓN (Cómo circula el análisis)
+────────────────────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────────────┐
+│ PASO 1: SELECCIONAR STAKEHOLDER + FASE + SUBCAPA                    │
+└────────────┬────────────────────────────────────────────────────────┘
+             │
+             ▼
+┌─────────────────────────────────────────────────────────────────────┐
+│ PASO 2: CARGAR 8 DIMENSIONES COGNITIVAS EN PARALELO                 │
+│ (IA, IAT, ICI, IVC, IME, IIN, IPRA, ICS)                            │
+└────────────┬────────────────────────────────────────────────────────┘
+             │
+             ▼
+┌─────────────────────────────────────────────────────────────────────┐
+│ PASO 3: PARA CADA DIMENSIÓN:                                        │
+│ ┌────────────────────────────────────────────────────────────────┐  │
+│ │ Recopilar datos cognitivos (5-6 preguntas Likert)             │  │
+│ │ Recopilar datos territoriales (contexto DANE)                 │  │
+│ │ Calcular índice (normalizar 0-100)                            │  │
+│ │ Conectar con contexto (interpretación)                        │  │
+│ └────────────────────────────────────────────────────────────────┘  │
+└────────────┬────────────────────────────────────────────────────────┘
+             │
+             ▼
+┌─────────────────────────────────────────────────────────────────────┐
+│ PASO 4: SÍNTESIS VISUAL DE RESULTADOS                               │
+│                                                                     │
+│  Radar 8D ────┐  Tabla de        ┌──── Matriz de         Riesgos/  │
+│  (coloreado)  ├─ indicadores    ├──── evaluación  ────  Activos   │
+│               ▼  territoriales   │     por dimensión  ├──> Acciones│
+│                                 └─────────────────────              │
+└────────────┬────────────────────────────────────────────────────────┘
+             │
+             ▼
+┌─────────────────────────────────────────────────────────────────────┐
+│ PASO 5: GENERAR CONCLUSIÓN PARA LA SUBCAPA                          │
+│ (Qué hacemos en 1A, qué cuidamos, qué riesgos)                      │
+│                                                                     │
+│ ➜ Retroalimenta al Panel 0 (actualiza Readiness)                   │
+│ ➜ Informa decisión de GATE (¿proceder a 1B?)                       │
+│ ➜ Documenta acciones específicas necesarias                        │
+└─────────────────────────────────────────────────────────────────────┘
+
+
+════════════════════════════════════════════════════════════════════════════════
+
+VISTA 4: DISPOSICIÓN EN STREAMLIT (Interfaz conceptual)
+────────────────────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────────────┐
+│ S-LCA Timeline Analysis                                             │
+│ [📊] [📤] [⚙️] [👥 PANEL 0] [🎯 ANÁLISIS MICRO-RED] [📈]          │
+└──────┬─────────────────────────────────────────────┬────────────────┘
+       │                                             │
+       ▼                                             ▼
+   [PANEL 0]                        [SELECCIONAR STAKEHOLDER × FASE]
+  Protagonistas                              │
+  Readiness global                           ▼
+  Matrix actores×fases              [Dropdown: COMUNIDAD]
+  Gobernanza                        [Dropdown: FASE 1]
+                                    [Dropdown: SUBCAPA 1A]
+                                             │
+                                             ▼
+                                    ╔═══════════════════════════════╗
+                                    ║  MICRO-RED EN TIEMPO REAL     ║
+                                    ╠═══════════════════════════════╣
+                                    ║                               ║
+                                    ║  ┌─────────────────────────┐  ║
+                                    ║  │ RADAR 8D               │  ║
+                                    ║  │ (dimensiones coloreadas)   ║
+                                    ║  │                           ║
+                                    ║  │  IA ●                      ║
+                                    ║  │ IAT● ●ICI                  ║
+                                    ║  │     IVC                    ║
+                                    ║  │  IME●  ●IIN                ║
+                                    ║  │     IPRA                   ║
+                                    ║  │          ●ICS              ║
+                                    ║  └─────────────────────────┘  ║
+                                    ║                               ║
+                                    ║  ┌─────────────────────────┐  ║
+                                    ║  │ TABLA: Valores 8D      │  ║
+                                    ║  │ IA........45/100       │  ║
+                                    ║  │ IAT.......38/100       │  ║
+                                    ║  │ ICI.......28/100 ⚠️     │  ║
+                                    ║  │ IVC.......72/100 ✓      │  ║
+                                    ║  │ IME.......32/100 ⚠️     │  ║
+                                    ║  │ IIN.......55/100       │  ║
+                                    ║  │ IPRA......41/100       │  ║
+                                    ║  │ ICS.......38/100       │  ║
+                                    ║  └─────────────────────────┘  ║
+                                    ║                               ║
+                                    ╚═══════════════════════════════╝
+                                             │
+                                             ▼
+                    ┌────────────────────────────────────┐
+                    │ PESTAÑA: CONTEXTO TERRITORIAL      │
+                    │ (DANE + proxies administrativos)   │
+                    │                                    │
+                    │ Pobreza multi: 67%                 │
+                    │ Informalidad: 83%                  │
+                    │ Educación: 4.2 años                │
+                    │ Acceso internet: 25%               │
+                    │ Participación previa: 12%          │
+                    │ Conflictividad: Alta               │
+                    └──────────────┬─────────────────────┘
+                                   │
+                                   ▼
+                    ┌────────────────────────────────────┐
+                    │ PESTAÑA: PUENTE INTERPRETATIVO     │
+                    │                                    │
+                    │ IA=45 PERO contexto=67% pobreza    │
+                    │ → Aspiración racional, no erosión  │
+                    │                                    │
+                    │ ICI=28 CRÍTICO + conflictos pasados│
+                    │ → Desconfianza justificada         │
+                    │ → INVERTIR en reparación ANTES 1B  │
+                    │                                    │
+                    │ IVC=72 ACTIVO                      │
+                    │ → Usar como narrativa del proyecto │
+                    └──────────────┬─────────────────────┘
+                                   │
+                                   ▼
+                    ┌────────────────────────────────────┐
+                    │ PESTAÑA: CONCLUSIÓN 1A             │
+                    │                                    │
+                    │ 🎯 ACCIÓN PRIORIZADA:              │
+                    │ Reconstruir confianza (ICI<40)     │
+                    │ Antes de avanzar a 1B              │
+                    │                                    │
+                    │ 🚀 OPORTUNIDADES:                  │
+                    │ Identidad fuerte (IVC=72)          │
+                    │ Mano de obra disponible            │
+                    │                                    │
+                    │ ⚠️ RIESGOS PRINCIPALES:             │
+                    │ Baja apropiación tecnológica       │
+                    │ Baja mentalidad emprendedora       │
+                    │                                    │
+                    │ 📋 ACCIONES PARA 1A:               │
+                    │ □ Diálogos de reparación (6 meses) │
+                    │ □ Capacitación digital básica      │
+                    │ □ Talleres de aspiraciones         │
+                    │                                    │
+                    │ ✅ GATE 1A → 1B:                   │
+                    │ ICI >= 40 & Acuerdos suscritos     │
+                    └────────────────────────────────────┘
+
+
+════════════════════════════════════════════════════════════════════════════════
+
+VISTA 5: MATRIZ GENERAL (VISTA COMPLETA DEL MODELO)
+────────────────────────────────────────────────────────────────────────────
+
+                          FASES
+                    FASE 1    FASE 2    FASE 3
+                    PREP      EJEC      SOST
+                    ─────────────────────────
+
+         1A  1B  1C  2A  2B  2C  3A  3B  3C
+         ┌───┬───┬───┬───┬───┬───┬───┬───┬───┐
+COMUNIDAD│●●●│●●●│●●●│●●●│●●●│●●●│●●●│●●●│●●●│
+         ├───┼───┼───┼───┼───┼───┼───┼───┼───┤
+GOBIERNO │●●●│●●●│●●●│●●●│●●●│●●●│●●●│●●●│●●●│
+S        ├───┼───┼───┼───┼───┼───┼───┼───┼───┤
+T TÉCNICOS  │●●●│●●●│●●●│●●●│●●●│●●●│●●●│●●●│●●●│
+A        ├───┼───┼───┼───┼───┼───┼───┼───┼───┤
+K ECONÓMICOS│●●●│●●●│●●●│●●●│●●●│●●●│●●●│●●●│●●●│
+E        ├───┼───┼───┼───┼───┼───┼───┼───┼───┤
+EXTERNOS │●●●│●●●│●●●│●●●│●●●│●●●│●●●│●●●│●●●│
+H        └───┴───┴───┴───┴───┴───┴───┴───┴───┘
+O
+L
+D
+E
+R
+S        Cada ● = una dimensión cognitiva (8 total)
+         Cada celda = 1 micro-red completa
+
+
+════════════════════════════════════════════════════════════════════════════════
+
+VISTA 6: CIRCULACIÓN DE DECISIONES (Flujo de Gates)
+────────────────────────────────────────────────────────────────────────────
+
+Entrada: "Evaluar viabilidad del proyecto con COMUNIDAD"
+         │
+         ▼
+    ┌──────────────┐
+    │ PANEL 0: ¿   │  ← Readiness comunitario actual: 17%
+    │ Qué sabemos  │     Requerido para Fase 1: 40%
+    │ del actor?   │     → NECESITA PRE-CAPACITACIÓN
+    └──────┬───────┘
+           │
+           ▼
+    ┌──────────────────────┐
+    │ MICRO-RED 1A         │  ← Evalúa 8 dimensiones
+    │ COMUNIDAD × FASE 1A  │     en paralelo
+    │ (Reconocimiento)     │
+    └──────┬───────────────┘
+           │
+           ├─→ IA = 45 ✓ (tolerable)
+           ├─→ IAT = 38 ⚠ (brecha material vs cognitiva)
+           ├─→ ICI = 28 ❌ (CRÍTICO)
+           ├─→ IVC = 72 ✓ (ACTIVO)
+           ├─→ IME = 32 ⚠ (baja)
+           ├─→ IIN = 55 (neutral)
+           ├─→ IPRA = 41 (moderado)
+           └─→ ICS = 38 ⚠ (baja)
+           │
+           ▼
+    ┌──────────────────────────────────┐
+    │ SÍNTESIS PARA 1A                 │
+    │ Barrera #1: Confianza (ICI=28)   │
+    │ Barrera #2: Tecnología (IAT=38)  │
+    │ Barrera #3: Mentalidad (IME=32)  │
+    │ Activo #1: Identidad (IVC=72)    │
+    │ Activo #2: Aspiraciones (IA=45)  │
+    └──────┬───────────────────────────┘
+           │
+           ▼
+    ┌──────────────────────────────────┐
+    │ DECISIÓN DE GATE 1A→1B:          │
+    │                                  │
+    │ "No estamos listos para 1B"      │
+    │ ICI < 40 (umbral de confianza)   │
+    │                                  │
+    │ ACCIONES PREVIAS NECESARIAS:     │
+    │ • 6 meses: Diálogos reparación   │
+    │ • 3 meses: Capacitación digital  │
+    │ • 2 meses: Talleres aspiraciones │
+    │                                  │
+    │ REVISIÓN DE READINESS:           │
+    │ Objetivo: Elevar ICI a 40+ antes │
+    │ de proceder a 1B                 │
+    │                                  │
+    │ ✅ CONDICIONAL A 1B              │
+    └──────┬───────────────────────────┘
+           │
+           ▼ (después de 6 meses)
+    ┌──────────────────────────────────┐
+    │ RE-EVALUAR: ICI=42? ✅ → IR A 1B │
+    └──────────────────────────────────┘
+
+
+════════════════════════════════════════════════════════════════════════════════
+
+VISTA 7: "CAJA NEGRA" SIMPLIFICADA
+────────────────────────────────────────────────────────────────────────────
+
+ENTRA:                      PROCESO:                SALE:
+┌──────────────────┐       ┌──────────────────┐    ┌─────────────────┐
+│ Stakeholder      │──────→│ MICRO-RED        │───→│ Matriz de       │
+│ Fase             │       │ (8D cognitivo +  │    │ Evaluación      │
+│ Subcapa          │       │  contexto terr)  │    │                 │
+│                  │       │                  │    │ Recomendaciones │
+│                  │       │  IA, IAT, ICI,   │    │ para acción     │
+│                  │       │  IVC, IME, IIN,  │    │                 │
+│                  │       │  IPRA, ICS       │    │ Gates de paso   │
+│                  │       │                  │    │                 │
+└──────────────────┘       └──────────────────┘    └─────────────────┘
+
+
+════════════════════════════════════════════════════════════════════════════════
+
+RESUMEN: ESTRUCTURA ESQUEMÁTICA DEL MODELO
+════════════════════════════════════════════════════════════════════════════════
+
+NIVEL 1:  PANEL 0 (TRANSVERSAL) - Protagonistas + Readiness
+           │
+NIVEL 2:  FASES (3) - Preparación | Ejecución | Sostenibilidad
+           │
+NIVEL 3:  SUBCAPAS (3 × fase) - Reconocimiento | Evaluación | Acción
+           │
+NIVEL 4:  DIMENSIONES (8) - IA, IAT, ICI, IVC, IME, IIN, IPRA, ICS
+           │
+NIVEL 5:  VARIABLES (5-6 × dimensión) - Preguntas Likert 1-5
+           │
+NIVEL 6:  CONTEXTO TERRITORIAL - Datos DANE + proxies admin
+           │
+NIVEL 7:  PUENTE INTERPRETATIVO - Conectar cognitivo ↔ territorial
+           │
+NIVEL 8:  CONCLUSIÓN Y GATE - Recomendaciones para siguiente fase
+
+RESULTADO: MATRIZ RICA, MULTI-DIMENSIONAL, QUE ALIMENTA DECISIONES REALES
+

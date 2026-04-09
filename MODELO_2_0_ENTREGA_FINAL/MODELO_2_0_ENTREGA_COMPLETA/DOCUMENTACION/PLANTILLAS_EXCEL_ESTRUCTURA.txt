@@ -1,0 +1,485 @@
+ESTRUCTURA DE CARGA DE DATOS - MODELO 2.0
+PLANTILLAS EXCEL PARA RECOLECCIÓN Y ANÁLISIS
+═════════════════════════════════════════════════════════════════════════════════
+
+RESUMEN: ARCHIVOS EXCEL REQUERIDOS
+═════════════════════════════════════════════════════════════════════════════════
+
+El sistema Modelo 2.0 requiere 5 archivos Excel principales:
+
+1. PANEL_0_PROTAGONISTAS.xlsx      ← Datos de los 5 actores
+2. DIMENSIONES_COGNITIVAS.xlsx     ← 8 dimensiones × 5-6 variables c/u
+3. CONTEXTO_TERRITORIAL.xlsx       ← DANE + proxies administrativos
+4. MEMORIA_TEMPORAL.xlsx            ← Series temporales (últimos 12 meses)
+5. OPERATIVA_MATERIAL.xlsx          ← Capacidad física, infraestructura
+
+
+═════════════════════════════════════════════════════════════════════════════════
+ARCHIVO 1: PANEL_0_PROTAGONISTAS.xlsx
+═════════════════════════════════════════════════════════════════════════════════
+
+ESTRUCTURA:
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ PESTAÑA: PROTAGONISTAS_READINESS                                            │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│ COLUMNAS:                                                                  │
+│                                                                             │
+│ A: Nombre Actor                                                            │
+│ B: Readiness Actual (0-100)                                                │
+│ C: Readiness Requerido Fase 1 (0-100)                                      │
+│ D: Brecha (C - B)                                                          │
+│ E: Historial t-12m (valor de hace 12 meses)                               │
+│ F: Cambio últimos 12m (B - E)                                              │
+│ G: Tendencia (↑ mejora / ↓ declive / → estable)                            │
+│ H: Volatilidad (Baja/Media/Alta)                                           │
+│ I: Alertas (Sí/No)                                                         │
+│ J: Descripción alerta (texto libre)                                        │
+│                                                                             │
+│ EJEMPLO DE DATOS:                                                          │
+│                                                                             │
+│ A              │ B  │ C  │ D  │ E  │ F  │ G     │ H    │ I   │ J          │
+├────────────────┼────┼────┼────┼────┼────┼───────┼──────┼─────┼────────────┤
+│Comunidad Local │ 17 │ 40 │-23 │ 5  │+12 │ ↑     │ Baja │ Sí  │Diálogos   │
+│                │    │    │    │    │    │       │      │     │iniciados  │
+├────────────────┼────┼────┼────┼────┼────┼───────┼──────┼─────┼────────────┤
+│Gobierno Local  │ 8  │ 35 │-27 │ 12 │-4  │ ↓     │ Alta │ Sí  │Cambio pol │
+├────────────────┼────┼────┼────┼────┼────┼───────┼──────┼─────┼────────────┤
+│Proveedores     │ 42 │ 30 │+12 │ 35 │+7  │ ↑     │ Baja │ No  │           │
+├────────────────┼────┼────┼────┼────┼────┼───────┼──────┼─────┼────────────┤
+│Actores Econ.   │ 25 │ 25 │ 0  │ 22 │+3  │ →     │ Baja │ No  │           │
+├────────────────┼────┼────┼────┼────┼────┼───────┼──────┼─────┼────────────┤
+│Actores Externos│ 18 │ 25 │-7  │ 25 │-7  │ ↓     │Media │ Sí  │Fondos res │
+└────────────────┴────┴────┴────┴────┴────┴───────┴──────┴─────┴────────────┘
+
+───────────────────────────────────────────────────────────────────────────────
+
+PESTAÑA: CAPACIDADES_POR_ACTOR
+(Una pestaña para cada actor, o una matriz consolidada)
+
+COLUMNAS:
+A: Actor
+B: Capacidad #1 (Sí/No/Parcial)
+C: Capacidad #2
+D: Capacidad #3
+...
+
+EJEMPLO (COMUNIDAD):
+┌────────────────┬──────────────────┬──────────────────┬──────────────────┐
+│ Actor          │ Mano de obra      │ Conocimiento     │ Finanzas propias │
+│                │                  │ local            │                  │
+├────────────────┼──────────────────┼──────────────────┼──────────────────┤
+│ Comunidad      │ Sí (85 h/semana) │ Sí (12 líderes)  │ No ($0)          │
+├────────────────┼──────────────────┼──────────────────┼──────────────────┤
+│ Gobierno       │ No               │ Sí (4 técnicos)  │ Parcial          │
+├────────────────┼──────────────────┼──────────────────┼──────────────────┤
+│ Técnicos       │ Parcial          │ Sí (expertise)   │ Sí (capital)     │
+└────────────────┴──────────────────┴──────────────────┴──────────────────┘
+
+───────────────────────────────────────────────────────────────────────────────
+
+PESTAÑA: BARRERAS_POR_ACTOR
+(Similar a capacidades)
+
+EJEMPLO (COMUNIDAD):
+┌────────────────┬──────────────────┬──────────────────┬──────────────────┐
+│ Actor          │ Barrera #1       │ Barrera #2       │ Barrera #3       │
+├────────────────┼──────────────────┼──────────────────┼──────────────────┤
+│ Comunidad      │ Baja confianza   │ Baja tech        │ Aspiraciones     │
+│                │ (histórica)      │ (25% internet)   │ erosionadas      │
+├────────────────┼──────────────────┼──────────────────┼──────────────────┤
+│ Gobierno       │ Cambio político  │ Restricciones    │ Capacidad        │
+│                │ (cada 4 años)    │ fiscales         │ técnica limitada │
+└────────────────┴──────────────────┴──────────────────┴──────────────────┘
+
+
+═════════════════════════════════════════════════════════════════════════════════
+ARCHIVO 2: DIMENSIONES_COGNITIVAS.xlsx
+═════════════════════════════════════════════════════════════════════════════════
+
+ESTRUCTURA GENERAL:
+- Una PESTAÑA por dimensión (8 hojas total)
+- Cada dimensión tiene 5-6 variables (preguntas Likert 1-5)
+- Al final, cálculo de ÍNDICE (promedio normalizado 0-100)
+- Comparación por actor y por fase
+
+───────────────────────────────────────────────────────────────────────────────
+
+EJEMPLO: PESTAÑA "IA_ASPIRACIONES"
+
+COLUMNAS:
+A: ID Encuestado
+B: Sector (Rural/Urbano/Mixto)
+C: Edad
+D: Género
+E-J: Respuestas a 6 preguntas (Likert 1-5)
+K: Suma
+L: Promedio
+M: Normalizado 0-100
+
+ESTRUCTURA DETALLADA:
+
+┌──────┬─────────┬─────┬──────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬──────┬────────┬─────────┬────────┐
+│ ID   │ Sector  │ Edad│ Género│P1: Estudios │P2: Empleo   │P3: Progreso │P4: Movilidad│P5: Futuro  │Suma  │Promedio│Norm 0-1│100     │
+├──────┼─────────┼─────┼──────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼──────┼────────┼─────────┼────────┤
+│ 1    │ Rural   │ 32  │ H    │ 3           │ 4           │ 4           │ 3           │ 4           │ 18   │ 3.6    │ 0.72   │ 72     │
+├──────┼─────────┼─────┼──────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼──────┼────────┼─────────┼────────┤
+│ 2    │ Rural   │ 45  │ M    │ 2           │ 2           │ 2           │ 1           │ 2           │ 9    │ 1.8    │ 0.36   │ 36     │
+├──────┼─────────┼─────┼──────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼──────┼────────┼─────────┼────────┤
+│ 3    │ Urbano  │ 28  │ M    │ 5           │ 4           │ 4           │ 4           │ 5           │ 22   │ 4.4    │ 0.88   │ 88     │
+├──────┼─────────┼─────┼──────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼──────┼────────┼─────────┼────────┤
+│ ...  │ ...     │ ... │ ...  │ ...         │ ...         │ ...         │ ...         │ ...         │ ...  │ ...    │ ...    │ ...    │
+└──────┴─────────┴─────┴──────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴──────┴────────┴─────────┴────────┘
+
+PREGUNTAS ESPECÍFICAS (Likert 1-5 donde 1=Muy en desacuerdo, 5=Muy de acuerdo):
+
+P1: "Creo que puedo llegar a educación superior"
+P2: "Creo que conseguiré un empleo mejor en 2 años"
+P3: "Siento que estoy progresando en la vida"
+P4: "Pienso que mis hijos vivirán mejor que yo"
+P5: "Veo un futuro promisorio para mi comunidad"
+
+CÁLCULO:
+│ IA_ÍNDICE = (Promedio de E:J) × 20
+│ Rango: 0-100
+│ <25: Aspiraciones colapsadas
+│ 25-50: Aspiraciones erosionadas
+│ 50-75: Aspiraciones moderadas
+│ >75: Aspiraciones fuertes
+
+───────────────────────────────────────────────────────────────────────────────
+
+AL FINAL DE LA HOJA: RESUMEN POR ACTOR Y POR FASE
+
+TABLA DE RESUMEN:
+┌────────────────────┬──────────┬──────────┬──────────┐
+│ Actor              │ Fase 1   │ Fase 2   │ Fase 3   │
+├────────────────────┼──────────┼──────────┼──────────┤
+│ Comunidad          │ 45       │ (vacío)  │ (vacío)  │
+├────────────────────┼──────────┼──────────┼──────────┤
+│ Gobierno           │ 38       │ (vacío)  │ (vacío)  │
+├────────────────────┼──────────┼──────────┼──────────┤
+│ Técnicos           │ 72       │ (vacío)  │ (vacío)  │
+└────────────────────┴──────────┴──────────┴──────────┘
+
+(Se completa a medida que avanzan las fases)
+
+
+═════════════════════════════════════════════════════════════════════════════════
+ARCHIVO 3: CONTEXTO_TERRITORIAL.xlsx
+═════════════════════════════════════════════════════════════════════════════════
+
+PESTAÑA: INDICADORES_DANE
+
+COLUMNAS:
+A: Indicador
+B: Nombre
+C: Valor actual
+D: Unidad
+E: Fuente DANE (o proxy)
+F: Año recolección
+G: Comparativo nacional
+H: Interpretación
+
+ESTRUCTURA:
+
+┌───────────────────┬──────────────────┬─────────┬────────┬─────────┬──────┬───────────────┬──────────────────┐
+│ Indicador         │ Nombre           │ Valor   │ Unidad │ Fuente  │ Año  │ Comp. Nacional│ Interpretación   │
+├───────────────────┼──────────────────┼─────────┼────────┼─────────┼──────┼───────────────┼──────────────────┤
+│ Pobreza Multi     │ Pobreza Multidem │ 67%     │ %      │ DANE    │ 2024 │ Nacional 11.5% │ 5.8x nacional    │
+├───────────────────┼──────────────────┼─────────┼────────┼─────────┼──────┼───────────────┼──────────────────┤
+│ Informalidad      │ Empleo informal  │ 83%     │ %      │ DANE    │ 2024 │ Rural 83%     │ En línea con rural│
+├───────────────────┼──────────────────┼─────────┼────────┼─────────┼──────┼───────────────┼──────────────────┤
+│ Educación         │ Años promedio    │ 4.2     │ años   │ Admin   │ 2023 │ Nacional 10.1 │ 58% debajo nacional│
+├───────────────────┼──────────────────┼─────────┼────────┼─────────┼──────┼───────────────┼──────────────────┤
+│ Internet          │ Cobertura hogar  │ 25%     │ %      │ MINTIC  │ 2024 │ Rural 18%     │ Ligeramente arriba│
+├───────────────────┼──────────────────┼─────────┼────────┼─────────┼──────┼───────────────┼──────────────────┤
+│ Desempleo Joven   │ Tasa <25 años    │ 22%     │ %      │ DANE    │ 2024 │ Rural 20%     │ Ligeramente arriba│
+├───────────────────┼──────────────────┼─────────┼────────┼─────────┼──────┼───────────────┼──────────────────┤
+│ Part. Ciudadana   │ Participación    │ 12%     │ %      │ Admin   │ 2023 │ Rural 10%     │ Ligeramente arriba│
+└───────────────────┴──────────────────┴─────────┴────────┴─────────┴──────┴───────────────┴──────────────────┘
+
+PESTAÑA: PROXIES_ADMINISTRATIVOS
+
+COLUMNAS:
+A: Proxy
+B: Descripción
+C: Valor
+D: Método de recolección
+E: Confiabilidad (Alta/Media/Baja)
+
+EJEMPLO:
+
+┌──────────────────┬────────────────────────┬─────────┬─────────────────┬──────────┐
+│ Proxy            │ Descripción            │ Valor   │ Método          │ Confiab. │
+├──────────────────┼────────────────────────┼─────────┼─────────────────┼──────────┤
+│ Conflictividad   │ Eventos conflictivos   │ 8/año   │ Registros polic │ Media    │
+├──────────────────┼────────────────────────┼─────────┼─────────────────┼──────────┤
+│ Cobertura salud  │ % población con acceso │ 45%     │ Padrones alcald │ Media    │
+├──────────────────┼────────────────────────┼─────────┼─────────────────┼──────────┤
+│ Matrícula educac │ Niños en escuela       │ 78%     │ Secretaría educ │ Alta     │
+├──────────────────┼────────────────────────┼─────────┼─────────────────┼──────────┤
+│ Vivienda digna   │ Viviendas construidas  │ 62%     │ Censo DANE      │ Alta     │
+└──────────────────┴────────────────────────┴─────────┴─────────────────┴──────────┘
+
+
+═════════════════════════════════════════════════════════════════════════════════
+ARCHIVO 4: MEMORIA_TEMPORAL.xlsx
+═════════════════════════════════════════════════════════════════════════════════
+
+PESTAÑA: SERIE_TEMPORAL_12M
+
+COLUMNAS:
+A: Fecha (mensual)
+B-I: Cada dimensión cognitiva (8 columnas = 8 dimensiones)
+J: Eventos registrados / Shocks
+
+ESTRUCTURA:
+
+┌────────────┬────┬────┬────┬────┬────┬────┬────┬────┬──────────────────────┐
+│ Fecha      │ IA │IAT │ICI │IVC │IME │IIN │IPRA│ICS │ Eventos / Shocks     │
+├────────────┼────┼────┼────┼────┼────┼────┼────┼────┼──────────────────────┤
+│ Ago 2023   │35  │38  │32  │64  │30  │53  │38  │35  │ (Baseline)           │
+├────────────┼────┼────┼────┼────┼────┼────┼────┼────┼──────────────────────┤
+│ Sep 2023   │36  │38  │31  │65  │30  │53  │39  │35  │ Inicio diálogos gov  │
+├────────────┼────┼────┼────┼────┼────┼────┼────┼────┼──────────────────────┤
+│ Oct 2023   │37  │38  │30  │66  │31  │54  │40  │36  │ Capacitación iniciada│
+├────────────┼────┼────┼────┼────┼────┼────┼────┼────┼──────────────────────┤
+│ Nov 2023   │38  │38  │29  │66  │31  │54  │41  │36  │                      │
+├────────────┼────┼────┼────┼────┼────┼────┼────┼────┼──────────────────────┤
+│ Dic 2023   │40  │38  │28  │67  │31  │55  │41  │37  │                      │
+├────────────┼────┼────┼────┼────┼────┼────┼────┼────┼──────────────────────┤
+│ Ene 2024   │41  │38  │27  │68  │31  │55  │42  │37  │                      │
+├────────────┼────┼────┼────┼────┼────┼────┼────┼────┼──────────────────────┤
+│ Feb 2024   │42  │38  │25  │69  │31  │55  │42  │37  │ ⚠️ SHOCK: Promesa no │
+│            │    │    │    │    │    │    │    │    │ cumplida (-5 ICI)    │
+├────────────┼────┼────┼────┼────┼────┼────┼────┼────┼──────────────────────┤
+│ Mar 2024   │42  │38  │25  │69  │32  │55  │42  │37  │                      │
+├────────────┼────┼────┼────┼────┼────┼────┼────┼────┼──────────────────────┤
+│ Abr 2024   │43  │38  │26  │69  │32  │55  │42  │37  │                      │
+├────────────┼────┼────┼────┼────┼────┼────┼────┼────┼──────────────────────┤
+│ May 2024   │44  │38  │26  │70  │32  │55  │43  │38  │ Diálogos reparación  │
+├────────────┼────┼────┼────┼────┼────┼────┼────┼────┼──────────────────────┤
+│ Jun 2024   │44  │38  │27  │70  │32  │55  │43  │38  │                      │
+├────────────┼────┼────┼────┼────┼────┼────┼────┼────┼──────────────────────┤
+│ Jul 2024   │44  │38  │27  │71  │32  │55  │43  │38  │                      │
+├────────────┼────┼────┼────┼────┼────┼────┼────┼────┼──────────────────────┤
+│ Ago 2024   │45  │38  │28  │72  │32  │55  │41  │38  │ (Actual)             │
+└────────────┴────┴────┴────┴────┴────┴────┴────┴────┴──────────────────────┘
+
+PESTAÑA: ANÁLISIS_TENDENCIAS
+
+COLUMNAS:
+A: Dimensión
+B: Valor inicial (t=0)
+C: Valor actual (t=12m)
+D: Cambio absoluto
+E: Cambio %
+F: Tendencia (↑/↓/→)
+G: Volatilidad (Baja/Media/Alta)
+H: Proyección 3m
+
+ESTRUCTURA:
+
+┌───────┬─────┬─────┬────┬────┬───┬────────┬──────────────┐
+│ Dimen │ t=0 │ t=12│ ΔAb│ Δ% │ T │ Volatl │ Proy 3m      │
+├───────┼─────┼─────┼────┼────┼───┼────────┼──────────────┤
+│ IA    │ 35  │ 45  │+10 │+29%│ ↑ │ Baja   │ 47 (lenta)   │
+├───────┼─────┼─────┼────┼────┼───┼────────┼──────────────┤
+│ IAT   │ 38  │ 38  │ 0  │ 0% │ → │ Nula   │ 38 (estable) │
+├───────┼─────┼─────┼────┼────┼───┼────────┼──────────────┤
+│ ICI   │ 32  │ 28  │ -4 │-13%│ ↓ │ Alta   │ 30 (incierto)│
+├───────┼─────┼─────┼────┼────┼───┼────────┼──────────────┤
+│ IVC   │ 64  │ 72  │ +8 │+13%│ ↑ │ Baja   │ 73 (estable) │
+├───────┼─────┼─────┼────┼────┼───┼────────┼──────────────┤
+│ IME   │ 30  │ 32  │ +2 │+7% │ ↑ │ Baja   │ 33 (lenta)   │
+├───────┼─────┼─────┼────┼────┼───┼────────┼──────────────┤
+│ IIN   │ 53  │ 55  │ +2 │+4% │ ↑ │ Baja   │ 56 (lenta)   │
+├───────┼─────┼─────┼────┼────┼───┼────────┼──────────────┤
+│ IPRA  │ 38  │ 41  │ +3 │+8% │ ↑ │ Baja   │ 44 (lenta)   │
+├───────┼─────┼─────┼────┼────┼───┼────────┼──────────────┤
+│ ICS   │ 35  │ 38  │ +3 │+9% │ ↑ │ Baja   │ 40 (lenta)   │
+└───────┴─────┴─────┴────┴────┴───┴────────┴──────────────┘
+
+
+═════════════════════════════════════════════════════════════════════════════════
+ARCHIVO 5: OPERATIVA_MATERIAL.xlsx
+═════════════════════════════════════════════════════════════════════════════════
+
+PESTAÑA: INFRAESTRUCTURA
+
+COLUMNAS:
+A: Tipo
+B: Recurso específico
+C: Cantidad
+D: Estado (Funciona/Parcial/No funciona)
+E: Edad/Antiguedad
+F: Capacidad
+G: Costo reemplazo
+
+ESTRUCTURA:
+
+┌────────────────┬─────────────────┬──────┬──────────┬────────┬──────────┬──────────┐
+│ Tipo           │ Recurso          │ Cant │ Estado   │ Edad   │ Capacidad│ $Reempl. │
+├────────────────┼─────────────────┼──────┼──────────┼────────┼──────────┼──────────┤
+│ Electricidad   │ Línea centraliz. │ 1    │Funciona  │ 12 años│ 40A      │ $8,000   │
+├────────────────┼─────────────────┼──────┼──────────┼────────┼──────────┼──────────┤
+│ Agua           │ Tanque comunit.  │ 3    │ Parcial  │ 8 años │ 50 m³    │ $12,000  │
+├────────────────┼─────────────────┼──────┼──────────┼────────┼──────────┼──────────┤
+│ Generador      │ Gen 25kW diesel  │ 1    │Funciona  │ 8 años │ 25 kW    │ $15,000  │
+├────────────────┼─────────────────┼──────┼──────────┼────────┼──────────┼──────────┤
+│ Telecomunicac. │ Cobertura celular│ 1    │Funciona  │ 5 años │ 4G       │ N/A      │
+├────────────────┼─────────────────┼──────┼──────────┼────────┼──────────┼──────────┤
+│ Vias           │ Carretera princi │ 1    │ Parcial  │ 15 años│ 2 carriles│$50,000  │
+└────────────────┴─────────────────┴──────┴──────────┴────────┴──────────┴──────────┘
+
+PESTAÑA: CAPACIDAD_TÉCNICA
+
+COLUMNAS:
+A: Tipo habilidad
+B: Profesión/Oficio
+C: Personas capacitadas
+D: Nivel (Básico/Intermedio/Avanzado)
+E: Años experiencia promedio
+F: Disponibilidad
+G: Costo capacitación adicional
+
+ESTRUCTURA:
+
+┌─────────────────┬──────────────┬───────┬────────────┬───────┬──────────┬───────────┐
+│ Tipo habilidad  │ Profesión    │ Pers. │ Nivel      │ Años  │ Disponib │ $Capit.   │
+├─────────────────┼──────────────┼───────┼────────────┼───────┼──────────┼───────────┤
+│ Electricidad    │ Electricista │ 2     │ Básico     │ 5     │ 20 h/sem │ $2,000    │
+├─────────────────┼──────────────┼───────┼────────────┼───────┼──────────┼───────────┤
+│ Plomería        │ Plomero      │ 1     │ Básico     │ 3     │ 15 h/sem │ $1,500    │
+├─────────────────┼──────────────┼───────┼────────────┼───────┼──────────┼───────────┤
+│ Construcción    │ Albañil      │ 8     │ Básico     │ 10    │ 40 h/sem │ $500      │
+├─────────────────┼──────────────┼───────┼────────────┼───────┼──────────┼───────────┤
+│ Mantenimiento   │ Mecánico     │ 1     │ Intermedio │ 8     │ 25 h/sem │ $3,000    │
+├─────────────────┼──────────────┼───────┼────────────┼───────┼──────────┼───────────┤
+│ Solar/Renovable │ Especialista │ 0     │ N/A        │ 0     │ N/A      │ $8,000    │
+└─────────────────┴──────────────┴───────┴────────────┴───────┴──────────┴───────────┘
+
+PESTAÑA: CADENAS_PRODUCTIVAS
+
+COLUMNAS:
+A: Sector
+B: Actividad económica
+C: Unidades (# de empresas, agricultores, etc)
+D: Empleo directo
+E: Consumo energético potencial (kWh/mes estimado)
+F: Disposición pago (0-100)
+G: Potencial ingresos para proyecto
+
+ESTRUCTURA:
+
+┌────────────┬─────────────────────┬──────┬────────┬────────────┬────────┬──────────┐
+│ Sector     │ Actividad           │Units │Empleo  │Cons Ener.  │Dispos. │$ Poten.  │
+├────────────┼─────────────────────┼──────┼────────┼────────────┼────────┼──────────┤
+│ Agricultura│ Riego de cultivos   │ 45   │ 90     │ 2,500 kWh  │ 65     │ $18,000  │
+├────────────┼─────────────────────┼──────┼────────┼────────────┼────────┼──────────┤
+│ Comercio   │ Tiendas/mercado     │ 35   │ 85     │ 1,200 kWh  │ 55     │ $8,000   │
+├────────────┼─────────────────────┼──────┼────────┼────────────┼────────┼──────────┤
+│ Salud      │ Centro health       │ 1    │ 12     │ 800 kWh    │ 100    │ $6,000   │
+├────────────┼─────────────────────┼──────┼────────┼────────────┼────────┼──────────┤
+│ Educación  │ Escuela + colegio   │ 2    │ 45     │ 1,500 kWh  │ 80     │ $9,000   │
+├────────────┼─────────────────────┼──────┼────────┼────────────┼────────┼──────────┤
+│ Transporte │ Taxi + pasajeros    │ 12   │ 48     │ 800 kWh    │ 40     │ $4,000   │
+└────────────┴─────────────────────┴──────┴────────┴────────────┴────────┴──────────┘
+
+IOM ÍNDICE AGREGADO = Promedio ponderado de:
+  - Infraestructura (% funcional): 60%
+  - Capacidad técnica (personas capacitadas / requeridas): 25%
+  - Cadenas productivas (potencial energético): 15%
+
+
+═════════════════════════════════════════════════════════════════════════════════
+FLUJO DE CARGA DE DATOS (Paso a paso)
+═════════════════════════════════════════════════════════════════════════════════
+
+PASO 1: Preparar PANEL_0_PROTAGONISTAS.xlsx
+  ├─ Completar: Readiness actual (encuesta o evaluación rápida)
+  ├─ Completar: Readiness histórico (hace 12 meses)
+  ├─ Listar: Capacidades y barreras por actor
+  └─ Identificar: Alertas
+
+  SALIDA: Matriz de actores 5×3 (5 actores, 3 columnas: actual, histórico, brecha)
+
+───────────────────────────────────────────────────────────────────────────────
+
+PASO 2: Recolectar DIMENSIONES_COGNITIVAS.xlsx
+  ├─ Diseñar encuesta con 8 dimensiones × 5-6 preguntas c/u = 48 preguntas
+  ├─ Aplicar encuesta a muestra (mínimo 60 personas, máximo 150)
+  ├─ Ingresar respuestas (Likert 1-5)
+  ├─ Calcular índices por dimensión (normalizar 0-100)
+  └─ Desagregar por actor / fase / subcapa
+
+  SALIDA: 8 índices cognitivos (IA, IAT, ICI, IVC, IME, IIN, IPRA, ICS)
+
+───────────────────────────────────────────────────────────────────────────────
+
+PASO 3: Compilar CONTEXTO_TERRITORIAL.xlsx
+  ├─ Obtener datos DANE (pobreza, informalidad, educación, empleo)
+  ├─ Obtener datos locales (participación, conflictividad)
+  ├─ Normalizar para comparabilidad
+  └─ Documentar fuente y año
+
+  SALIDA: 6-8 indicadores territoriales con contexto comparativo
+
+───────────────────────────────────────────────────────────────────────────────
+
+PASO 4: Registrar MEMORIA_TEMPORAL.xlsx
+  ├─ Recolectar datos históricos (últimos 12 meses) SI EXISTEN
+  ├─ Registrar shocks / eventos significativos
+  ├─ Calcular tendencias (interpolación lineal si faltan datos)
+  └─ Documentar volatilidad
+
+  SALIDA: Series temporales de 8 dimensiones con trayectorias
+
+───────────────────────────────────────────────────────────────────────────────
+
+PASO 5: Inventariar OPERATIVA_MATERIAL.xlsx
+  ├─ Recorrer territorio y documentar infraestructura existente
+  ├─ Hacer inventario de recursos / equipamiento
+  ├─ Mapear cadenas productivas que se benefician
+  ├─ Evaluar capacidad técnica instalada
+  └─ Calcular IOM índice agregado
+
+  SALIDA: Capacidad operativa-material (IOM = 0-100)
+
+───────────────────────────────────────────────────────────────────────────────
+
+PASO 6: CONSOLIDAR EN SISTEMA
+  ├─ Importar 5 archivos Excel a base de datos
+  ├─ Validar integridad de datos
+  ├─ Calcular MICRO-REDES automáticamente
+  └─ Generar salidas JSON para cada micro-red
+
+  SALIDA: Sistema listo para análisis
+
+
+═════════════════════════════════════════════════════════════════════════════════
+VALIDACIÓN DE DATOS ANTES DE IMPORTAR
+═════════════════════════════════════════════════════════════════════════════════
+
+CHECKLIST DE CALIDAD:
+
+☐ PANEL_0: Todos los 5 actores tienen readiness completo (actual + histórico)
+☐ DIMENSIONES: Al menos 60 encuestas completadas (mínimo muestra)
+☐ DIMENSIONES: Todas las preguntas Likert están en rango 1-5
+☐ CONTEXTO: Todos los indicadores tienen fuente documentada
+☐ CONTEXTO: Datos son del último año disponible (2024 o 2023)
+☐ MEMORIA: Al menos 6 puntos en tiempo (preferible 12 mensuales)
+☐ OPERATIVA: Inventario físico fue validado en terreno
+☐ OPERATIVA: Cadenas productivas identificadas localmente
+
+SI FALTA ALGUNO: DOCUMENTAR COMO "DATO_FALTANTE" EN LA SALIDA JSON
+
+
+═════════════════════════════════════════════════════════════════════════════════
+
+RESULTADO ESPERADO:
+Al completar estas 5 plantillas Excel, el sistema Modelo 2.0 puede evaluar
+CUALQUIER MICRO-RED (5 actores × 3 fases × 3 subcapas = 45 evaluaciones)
+con total rigor metodológico y generar reportes JSON para cada una.
+

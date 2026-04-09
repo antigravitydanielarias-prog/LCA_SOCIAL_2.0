@@ -1,0 +1,659 @@
+EJEMPLO COMPLETO: MICRO-RED COMUNIDAD FASE 1A RESUELTA
+═══════════════════════════════════════════════════════════════════════════════
+
+Este es un ejemplo real de cómo se vería una micro-red completamente analizada,
+generada por el motor 2.0, lista para consuma Streamlit.
+
+═══════════════════════════════════════════════════════════════════════════════
+
+{
+  "metadata": {
+    "project_id": "PROYECTO-ENERGÍA-RURAL-001",
+    "project_name": "Sistema de Energía Comunitaria - Vereda Montaña, Nariño",
+    "actor": "Comunidad Local (Households)",
+    "phase": 1,
+    "subphase": "A",
+    "phase_name": "PREPARACIÓN",
+    "subphase_name": "Reconocimiento",
+    "timestamp": "2024-02-15T14:30:00Z",
+    "period": "2024-Q1",
+    "analyst": "Sistema Automático 2.0",
+    "version": "2.0"
+  },
+
+  "dimensions": {
+    "IA": {
+      "name": "Aspiraciones",
+      "score": 45,
+      "category": "MODERADA",
+      "color": "yellow",
+      "likert_responses": [4, 3, 5, 4, 3],
+      "likert_questions": [
+        "Horizonte educativo esperado para próxima generación (1=hasta primaria, 5=universidad)",
+        "Expectativa de empleo mejorando en 5 años (1=nada, 5=mucho)",
+        "Creencia en movilidad social posible (1=imposible, 5=muy posible)",
+        "Capacidad percibida de aprovechar oportunidades (1=nula, 5=alta)",
+        "Disposición a invertir en educación/capacitación (1=ninguna, 5=total)"
+      ],
+      "calculation": "(4+3+5+4+3)/5 = 3.8 → 3.8 × 20 = 76... ajustado por contexto territorial: 45",
+      "evidence": [
+        "Persona refirió: 'Mi hija quiere estudiar enfermería pero no hay dinero'",
+        "En grupo: 80% cree que podrían mejorar si tuviera oportunidades",
+        "Interés en capacitación digital: 60% de participantes"
+      ],
+      "interpretation": "Aspiraciones moderadas presentes pero limitadas por contexto de pobreza. No es erosión cognitiva sino racional dada deprivación histórica. Existe brecha entre 'lo que desean' (Likert 4-5) y 'lo que creen posible' (contexto real: 67% pobreza). Intervención debe mostrar ejemplos locales de movilidad para activar aspiraciones latentes.",
+      "territorial_context": {
+        "school_dropout_rate": "34%",
+        "youth_unemployment": "45%",
+        "intergenerational_mobility": "-1.2 años (padres tienen 3.5 años, hijos 2.3 años)",
+        "migration_rate": "22% anual (jóvenes hacia ciudades)"
+      },
+      "temporal_trend": "stable",
+      "risk_level": "moderate"
+    },
+
+    "IAT": {
+      "name": "Apropiación Tecnológica",
+      "score": 38,
+      "category": "CRÍTICA",
+      "color": "red",
+      "likert_responses": [2, 2, 3, 2, 1],
+      "likert_questions": [
+        "Percepción de utilidad de tecnología renovable (1=inútil, 5=muy útil)",
+        "Confianza en sistemas inteligentes/smart grid (1=desconfianza total, 5=mucha confianza)",
+        "Facilidad percibida de uso (1=muy difícil, 5=muy fácil)",
+        "Intención de adopción (1=nunca, 5=definitivamente)",
+        "Frecuencia actual de uso de TIC básicas (1=nunca, 5=diariamente)"
+      ],
+      "calculation": "(2+2+3+2+1)/5 = 2.0 → 2.0 × 20 = 40... ajustado: 38",
+      "evidence": [
+        "Solo 3 de 12 participantes tienen WhatsApp activo",
+        "Nadie había escuchado de 'paneles solares inteligentes'",
+        "Experiencia con tecnología: 'computadora de la escuela hace 15 años'",
+        "Barrera percibida: 'eso es muy complicado para nosotros'"
+      ],
+      "interpretation": "BRECHA MIXTA: 60% es barrera MATERIAL (25% internet), 40% es barrera COGNITIVA (falta confianza/familiaridad). NO es rechazo ideológico sino desconocimiento + experiencia limitada. Score bajo NO predice fracaso: con capacitación digital progresiva (3 meses) podría subir a 60+. Riesgo: si se espera adopción inmediata sin preparación, fracaso seguro.",
+      "territorial_context": {
+        "internet_coverage": "25%",
+        "digital_literacy": "18%",
+        "previous_tech_experience": "Mínima (1 escuela con computadora en 2008)",
+        "mobile_phone_penetration": "65%"
+      },
+      "temporal_trend": "ascending (medición anterior: 32 en 2023-Q3)",
+      "risk_level": "high",
+      "intervention_recommended": "Capacitación digital en 3 fases: (1) WhatsApp/navegación básica (4 semanas), (2) Conceptos de energía en video/apps (4 semanas), (3) Simulación interactiva de sistema (2 semanas)"
+    },
+
+    "ICI": {
+      "name": "Confianza Institucional",
+      "score": 28,
+      "category": "CRÍTICA",
+      "color": "red",
+      "likert_responses": [2, 1, 1, 2, 2],
+      "likert_questions": [
+        "Confianza en autoridades locales (1=nada, 5=mucha)",
+        "Percepción de transparencia del gobierno (1=opaco, 5=muy transparente)",
+        "Expectativa de cumplimiento de promesas (1=nunca, 5=siempre)",
+        "Creencia en que beneficios serán equitativos (1=no, 5=seguro)",
+        "Disposición a participar en decisiones (1=ninguna, 5=alta)"
+      ],
+      "calculation": "(2+1+1+2+2)/5 = 1.6 → 1.6 × 20 = 32... ajustado: 28",
+      "evidence": [
+        "Líder comunitario: 'La última vez prometieron agua potable. Nunca llegó nada. Por eso desconfiamos.'",
+        "Muchos rechazaron participar en reuniones iniciales: 'Para qué, si no cambia nada'",
+        "Historial documenta: Proyecto de acueducto 2015 (abandonado), Capacitación técnica 2018 (nunca se implementó), Crédito para agriculture 2019 (baja cobertura, altas tasas)",
+        "Percepción de gobierno local: 'Solo vienen cuando hay elecciones'"
+      ],
+      "interpretation": "🔴 CRÍTICA Y JUSTIFICADA: Desconfianza no es paranoia sino RACIONAL dada historia documentada de incumplimientos. ICI=28 es síntoma, no causa. ANTES de cualquier evaluación técnica (1B) o diseño (2A), NECESARIO ejecutar 'Ciclo de Diálogos de Reparación' (6 meses) donde gobierno reconozca fracasos anteriores y establezca nuevo pacto. SIN ESTO, probabilidad de éxito del proyecto < 30%. CON ESTO, puede llegar a 70%.",
+      "territorial_context": {
+        "government_participation_in_previous_consultations": "8%",
+        "previous_promise_fulfillment": "0/3 (histórico: 3 promesas, 0 cumplidas)",
+        "public_service_satisfaction": "22%",
+        "state_presence": "Alcaldía semanal, sin extensión territorial",
+        "historical_conflict_index": "Alta (desplazamiento 2008-2010, paramilitarismo)"
+      },
+      "temporal_trend": "descending (medición anterior: 35 en 2023-Q3)",
+      "risk_level": "critical",
+      "barrier_type": "Institucional + histórico",
+      "required_action": "URGENTE - Reparación de confianza ANTES de fase 1B"
+    },
+
+    "IVC": {
+      "name": "Identidad Cultural",
+      "score": 72,
+      "category": "FAVORABLE",
+      "color": "green",
+      "likert_responses": [4, 5, 4, 5, 3],
+      "likert_questions": [
+        "Orgullo territorial y conexión con lugar (1=ninguno, 5=muy fuerte)",
+        "Percepción de respeto a costumbres locales (1=no respetadas, 5=muy respetadas)",
+        "Valoración de saberes ancestrales (1=sin valor, 5=muy valorados)",
+        "Visión de modernidad como oportunidad vs amenaza (1=amenaza total, 5=pura oportunidad)",
+        "Participación en eventos/prácticas culturales (1=nunca, 5=siempre)"
+      ],
+      "calculation": "(4+5+4+5+3)/5 = 4.2 → 4.2 × 20 = 84... ajustado: 72",
+      "evidence": [
+        "Fuerte presencia de autoridades ancestrales: 'Cabildo indígena' activo y respetado",
+        "Prácticas culturales vivas: 'Mingas' (trabajo comunitario) cada 3 meses, rituales agrícolas",
+        "Orgullo territorial explícito: 'Esta tierra es sagrada, nuestros abuelos la cuidaban'",
+        "Modernidad NO es percibida como amenaza: 'Queremos energía para nuestros hijos, no para abandonar aquí'",
+        "Rechazo a imposiciones externas: 'Queremos que se respete OUR forma de hacer las cosas'"
+      ],
+      "interpretation": "✓ FORTALEZA ESTRATÉGICA: Identidad cultural fuerte es ACTIVO a aprovechar, no obstáculo. Propuesta debe integrar elementos culturales (diseño del proyecto respeta autoridades locales, ceremonias en hitos, beneficios para prácticas culturales). Narrativa: 'Energía comunitaria como expresión moderna de RECIPROCIDAD ANCESTRAL'. Esto puede multiplicar legitimidad y sostenibilidad.",
+      "territorial_context": {
+        "indigenous_authorities_presence": "Sí, activo",
+        "cultural_patrimony_tangible": "Sitios sagrados, oficios artesanales",
+        "artisanal_economic_percentage": "18% de ingresos locales",
+        "industrialization_conflict": "No presente (territorio rural aislado)",
+        "demographic_composition": "95% originarios, 5% migrados recientes"
+      },
+      "temporal_trend": "stable",
+      "risk_level": "low",
+      "opportunity": "Integrar proyecto dentro de narrativa de RECIPROCIDAD y CUIDADO TERRITORIAL ancestral"
+    },
+
+    "IME": {
+      "name": "Mentalidad Emprendedora",
+      "score": 32,
+      "category": "CRÍTICA",
+      "color": "red",
+      "likert_responses": [2, 1, 2, 2, 1],
+      "likert_questions": [
+        "Intención de emprender (1=ninguna, 5=muy alta)",
+        "Autoconfianza en capacidad técnica/organizativa (1=nula, 5=alta)",
+        "Disposición a asumir riesgos calculados (1=aversión total, 5=buscador de riesgo)",
+        "Percepción de viabilidad del negocio (1=imposible, 5=muy viable)",
+        "Conocimiento de cómo comercializar/transformar productos (1=nulo, 5=alto)"
+      ],
+      "calculation": "(2+1+2+2+1)/5 = 1.6 → 1.6 × 20 = 32",
+      "evidence": [
+        "Pregunta 'Alguien aquí quisiera montar un negocio de energía solar?': Silencio, luego risas incómodas",
+        "Comentario: 'Eso es para gente educada de las ciudades'",
+        "Experiencia emprendedora: 0/12 participantes con negocio propio o en familia",
+        "Visión del futuro: 'Trabajar en el pueblo es imposible, hay que irse'"
+      ],
+      "interpretation": "BAJA MENTALIDAD EMPRENDEDORA refleja HISTORIA DE DEPRIVACIÓN, NO falta de capacidad innata. Comunidad se ha adaptado a modelo de 'buscar trabajo externo' porque oportunidades locales eran mínimas. Intervención: (1) Mostrar ejemplos locales viables (ej: venta de energía a red national, servicios técnicos), (2) Modelar mentalidad: talleres de 'visión de oportunidad', (3) Financiamiento accesible para iniciativas colectivas. POTENCIAL: si se abre modelo de cooperativa energética, mentalidad podría subir a 55+ en 12 meses.",
+      "territorial_context": {
+        "microenterprises_per_1000": 12,
+        "enterprise_survival_3yr": "35%",
+        "access_to_financing": "Muy limitado (solo gota a gota, tasas >30%)",
+        "previous_entrepreneurship_family": "3% de hogares",
+        "economic_opportunities_local": "Agricultura (baja margen), ganadería (decayendo)"
+      },
+      "temporal_trend": "stable",
+      "risk_level": "moderate",
+      "intervention_pathway": "Cooperativa energética como modelo emprendedor colectivo (menos riesgo individual, más viabilidad)"
+    },
+
+    "IIN": {
+      "name": "Innovación/Apertura al Cambio",
+      "score": 55,
+      "category": "MODERADA",
+      "color": "yellow",
+      "likert_responses": [3, 3, 4, 3, 2],
+      "likert_questions": [
+        "Disposición a probar nuevas prácticas (1=ninguna, 5=muy alta)",
+        "Percepción de beneficio en cambiar (1=no hay, 5=mucho beneficio)",
+        "Apertura a aprender nuevas habilidades (1=cerrado, 5=muy abierto)",
+        "Aceptación de errores como parte de aprendizaje (1=nada, 5=total)",
+        "Disposición a escuchar ideas diferentes (1=nada, 5=total)"
+      ],
+      "calculation": "(3+3+4+3+2)/5 = 3.0 → 3.0 × 20 = 60... ajustado: 55",
+      "evidence": [
+        "Adoptaron panela mejorada (técnica nueva) hace 5 años, ahora 40% de productores la usan",
+        "Resistencia inicial a hombres participando en 'reuniones de cocina': 'Es cosa de mujeres' → Ahora entienden valor de input de todos",
+        "Miedo a cambiar técnicas de agricultura (temor a pérdida): 'Mejor lo conocido que lo nuevo'",
+        "Pero: 'Si es para mejorar la vida de mis hijos, estoy dispuesto a intentar'"
+      ],
+      "interpretation": "MODERADA pero ASCENDENTE: Comunidad no es rígida; ha mostrado capacidad de cambio (panela mejorada es evidencia). Resistencia no es a la innovación en sí sino a RIESGO FINANCIERO (si falla cambio, pierdo lo poco que tengo). Intervención: (1) Demostrar baja-riesgo (piloto con 3 hogares primero), (2) Mostrar ejemplos de otros pueblos, (3) Integrar sabiduría ancestral ('innovación respetuosa'). Potencial: 55 podría subir a 70 con acompañamiento correcto en Fase 2.",
+      "territorial_context": {
+        "new_initiatives_2yr": "2 (panela mejorada, grupo de mujeres productoras)",
+        "adoption_rate_recommended_practices": "40%",
+        "documented_social_innovation": "Minga moderna (incluye remuneración, no solo reciprocidad)",
+        "generational_presence": "45% < 30 años"
+      },
+      "temporal_trend": "ascending",
+      "risk_level": "low-moderate"
+    },
+
+    "IPRA": {
+      "name": "Participación y Acción Concreta",
+      "score": 42,
+      "category": "MODERADA",
+      "color": "yellow",
+      "likert_responses": [2, 3, 3, 3, 2],
+      "likert_questions": [
+        "Asistencia a asambleas/reuniones comunitarias (1=nunca, 5=siempre)",
+        "Disposición a dedicar tiempo a proyecto (1=nada, 5=mucho tiempo)",
+        "Participación en actividades de capacitación (1=nunca, 5=siempre)",
+        "Compromiso verbal vs acciones concretas: congruencia (1=puro discurso, 5=total coherencia)",
+        "Voluntad de asumir responsabilidades (1=nada, 5=total)"
+      ],
+      "calculation": "(2+3+3+3+2)/5 = 2.6 → 2.6 × 20 = 52... ajustado: 42",
+      "evidence": [
+        "Asistencia a reuniones iniciales: 38% de hogares (mayor de esperado)",
+        "Pero: 'Vienen a ver de qué se trata, pero no vuelven hasta que haya dinero'",
+        "Capacitación anterior: 45 convocados, 12 asistieron consistentemente",
+        "Minga comunitaria (trabajo voluntario): 50% de hogares participa, pero = 10 horas/año, no más",
+        "Líderes: 'Hay ganas, pero hay hambre. Si alguien no puede trabajar en la tierra ese día, pierde comida'"
+      ],
+      "interpretation": "CUELLLO DE BOTELLA OPERATIVO: Participación potencial existe (42 no es 20) pero está LIMITADA POR POBREZA (tiempo para subsistencia >8 hrs/día). No es apatía sino RESTRICCIÓN MATERIAL. Solución: (1) Reconocer tiempo de participación (pequeña remuneración o beneficio directo), (2) Horarios flexibles (mañana OR tarde, no full day), (3) Resultados visibles rápido (no esperar 2 años para ver beneficios). Si se estructura bien, IPRA podría subir a 65+ en Fase 2 cuando proyecto genere ingresos.",
+      "territorial_context": {
+        "meeting_attendance_rate": "38%",
+        "training_completion_rate": "27%",
+        "volunteer_hours_per_person_per_year": "10",
+        "average_working_hours_subsistence": "8",
+        "time_availability": "Muy limitada"
+      },
+      "temporal_trend": "stable (ligeramente ascending con espera)",
+      "risk_level": "moderate",
+      "constraint_type": "Material (pobreza), no motivacional"
+    },
+
+    "ICS": {
+      "name": "Sostenibilidad y Colaboración",
+      "score": 48,
+      "category": "MODERADA",
+      "color": "yellow",
+      "likert_responses": [3, 2, 2, 3, 3],
+      "likert_questions": [
+        "Confianza en sostenibilidad del proyecto (1=nunca dura, 5=durará siempre)",
+        "Disposición a cooperar a largo plazo (1=solo corto plazo, 5=comprometido a 10+ años)",
+        "Disposición a contribuir económicamente: cuota (1=no, 5=con entusiasmo)",
+        "Expectativa de beneficio sostenido en tiempo (1=nada, 5=mucho)",
+        "Disposición a cuidar/mantener lo construido (1=no, 5=con celo)"
+      ],
+      "calculation": "(3+2+2+3+3)/5 = 2.6 → 2.6 × 20 = 52... ajustado: 48",
+      "evidence": [
+        "Historia de proyecto: acueducto 2015 → abandonado cuando dinero de donante se acabó",
+        "Pregunta 'Cuota mensual $5 USD por energía?': Vacilación. 'Solo si es barato y funciona'",
+        "Pero: Minga comunitaria de 20 años funcionando (aunque con baja participación)",
+        "Rotación de líderes: 2 líderes en 15 años (bueno, indica estabilidad)"
+      ],
+      "interpretation": "ESCÉPTICISMO JUSTIFICADO sobre LP: Comunidad ha visto proyectos morir cuando fondos se agotan. ICS=48 no es pesimismo sino EXPERIENCIA. Intervención: (1) Modelo de negocio robusto (ingresos por venta de energía, no solo donaciones), (2) Mostrar flujo de caja a 10 años, (3) Ejemplos de cooperativas energéticas que duraron (Feldheim, Urja Upatayaka), (4) Estructura de gobernanza que garantice cuidado. CON MODELO SÓLIDO, ICS podría subir a 65+ en Fase 3.",
+      "territorial_context": {
+        "project_dropout_rate": "85% en primeros 2 años",
+        "maintenance_fund_existence": "No (proyectos anteriores no lo tenían)",
+        "economic_viability_models": "Ninguno identificado previamente",
+        "long_duration_project_experience": "Minga de 20 años, pero con participación decreciente"
+      },
+      "temporal_trend": "stable",
+      "risk_level": "moderate-high",
+      "dependency": "Depende de modelo de negocio sostenible (Fase 2B)"
+    },
+
+    "IOM": {
+      "name": "Operativo-Material",
+      "score": 0,
+      "category": "NO APLICA",
+      "color": "gray",
+      "status": "pre-implementation",
+      "interpretation": "IOM = 0 porque el proyecto está en FASE 1A (Reconocimiento). Aún no hay sistema instalado. IOM comenzará a medirse en Fase 2C (Puesta en marcha). Este es el baseline: cuando se instale, definirá capacidad operativa. Se recomienda establecer ESTÁNDARES MÍNIMOS de IOM ya en Fase 1A: disponibilidad >95%, downtime <5%, repuestos para 12 meses, documentación completa.",
+      "pre_implementation_notes": "Plan para medición en Fase 2C: (1) Establecer KPIs operativos antes de instalación, (2) Capacitar técnicos locales en 3 meses, (3) Crear fondo de mantenimiento ($500 inicial), (4) Sistema de alertas temprana para fallas"
+    }
+  },
+
+  "territorial_context": {
+    "municipality": "Vereda Montaña, Municipio de Guachucal, Nariño",
+    "region": "Pacífico-Andino, post-conflicto",
+    "population": 180,
+    "households": 35,
+    "altitude": "2800 m",
+    
+    "socio_economic_indicators": {
+      "multidimensional_poverty": "67%",
+      "multidimensional_poverty_source": "DANE 2024",
+      "informality_rate": "83%",
+      "average_education_years": 4.2,
+      "school_dropout_rate_youth": "34%",
+      "youth_unemployment": "45%",
+      "agriculture_participation": "80% (subsistence)",
+      "monthly_household_income_usd": 120
+    },
+    
+    "infrastructure": {
+      "electricity_coverage": "47% (unstable, 6-8 hrs/day)",
+      "water_access": "65% (intermittent)",
+      "internet_coverage": "25%",
+      "road_quality": "Deteriorated (1.5 hrs to nearest town)",
+      "health_facility": "No, 45 min distance",
+      "education_facility": "Primary school only"
+    },
+    
+    "environmental": {
+      "solar_irradiance": "4.8 kWh/m²/day (favorable)",
+      "water_availability": "High (rainfall 2200 mm/yr)",
+      "climate_vulnerability": "Moderate (flooding risk 2/5 years)",
+      "forest_coverage": "45% (native species)"
+    },
+    
+    "historical_context": {
+      "conflict_period": "2000-2012 (paramilitarism, displacement)",
+      "displacement_households": "12 (returned 2015)",
+      "violent_deaths": "3 documented",
+      "current_security": "Stable",
+      "trust_in_state": "Very low (0 police presence)"
+    },
+    
+    "project_history": {
+      "water_aqueduct_2015": "Promised, never built. Cost $50K, funds diverted.",
+      "technical_training_2018": "Promised, 3 sessions delivered (15 people), not followed up.",
+      "agricultural_credit_2019": "Offered at 35% annual interest, only 4 households accepted, 2 defaulted.",
+      "lesson_learned": "Promises without follow-through destroy credibility."
+    },
+    
+    "sources": "DANE 2024, Municipal records, Community focus group Feb 2024",
+    "notes": "Post-conflict territory with strong indigenous identity but deep institutional mistrust. Natural resources favorable but economic opportunities scarce."
+  },
+
+  "temporal_history": {
+    "measurement_1": {
+      "date": "2023-09-15",
+      "period": "2023-Q3",
+      "IA": 42,
+      "IAT": 32,
+      "ICI": 35,
+      "IVC": 70,
+      "IME": 30,
+      "IIN": 52,
+      "IPRA": 40,
+      "ICS": 45,
+      "average_8d": 44
+    },
+    "measurement_2": {
+      "date": "2024-02-15",
+      "period": "2024-Q1",
+      "IA": 45,
+      "IAT": 38,
+      "ICI": 28,
+      "IVC": 72,
+      "IME": 32,
+      "IIN": 55,
+      "IPRA": 42,
+      "ICS": 48,
+      "average_8d": 44.4
+    },
+    "trend_analysis": {
+      "IA": "↗ +3 (ascending, good sign)",
+      "IAT": "↗ +6 (ascending, exposure to technology discussion)",
+      "ICI": "↘ -7 (DESCENDING, alarm - distrust increasing)",
+      "IVC": "↗ +2 (stable-ascending)",
+      "IME": "→ +2 (stable, very low)",
+      "IIN": "↗ +3 (ascending, slightly more open)",
+      "IPRA": "↗ +2 (stable, limited by material constraints)",
+      "ICS": "↗ +3 (ascending, slight improvement)",
+      "overall_trend": "MIXED: Mostly stable, but ICI DECLINING RAPIDLY - critical alert"
+    },
+    "interpretation": "Entre septiembre y febrero, aspiraciones y apertura mejoraron ligeramente (probable por expectativa de proyecto). PERO confianza se deterioró significativamente (-7 puntos). Esto sugiere que discusiones del proyecto generaron ESPERANZA pero también ESCEPTICISMO (promesas incumplidas nuevamente). Si no se interviene en ICI, podría caer a <20 en próximos 6 meses, saboteando todo el proyecto.",
+    "alert_level": "CRITICAL"
+  },
+
+  "interdependencies": [
+    {
+      "from": "ICI",
+      "to": "IPRA",
+      "weight": 0.88,
+      "status": "active",
+      "current_state": "ICI=28 (baja) AND IPRA=42 (moderada) = TENSIÓN",
+      "interpretation": "Paradoja: gente participa en reuniones (IPRA=42) pero no confía (ICI=28). Esto indica participación instrumental ('venir a ver qué hay') no genuina ('colaborar en construcción conjunta'). Riesgo: cuando pidan dinero o trabajo voluntario, participación cae abruptamente.",
+      "intervention": "Resolver confianza ANTES de esperar participación genuina en Fase 1B"
+    },
+    {
+      "from": "IA",
+      "to": "IPRA",
+      "weight": 0.72,
+      "status": "weak",
+      "current_state": "IA=45 (moderada) AND IPRA=42 (moderada) = ALINEADO",
+      "interpretation": "Aspiraciones y participación están alineadas: gente con esperanza moderada participa moderadamente. Esto es coherente. Potencial: si IA sube (ej: a 65), IPRA podría subir también (a 60+).",
+      "intervention": "Talleres de aspiraciones en Fase 1A pueden activar cadena positiva"
+    },
+    {
+      "from": "IAT",
+      "to": "IOM",
+      "weight": 0.65,
+      "status": "pending",
+      "current_state": "IAT=38 (baja) BEFORE implementation. IOM=0 (not yet).",
+      "interpretation": "Predicción: Si apropiación tecnológica sigue baja en Fase 2B, IOM sufrirá en Fase 2C. Sistema será mantenido por técnico externo (dependencia), no por comunidad. Riesgo de colapso cuando técnico no esté disponible.",
+      "intervention": "Capacitación digital obligatoria en Fase 1B para elevar IAT a 55+ ANTES de Fase 2"
+    },
+    {
+      "from": "ICI",
+      "to": "IOM",
+      "weight": 0.82,
+      "status": "bidirectional_risk",
+      "current_state": "ICI=28 (crítica). IOM=0 (not yet), pero PREDICCIÓN: si ICI sigue baja, IOM se verá comprometido.",
+      "interpretation": "Bidireccional: (1) Baja confianza → comunidad no cuida sistema (IOM cae), (2) Sistema que falla → nuevamente 'demostrado que no funciona' → confianza cae más. Círculo vicioso posible.",
+      "intervention": "CRÍTICO: Subir ICI a >40 ANTES de que sistema entre en operación. De lo contrario, círculo vicioso es prácticamente inevitable."
+    },
+    {
+      "from": "IVC",
+      "to": "ICS",
+      "weight": 0.79,
+      "status": "strong_positive",
+      "current_state": "IVC=72 (fuerte) AND ICS=48 (moderada) = OPORTUNIDAD NO PLENAMENTE EXPLOTADA",
+      "interpretation": "Identidad cultural fuerte podría llevar a sostenibilidad muy alta. Pero actualmente ICS es solo moderada (limitada por historia de fracasos, no por falta de identidad). Si proyecto se NARRATIVIZA dentro de identidad cultural ('energía respetuosa con territorio'), ICS podría dispararse a 70+.",
+      "intervention": "Integración explícita de elementos culturales en diseño y gobernanza de proyecto"
+    },
+    {
+      "from": "IME",
+      "to": "IIN",
+      "weight": 0.68,
+      "status": "weak",
+      "current_state": "IME=32 (baja) BUT IIN=55 (moderada) = DESALINEADOS",
+      "interpretation": "Comunidad es más abierta al cambio (IIN=55) de lo que está dispuesta a emprender (IME=32). Esto sugiere que no es rechazo a novedad sino miedo a riesgo personal. Oportunidad: modelo COLECTIVO (cooperativa) podría activar emprendimiento distribuido sin riesgo individual.",
+      "intervention": "Diseñar cooperativa como 'emprendimiento compartido' para vencer aversión al riesgo individual"
+    },
+    {
+      "from": "IPRA",
+      "to": "ICS",
+      "weight": 0.74,
+      "status": "dependent",
+      "current_state": "IPRA=42 (moderada) AND ICS=48 (moderada) = CONGRUENTES",
+      "interpretation": "Participación limitada (IPRA) probablemente conducirá a sostenibilidad limitada (ICS) si no se interviene. Gente que no participa en construcción no se siente propietaria en mantenimiento. Riesgo: delegación de cuidado a 'alguien más'.",
+      "intervention": "Mecanismos para vincular participación en fase 2 con apropiación en fase 3 (ej: roles rotativos de mantenimiento)"
+    }
+  ],
+
+  "gate": {
+    "status": "blocked",
+    "state_name": "BLOQUEADO",
+    "reasoning_short": "Desconfianza institucional crítica (ICI=28) es barrera principal. Confianza es prerequisito para que toda evaluación posterior sea aceptada. No se puede avanzar a Fase 1B (evaluación técnica) si comunidad no confía que resultados serán respetados.",
+    
+    "criteria_evaluation": [
+      {
+        "criterion": "Todas las dimensiones >40",
+        "status": "FAILED",
+        "evidence": "IAT=38, ICI=28, IME=32 (3 dimensiones críticas)"
+      },
+      {
+        "criterion": "Promedio 8D >45",
+        "status": "PASSED",
+        "evidence": "Promedio=44.4 (casi pasa)"
+      },
+      {
+        "criterion": "Interdependencias clave funcionales",
+        "status": "FAILED",
+        "evidence": "ICI→IPRA tensión; ICI→IOM riesgo bidireccional"
+      },
+      {
+        "criterion": "Contexto territorial no extremadamente desfavorable",
+        "status": "PASSED",
+        "evidence": "Pobreza 67% es difícil pero no desesperado (ref: umbral extremo >75%)"
+      },
+      {
+        "criterion": "Histórico no en caída libre",
+        "status": "FAILED",
+        "evidence": "ICI descendiendo (-7), tendencia hacia bloqueo"
+      },
+      {
+        "criterion": "Activos presentes para contrabalancear barreras",
+        "status": "PARTIAL",
+        "evidence": "IVC=72 es activo fuerte, pero insuficiente para compensar ICI crítica"
+      }
+    ],
+    
+    "blocking_factors": [
+      {
+        "rank": 1,
+        "factor": "ICI=28 (Confianza institucional crítica)",
+        "severity": "CRITICAL",
+        "why_blocking": "Confianza es fundamento de todo lo demás. Sin ella, comunidad rechazará datos, resultados, propuestas. Evaluaciones técnicas (1B) y diseño (2A) serán percibidas como 'otra mentira del gobierno'. Participación (IPRA) será simulada. Cuidado de sistema (IOM) será delegado. ICI crítica bloquea el proyecto entero.",
+        "temporal_aspect": "Además, ICI está CAYENDO (-7 en 5 meses). Si sigue esta tendencia, caerá <20 en próximos 6 meses, momento en el cual será prácticamente irreversible.",
+        "intervention": "Ciclo de Diálogos de Reparación: gobierno reconoce fracasos, comunidad expresan dolores, acuerdo nuevo sobre cómo proceder"
+      },
+      {
+        "rank": 2,
+        "factor": "IAT=38 (Apropiación tecnológica baja)",
+        "severity": "HIGH",
+        "why_blocking": "Sistema energético es tecnológico. Si apropiación es baja, comunidad no lo usará eficientemente, no lo mantendrá adecuadamente, no resolverá problemas menores. Dependencia de técnico externo = vulnerabilidad operativa. PERO: no es bloqueador ABSOLUTO porque es remediable en 3 meses con capacitación.",
+        "intervention": "Capacitación digital progresiva (3 fases, 10 semanas). No bloquea si se interviene EN FASE 1B."
+      },
+      {
+        "rank": 3,
+        "factor": "IME=32 (Mentalidad emprendedora baja)",
+        "severity": "MODERATE",
+        "why_blocking": "Si mentalidad es muy pasiva, cadenas productivas no se activan. Energía está disponible pero no se usa para actividades que generan ingresos. Proyecto se convierte en 'servicio público' (gratuito/subsidiado) en lugar de 'activo productivo'. Insostenible LP. PERO: remediable con modelo de cooperativa.",
+        "intervention": "Cooperativa energética como emprendimiento colectivo (ej: venta de electricidad a red, servicios técnicos locales)"
+      }
+    ],
+    
+    "blocking_decision": "NO PROCEDER A FASE 1B HASTA QUE ICI ≥ 40",
+    
+    "required_pre_conditions": [
+      "Ciclo de Diálogos de Reparación: 6 meses, liderado por mediador externo, gobierno debe reconocer fracasos y formalizar nuevo pacto",
+      "Re-medición de ICI después de 6 meses: si ICI sigue <40, proyecto debe ser cancelado (probabilidad de éxito <20%)",
+      "Si ICI ≥ 40 después de reparación: proceder a Fase 1B (evaluación técnica integrada)"
+    ],
+    
+    "transition_cost": {
+      "time": "6 meses (ANTES de cualquier otra actividad)",
+      "resources": "$25,000 - $35,000 (mediador profesional, espacios, documentación, transporte)",
+      "human_resources": "1 mediador de conflictos, 2 facilitadores comunitarios, gobierno local (alcalde, personero)",
+      "risk": "ALTO: Si no se logra ICI ≥ 40, proyecto fracasa. Probabilidad de fracaso sin intervención: 75%.",
+      "risk_mitigation": "Trabajar en paralelo con IAT y IME (capacitación, talleres de aspiraciones) para mostrar progreso mientras se reconstruye confianza"
+    },
+    
+    "what_happens_if_forced_forward": "Si se obliga avanzar a 1B sin resolver ICI: (1) Evaluaciones seran rechazadas ('son mentiras'), (2) Diseño será cuestionado ('no van a beneficiar a todos'), (3) Participación será baja (40% asistencia vs 70% esperado), (4) Cuando se solicite contribución, rechazo masivo, (5) Proyecto colapsa en Fase 2, dinero se pierde, gobierno se desacredita aún más, comunidad queda aún más resentida.",
+    
+    "success_path": "Invertir 6 meses en confianza = 80% probabilidad de éxito en Fases 2-3. Ahorro de recursos: evita fracaso de $200K en inversion."
+  },
+
+  "recommendations": [
+    {
+      "rank": 1,
+      "title": "URGENTE: Ejecutar Ciclo de Diálogos de Reparación",
+      "description": "Antes de cualquier otra actividad de proyecto, procesar trauma de promesas incumplidas. Formato: 6 encuentros (uno por mes) entre gobierno local, líderes comunitarios, facilitador mediador. Temas: (1) Reconocer dolor comunitario, (2) Analizar qué salió mal (aqueducto, capacitación, crédito), (3) Identificar cambios requeridos para que ESTA VEZ sea diferente, (4) Formalizar nuevo pacto en acuerdo escrito.",
+      "who": "Alcalde, personero, 5 líderes comunitarios, mediador profesional",
+      "when": "Inmediato, 6 meses de duración, antes de Fase 1B",
+      "cost": "$25-35K",
+      "expected_outcome": "ICI ≥ 40",
+      "success_metric": "Acuerdo escrito firmado, participación >70%, ICI re-medida >40"
+    },
+    {
+      "rank": 2,
+      "title": "Capacitación Digital Progresiva (3 fases, 10 semanas)",
+      "description": "Paralelo a diálogos de reparación, iniciar capacitación para elevar IAT. Fase 1 (semanas 1-4): WhatsApp, navegación básica, búsqueda de info. Fase 2 (semanas 5-8): Conceptos energía, sistemas solares, video educativo. Fase 3 (semanas 9-10): Simulador interactivo de sistema comunitario. Dirigido a 30 personas (potenciales líderes + interesados). Dos grupos paralelos (mañana/tarde) para flexibilidad.",
+      "who": "Facilitador digital local (capacitado previamente) + soporte técnico remoto",
+      "when": "Meses 1-3 de preparación previa (paralelo con reparación)",
+      "cost": "$8-12K",
+      "expected_outcome": "IAT ≥ 55 (al menos 50% de participantes)",
+      "success_metric": "30 personas con mínimo 8/10 sesiones, capacidad de usar app básica demostrada"
+    },
+    {
+      "rank": 3,
+      "title": "Talleres de Aspiraciones y Mentalidad Emprendedora",
+      "description": "Series de 12 talleres (2 horas, 1x semana) sobre: (1) Visión de futuro personal/comunitario, (2) Ejemplos locales/regionales de movilidad, (3) Cooperativa como modelo de negocio colectivo, (4) Identificación de oportunidades de ingresos por energía. Participantes: 25-30 personas. Énfasis en jóvenes (>40% de participantes).",
+      "who": "Facilitador de desarrollo comunitario + emprendedor local mentoring",
+      "when": "Meses 2-4 de preparación previa",
+      "cost": "$4-6K",
+      "expected_outcome": "IA ≥ 55, IME ≥ 45, IIN ≥ 65",
+      "success_metric": "Plan de cooperativa energética diseñado participativamente, 15+ personas comprometidas"
+    },
+    {
+      "rank": 4,
+      "title": "Documentación de Historial de Incumplimientos + Análisis Causa-Efecto",
+      "description": "Trabajo de investigación comunitaria: recopilar información detallada sobre 3 promesas incumplidas (aqueducto 2015, capacitación 2018, crédito 2019). Qué sucedió exactamente, por qué fracasó, a quién benefició/perjudicó. Análisis causal. Presentar hallazgos a comunidad + gobierno en ciclo de diálogos. Objetivo: entender raíces de desconfianza, no para blame sino para diseño de safeguards en ESTE proyecto.",
+      "who": "Equipo externo de investigación participativa",
+      "when": "Meses 1-2 de preparación",
+      "cost": "$3-5K",
+      "expected_outcome": "Documento de historial compartido, comprensión común de qué salió mal",
+      "success_metric": "Documento validado por comunidad y gobierno, citado en diseño de Fase 1B"
+    },
+    {
+      "rank": 5,
+      "title": "Establecer Fondo de Emergencia Operativa ($500) ANTES de Fase 2C",
+      "description": "Crear pequeño fondo (ahorros comunitarios) para respuesta rápida a fallas menores en sistema (repuestos, pequeñas reparaciones). Gestión comunitaria (tesorería rotativa). Objetivo: Cuando algo falla, se arregla en <48 hrs, comunidad ve que sistema es cuidado, confianza se refuerza (no se erosiona por fallas)",
+      "who": "Tesorera comunitaria + auditor voluntario",
+      "when": "Establecer en Fase 1C, fondear en Fase 2A",
+      "cost": "$500 + rotación de ahorros comunitarios",
+      "expected_outcome": "Respuesta rápida a fallas, confianza operativa",
+      "success_metric": "Fondo establecido, <2 fallas no reparadas en 6 meses de operación (Fase 3A)"
+    }
+  ],
+
+  "alerts": [
+    {
+      "level": "CRITICAL",
+      "icon": "🔴",
+      "title": "Confianza institucional en caída libre",
+      "detail": "ICI cayó de 35 (Sep-2023) a 28 (Feb-2024), -7 en 5 meses. Tendencia: si continúa, llegará a <20 en junio-2024, punto de no-retorno. ACCIÓN: Iniciar diálogos de reparación INMEDIATAMENTE (próximas 2 semanas).",
+      "consequence": "Sin intervención urgente, proyecto tiene <30% probabilidad de éxito."
+    },
+    {
+      "level": "HIGH",
+      "icon": "🟠",
+      "title": "Baja apropiación tecnológica + dependencia operativa predicha",
+      "detail": "IAT=38 sugiere que si sistema se instala, comunidad no lo mantendrá localmente. Dependencia de técnico externo es vulnerable (costo alto, disponibilidad baja). Capacitación digital ES reversible en 3 meses, pero debe iniciarse YA.",
+      "consequence": "Riesgo de colapso operativo en Fase 3 si IAT sigue baja."
+    },
+    {
+      "level": "HIGH",
+      "icon": "🟠",
+      "title": "Mentalidad emprendedora muy baja = cadenas productivas inactivas",
+      "detail": "IME=32 significa que aunque energía esté disponible, comunidad no la usará para empresas productivas. Energía se convierte en 'servicio público' (gratuito) en lugar de 'recurso productivo' (pagado). Modelo cooperativo es solución, pero debe diseñarse en Fase 1B.",
+      "consequence": "Proyecto sostenible solo si se generan ingresos por energía. De lo contrario, subsidios permanentes (no viable LP)."
+    },
+    {
+      "level": "MODERATE",
+      "icon": "🟡",
+      "title": "Paradoja participación-confianza: gente viene pero no confía",
+      "detail": "IPRA=42 pero ICI=28. Esto sugiere participación instrumental, no genuina. Cuando se pida dinero o trabajo voluntario, participación cae. Riesgo: frustración de equipo de proyecto ('prometieron ayudar, luego no vienen').",
+      "consequence": "Diseño de Fase 1B debe anticipar resistencia en Fase 2 y construir mecanismos de confianza PROGRESIVA."
+    },
+    {
+      "level": "MODERATE",
+      "icon": "🟡",
+      "title": "Limitación material (pobreza) no debe ser confundida con falta de disposición",
+      "detail": "IPRA=42 principalmente por RESTRICCIÓN DE TIEMPO (pobreza, subsistencia), no por apatía. Solución: pequeña remuneración O beneficio directo POR participación. Sin esto, IPRA no sube aunque haya disposición.",
+      "consequence": "Si se espera participación voluntaria en contexto de pobreza extrema, proyecto fracasa no por falta de voluntad sino por inanición."
+    },
+    {
+      "level": "POSITIVE",
+      "icon": "🟢",
+      "title": "Fortaleza de identidad cultural (IVC=72) es ACTIVO clave a aprovechar",
+      "detail": "Identidad fuerte, liderazgo ancestral activo, prácticas vivas. Oportunidad: narrativizar proyecto como expresión moderna de RECIPROCIDAD y CUIDADO ancestral. Esto puede multiplicar legitimidad y sostenibilidad.",
+      "consequence": "Integración explícita de elementos culturales en diseño de gobernanza Y en narrativa de proyecto (no es 'imposición técnica' sino 'expresión de valores locales')."
+    }
+  ],
+
+  "summary": {
+    "executive_summary": "Comunidad con identidad cultural fuerte pero desconfianza institucional profunda y justificada por historia de promesas incumplidas. Aspiraciones moderadas, participación limitada por pobreza extrema, apropiación tecnológica baja pero remediable. CRÍTICO: No avanzar a Fase 1B hasta reconstruir confianza (ICI ≥ 40) mediante 6 meses de diálogos de reparación. CON esta inversión inicial, proyecto tiene 70-80% probabilidad de éxito. SIN ella, <30%.",
+    
+    "current_state": "Bloqueado por desconfianza crítica. Confianza está en caída libre. Ventana de 6 meses para intervención antes de punto de no-retorno.",
+    
+    "path_forward": "FASE 1A-PRE: 6 meses de preparación (reparación + capacitación + talleres). DESPUÉS: Proceeder a Fase 1B (evaluación técnica). Costo adicional: $40-50K. ROI: evita fracaso de $200K+ en inversión.",
+    
+    "confidence_level": 82,
+    "missing_data_summary": "Detalle de promesas incumplidas (historial debe documentarse), datos operativos de proyectos previos (para análisis de qué falló), participación desagregada por género (se tienen solo agregados)"
+  }
+}
+
+═══════════════════════════════════════════════════════════════════════════════
+
+ESTE EJEMPLO PUEDE SER:
+- Consumido por Streamlit para visualización interactiva
+- Usado como template para otras micro-redes
+- Exportado como PDF ejecutivo para stakeholders
+- Archivado como histórico para seguimiento longitudinal
+
+═══════════════════════════════════════════════════════════════════════════════

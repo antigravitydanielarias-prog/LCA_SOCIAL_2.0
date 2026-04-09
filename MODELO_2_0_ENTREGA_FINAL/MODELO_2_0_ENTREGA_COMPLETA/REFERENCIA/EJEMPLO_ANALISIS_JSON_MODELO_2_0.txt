@@ -1,0 +1,818 @@
+EJEMPLO DE ANÁLISIS JSON - MODELO 2.0
+Rol: ANALISTA METODOLÓGICO EXPERTO EN MICRO-REDES
+Caso: COMUNIDAD LOCAL - FASE 1 - SUBCAPA 1A (RECONOCIMIENTO)
+═════════════════════════════════════════════════════════════════════════════
+
+{
+  "metadata": {
+    "version": "2.0",
+    "fecha_analisis": "2024-01-15",
+    "analista": "Sistema Análisis Micro-red v2.0",
+    "actor": "COMUNIDAD LOCAL",
+    "fase": 1,
+    "subcapa": "1A",
+    "id_microrred": "COM_F1_1A",
+    "territorio": "Veredas rurales - Municipio PDET",
+    "muestra_cognitiva": 45,
+    "proporcion_genero": "52% mujeres, 48% hombres",
+    "rango_edad": "18-65 años"
+  },
+
+  "estado_actual": {
+    "panel0_readiness": 35,
+    "panel0_readiness_requerido_fase1": 40,
+    "brecha_panel0": -5,
+    "recomendacion_previa": "Invertir 4-6 semanas en fortalecimiento de readiness antes de fase 1 completa",
+    
+    "dimensiones_cognitivas": {
+      "IA_aspiraciones": {
+        "valor": 45,
+        "interpretacion": "Moderado. Aspiraciones presentes pero erosionadas.",
+        "componentes": {
+          "horizonte_educativo": 42,
+          "expectativa_laboral": 40,
+          "autoeficacia": 45,
+          "oportunidad_territorial": 38,
+          "movilidad_intergeneracional": 40
+        },
+        "umbrales": {
+          "critico": "<25",
+          "actual_status": "AMARILLO (25-50)",
+          "recomendacion": "No invertir en 'motivación' genérica; invertir en oportunidades concretas de empleo/educación"
+        }
+      },
+      
+      "IAT_tecnologia": {
+        "valor": 38,
+        "interpretacion": "Bajo. Brecha entre percepción y acceso actual.",
+        "componentes": {
+          "utilidad_percibida": 35,
+          "confianza": 30,
+          "facilidad_percibida": 35,
+          "intencion_adopcion": 40,
+          "uso_actual_frecuencia": 45
+        },
+        "umbrales": {
+          "critico": "<25",
+          "actual_status": "AMARILLO (25-50)",
+          "causal_propuesta": "Bajo acceso internet (25%) + desconfianza en privacidad datos = IAT baja",
+          "solubilidad": "ALTA - Infraestructura digital resolverá esto en 12 meses"
+        }
+      },
+      
+      "ICI_confianza": {
+        "valor": 28,
+        "interpretacion": "CRÍTICO. Confianza institucional severa erosión.",
+        "componentes": {
+          "confianza_autoridades": 20,
+          "percepcion_transparencia": 25,
+          "eficacia_estatal": 18,
+          "expectativa_beneficio_justo": 30,
+          "disposicion_participar": 35
+        },
+        "umbrales": {
+          "critico": "<25",
+          "actual_status": "ROJO (<25)",
+          "evento_causante": "Proyecto energía 2022 no completado + promesas incumplidas",
+          "severidad": "CRÍTICA - Este es el BLOQUEADOR PRINCIPAL de la micro-red",
+          "reversibilidad": "MEDIA - Requiere 6+ meses de diálogos reparación"
+        }
+      },
+      
+      "IVC_identidad": {
+        "valor": 72,
+        "interpretacion": "FUERTE. Identidad cultural es activo principal del territorio.",
+        "componentes": {
+          "orgullo_territorial": 75,
+          "valoracion_saberes": 70,
+          "respeto_cultural": 68,
+          "vision_modernidad": 72,
+          "participacion_eventos": "73% asiste eventos locales"
+        },
+        "umbrales": {
+          "critico": "<25",
+          "actual_status": "VERDE (>50)",
+          "fortaleza_identificada": "ACTIVO CLAVE",
+          "aplicacion_proyecto": "Diseñar narrativa del proyecto como 'Energía con identidad local', no imposición externa"
+        }
+      },
+      
+      "IME_emprendimiento": {
+        "valor": 32,
+        "interpretacion": "Bajo. Mentalidad emprendedora debilitada por contexto económico.",
+        "componentes": {
+          "intencion_emprender": 30,
+          "autoconfianza": 25,
+          "conocimiento_transformacion": 28,
+          "experiencia_previa": 35,
+          "percepcion_oportunidad": 35
+        },
+        "umbrales": {
+          "critico": "<25",
+          "actual_status": "AMARILLO (25-50)",
+          "causal": "Contexto de 83% informalidad + 18% desempleo desalienta emprendimiento formal",
+          "solubilidad": "MEDIA - Capacitación + acceso a financiamiento pueden subir en 12 meses"
+        }
+      },
+      
+      "IIN_genero": {
+        "valor": 55,
+        "interpretacion": "Neutral-positivo. Normas de género evolucionando favorablemente.",
+        "componentes": {
+          "igualdad_educativa_norm": 58,
+          "liderazgo_femenino_norm": 52,
+          "acceso_laboral_norm": 54,
+          "corresponsabilidad_cuidado": 48,
+          "participacion_laboral_real": "35% tasa oficial"
+        },
+        "umbrales": {
+          "critico": "<25",
+          "actual_status": "VERDE (>50)",
+          "asimetria_detectada": "Normas cognitivas son más igualitarias que la realidad (35% part. femenina)",
+          "implicacion": "Hay espacio para aumentar participación si se remueven barreras operativas"
+        }
+      },
+      
+      "IPRA_riesgo_climatico": {
+        "valor": 41,
+        "interpretacion": "Moderado. Percepción existe pero no siempre convierte en acción.",
+        "componentes": {
+          "percepcion_amenaza": 45,
+          "conocimiento_riesgo_especifico": 38,
+          "disposicion_adaptar": 42,
+          "adopcion_practicas_resilientes": "25% reporta medidas",
+          "inversion_proteccion": "10% intenta"
+        },
+        "umbrales": {
+          "critico": "<25",
+          "actual_status": "AMARILLO (25-50)",
+          "fenomeno_principal": "Sequía cada 3-4 años (última 2023)",
+          "brecha_de_accion": "La gente SABE del riesgo pero no ACTÚA por falta de recursos",
+          "solubilidad": "MEDIA-ALTA - Fondos para adaptación cambiarían comportamiento"
+        }
+      },
+      
+      "ICS_consumo_sostenible": {
+        "valor": 38,
+        "interpretacion": "Bajo. Sostenibilidad no es prioridad en contexto de supervivencia.",
+        "componentes": {
+          "preferencia_local": 45,
+          "disposicion_pagar_sostenible": 25,
+          "conocimiento_etiquetas": 30,
+          "habitos_responsables": 35,
+          "consumo_local_actual": "60% compras son local"
+        },
+        "umbrales": {
+          "critico": "<25",
+          "actual_status": "AMARILLO (25-50)",
+          "contexto": "Consumo local existe por necesidad económica, no por valores sostenibles",
+          "oportunidad": "Fortalecer cadenas locales como vía a sostenibilidad (dual benefit)"
+        }
+      },
+      
+      "RESUMEN_DIMENSIONES": {
+        "dimensiones_críticas": ["ICI_confianza (28)"],
+        "dimensiones_débiles": ["IAT_tecnologia (38)", "IME_emprendimiento (32)"],
+        "dimensiones_fuertes": ["IVC_identidad (72)", "IIN_genero (55)"],
+        "dimensiones_moderadas": ["IA_aspiraciones (45)", "IPRA_riesgo (41)", "ICS_consumo (38)"]
+      }
+    },
+    
+    "iom_operativa": {
+      "infraestructura": {
+        "internet_cobertura_pct": 25,
+        "calidad_internet_mbps": 3.5,
+        "electricidad_pct": 95,
+        "vias_acceso": "Malas - tierra/lluvia",
+        "espacios_reuniones": "2 espacios (iglesia + escuela)",
+        "evaluacion_general": "30% - CRÍTICA"
+      },
+      
+      "equipamiento": {
+        "computadores_funcionales": 12,
+        "paneles_solares_instalados": 0,
+        "sistemas_monitoreo": "No existen",
+        "herramientas_admin": "Básicas (cuadernos, lapiceros)",
+        "evaluacion_general": "15% - MUY CRÍTICA"
+      },
+      
+      "procesos": {
+        "procedimientos_documentados": false,
+        "capacitacion_horas_2023": 0,
+        "plan_mantenimiento": false,
+        "mecanismo_conflictos": "Informal (conversas directas)",
+        "reuniones_gobernanza_frecuencia": "Ocasional (cada 3-4 meses)",
+        "evaluacion_general": "20% - MUY CRÍTICA"
+      },
+      
+      "recursos_humanos": {
+        "personas_capacitadas": 0,
+        "lideres_identificados": "3 personas (alcalde vereda, líderes junta)",
+        "carga_trabajo_promedio_h_semana": 8,
+        "liderazgo_continuidad_anos": "1.5 años promedio",
+        "turnover_pct": "60% (cambios frecuentes)",
+        "evaluacion_general": "35% - CRÍTICA"
+      },
+      
+      "financiero": {
+        "presupuesto_operativo_anual_usd": 0,
+        "ingresos_2023_usd": 0,
+        "fondo_reserva_existe": false,
+        "viabilidad_financiera_anos": "No evaluada",
+        "acceso_credito": "Muy restringido",
+        "evaluacion_general": "5% - CRÍTICA"
+      },
+      
+      "gobernanza_local": {
+        "estructura_toma_decisiones": "Informal (asambleas ocasionales)",
+        "composicion_junta_genero_pct_mujeres": 33,
+        "transparencia_escala_1_10": 3,
+        "equidad_distribucion_beneficios_pct": 50,
+        "cumplimiento_compromisos_pasados_pct": 20,
+        "evaluacion_general": "25% - MUY CRÍTICA"
+      },
+      
+      "iom_operativa_integrada_pct": 21,
+      "diagnostico_iom": "SISTEMA OPERATIVO PRÁCTICAMENTE INEXISTENTE. Comunidad tiene voluntad pero no tiene infraestructura, procesos, ni recursos para auto-gestión en esta fase. Requiere INVERSIÓN EXTERNASIGNIFICATIVA para pasar a nivel operativo básico (50%)."
+    },
+    
+    "contexto_territorial": {
+      "POBREZA": {
+        "pobreza_multidimensional_pct": 67,
+        "gini_ingresos": 0.52,
+        "poblacion_rural_dispersa": true,
+        "vulnerabilidad": "ALTA"
+      },
+      
+      "MERCADO_LABORAL": {
+        "desempleo_pct": 18,
+        "informalidad_pct": 83,
+        "participacion_laboral_femenina_pct": 35,
+        "principales_actividades": ["Agricultura", "Ganadería", "Comercio informal"],
+        "salario_promedio_usd": 450,
+        "brecha_vs_nacional": "-55%"
+      },
+      
+      "EDUCACIÓN": {
+        "matricula_neta_pct": 82,
+        "anos_educacion_promedio": 4.2,
+        "tasa_desercion_pct": 12,
+        "acceso_tecnica_superior_pct": 8,
+        "alfabetismo_digital_pct": 25
+      },
+      
+      "DIGITAL": {
+        "cobertura_internet_hogares_pct": 25,
+        "calidad_conexion_mbps": 3.5,
+        "dispositivos_por_hogar": 0.8,
+        "brecha_urbano_rural_pct": 35,
+        "experiencia_previa_plataformas_pct": 15
+      },
+      
+      "CLIMA": {
+        "zona_climatica": "Tropical - Altiplano",
+        "amenaza_principal": "Sequía (cada 3-4 años)",
+        "dependencia_agricola_pct": 60,
+        "desastres_historicos_frecuencia": "2 eventos severos últimos 5 años",
+        "deforestacion_tendencia": "Decreciente (reforestación comunitaria)",
+        "cobertura_hidrica": "Media (1 río principal)"
+      },
+      
+      "INSTITUCIONAL": {
+        "presencia_estatal": "Parcial (alcaldía, no IPS, educación limitada)",
+        "conflictividad_historica": "Media (disputas por tierra, agua)",
+        "cumplimiento_promesas_previas_pct": 20,
+        "cambios_politicos_proximos": "Elecciones locales oct 2024",
+        "regulaciones_relevantes": "Ley energías renovables (incentivos), PDET (recursos), Ordenamiento territorial"
+      },
+      
+      "diagnostico_territorial": "Territorio con capacidad agrícola, biodiversidad, pero con vulnerabilidad climática, acceso limitado a mercados y servicios. Contexto estructural justifica bajas aspiraciones y baja mentalidad emprendedora. PERO NO justifica desconfianza en proyecto: eso viene de incumplimiento pasado, NO de contexto."
+    },
+    
+    "historial_temporal": {
+      "2022": {
+        "IA": 55,
+        "IAT": 35,
+        "ICI": 60,
+        "IVC": 70,
+        "IME": 40,
+        "IIN": 50,
+        "IPRA": 48,
+        "ICS": 42
+      },
+      
+      "2023": {
+        "IA": 48,
+        "IAT": 37,
+        "ICI": 42,
+        "IVC": 71,
+        "IME": 35,
+        "IIN": 52,
+        "IPRA": 44,
+        "ICS": 40
+      },
+      
+      "2024_actual": {
+        "IA": 45,
+        "IAT": 38,
+        "ICI": 28,
+        "IVC": 72,
+        "IME": 32,
+        "IIN": 55,
+        "IPRA": 41,
+        "ICS": 38
+      },
+      
+      "tendencias": {
+        "IA": "DECRECIENTE (-10 puntos en 2 años)",
+        "IAT": "CRECIENTE LEVE (+3 puntos)",
+        "ICI": "DECRECIENTE CRÍTICA (-32 puntos en 2 años)",
+        "IVC": "ESTABLE FUERTE (+2 puntos)",
+        "IME": "DECRECIENTE (-8 puntos)",
+        "IIN": "CRECIENTE (+5 puntos, positivo)",
+        "IPRA": "DECRECIENTE (-7 puntos)",
+        "ICS": "DECRECIENTE (-4 puntos)"
+      },
+      
+      "volatilidad": {
+        "IA": "MEDIA (9 ptos desv std)",
+        "IAT": "BAJA (3 ptos desv std)",
+        "ICI": "ALTA (32 ptos desv std) ← MÁS VOLÁTIL",
+        "IVC": "BAJA (2 ptos desv std) ← MÁS ESTABLE",
+        "IME": "MEDIA (8 ptos desv std)",
+        "IIN": "BAJA (5 ptos desv std)",
+        "IPRA": "MEDIA (7 ptos desv std)",
+        "ICS": "BAJA (4 ptos desv std)"
+      },
+      
+      "eventos_marcadores": [
+        {
+          "fecha": "2022-03-15",
+          "evento": "Proyecto energía comunitaria FRACASÓ",
+          "impacto_dimensiones": ["ICI: -30", "IA: -7", "IME: -5"],
+          "descripcion": "Proyecto no se completó, promesas incumplidas, fondos desaparecieron (se rumora corrupción de intermediarios)"
+        },
+        {
+          "fecha": "2023-11-01",
+          "evento": "Cambio político municipal",
+          "impacto_dimensiones": ["ICI: -18 (incertidumbre)", "IA: -3"],
+          "descripcion": "Nuevo alcalde asume, incertidumbre sobre continuidad de programas previos"
+        },
+        {
+          "fecha": "2023-06-15",
+          "evento": "Sequía severa",
+          "impacto_dimensiones": ["IPRA: -4", "IA: -2", "IME: -3"],
+          "descripcion": "Pérdida de cosechas, algunos hogares consideraron migración"
+        }
+      ]
+    },
+    
+    "tensions_identificadas": [
+      {
+        "tension": "T1 - Confianza Erosionada vs Responsabilidad de Proyecto",
+        "plano_1": "Cognitivo (ICI=28 CRÍTICO)",
+        "valor_plano1": 28,
+        "plano_2": "Histórico/Operativo (Proyecto 2022 fracasó)",
+        "valor_plano2": "Incumplimiento documentado",
+        "implicacion": "La desconfianza es RACIONAL, no es irracionalidad. No se cura con 'charlas de motivación'. Se cura con RESULTADOS demostrables y proceso de reparación.",
+        "recomendacion": "INVERTIR 6 meses en diálogos reparación + primeras acciones visibles ANTES de pedir evaluación técnica completa (Fase 1B)"
+      },
+      
+      {
+        "tension": "T2 - Baja Apropiación Tecnológica vs Acceso Material",
+        "plano_1": "Cognitivo (IAT=38 bajo)",
+        "valor_plano1": 38,
+        "plano_2": "Operativo (Internet 25%, Equipamiento 0)",
+        "valor_plano2": "25% cobertura",
+        "implicacion": "La baja IAT NO es rechazo cultural a tecnología. Es CONSECUENCIA de falta de acceso. Si invertimos en infraestructura digital, IAT subirá naturalmente.",
+        "recomendacion": "Acción PARALELA: Infraestructura digital + capacitación = IAT debería subir 20-30 puntos en 12 meses"
+      },
+      
+      {
+        "tension": "T3 - Aspiraciones Moderadas vs Contexto de Pobreza",
+        "plano_1": "Cognitivo (IA=45 moderado)",
+        "valor_plano1": 45,
+        "plano_2": "Territorial (Pobreza 67%, Educación 4.2 años)",
+        "valor_plano2": "Contexto adverso",
+        "implicacion": "Las aspiraciones NO son bajas para el contexto. Son RACIONALES. Una persona en pobreza extrema que espera educación secundaria NO está siendo poco ambiciosa; está siendo realista.",
+        "recomendacion": "No invertir en programas de 'motivación inspiracional'. Invertir en OPORTUNIDADES CONCRETAS: educación técnica accesible, empleos locales que paguen bien."
+      },
+      
+      {
+        "tension": "T4 - Identidad Fuerte vs Recursos Operativos Débiles",
+        "plano_1": "Cognitivo (IVC=72 fuerte)",
+        "valor_plano1": 72,
+        "plano_2": "Operativo (IOM=21% crítica)",
+        "valor_plano2": "21%",
+        "implicacion": "ACTIVO SUBUTILIZADO. La comunidad tiene identidad, orgullo, saberes locales vivos. PERO estos no se están usando como palanca de cambio porque no hay recursos operativos.",
+        "recomendacion": "Diseñar proyecto como 'ENERGÍA CON IDENTIDAD LOCAL' - integrar saberes ancestrales, narrativa de territorio. Esto potencia tanto IVC como IME."
+      },
+      
+      {
+        "tension": "T5 - Normas de Género Igualitarias vs Participación Real Baja",
+        "plano_1": "Cognitivo (IIN=55 normas igualitarias)",
+        "valor_plano1": 55,
+        "plano_2": "Territorial (Participación laboral fem 35%)",
+        "valor_plano2": "35%",
+        "implicacion": "Las normas PERMITEN participación, pero BARRERAS OPERATIVAS (cuidado, transporte, acceso) impiden. No es problema de creencias, es de recursos.",
+        "recomendacion": "En diseño de proyecto, asegurar: cuidado de menores durante sesiones, transporte, horarios flexibles. Esto liberará participación sin necesidad de cambiar normas."
+      }
+    ],
+    
+    "barreras": [
+      {
+        "barrera": "Confianza institucional erosionada por incumplimiento pasado",
+        "tipo": "Cognitiva + Histórica",
+        "severidad": "CRÍTICA",
+        "dimensión_afectada": "ICI (28 = crítico)",
+        "descripción": "Proyecto energía 2022 no se completó. Fondos desaparecieron. Intermediarios acusados de corrupción. Comunidad reporta: 'Nos prometen, no cumplen'.",
+        "evidencia": "ICI bajó 32 puntos en 2 años. Evento marcador documentado. Reportes de conflictividad.",
+        "plazo_resolución": "LARGO (6-12 meses)",
+        "solubilidad": "MEDIA - Requiere diálogos reparación + resultados demostrables de transparencia"
+      },
+      
+      {
+        "barrera": "Infraestructura operativa prácticamente inexistente",
+        "tipo": "Operativa",
+        "severidad": "CRÍTICA",
+        "dimensión_afectada": "IAT (38), pero afecta toda IOM (21%)",
+        "descripción": "0 equipo de monitoreo, 0 paneles solares, 0 procesos documentados, 0 capacitación formal, 0 presupuesto, 25% internet, liderazgo debilitado por rotación.",
+        "evidencia": "Evaluación IOM = 21% (muy inferior a 50% mínimo para operación autónoma)",
+        "plazo_resolución": "LARGO (12-18 meses)",
+        "solubilidad": "ALTA - pero requiere inversión externa significativa ($42-50K USD)"
+      },
+      
+      {
+        "barrera": "Baja mentalidad emprendedora (IME=32)",
+        "tipo": "Cognitiva",
+        "severidad": "MAYOR",
+        "dimensión_afectada": "IME (32), pero vinculada a contexto económico",
+        "descripción": "Contexto de 83% informalidad + 18% desempleo desalienta emprendimiento formal. Comunidad no ve oportunidades viables de crecer negocio.",
+        "evidencia": "IME bajó 8 puntos en 2 años. Alineado con contexto de sequía y cambio político.",
+        "plazo_resolución": "MEDIO (6-9 meses, en paralelo con solución de otras barreras)",
+        "solubilidad": "MEDIA - Acceso a crédito + capacitación técnica + mercados locales pueden invertir esto"
+      },
+      
+      {
+        "barrera": "Liderazgo débil y con alta rotación",
+        "tipo": "Operativa + Institucional",
+        "severidad": "MAYOR",
+        "dimensión_afectada": "IOM Recursos Humanos (35%)",
+        "descripción": "3 líderes identificados, pero turnover es 60% (cambios cada 1-2 años). Capacitación informal. Sin sucesión planificada.",
+        "evidencia": "Observación directa. Historiales de puestos. Reportes de fatiga de liderazgo.",
+        "plazo_resolución": "MEDIO (4-6 meses)",
+        "solubilidad": "MEDIA - Fortalecer sistema de gobernanza local + capacitación formal + incentivos de permanencia"
+      },
+      
+      {
+        "barrera": "Falta de capital inicial para infraestructura digital",
+        "tipo": "Financiera",
+        "severidad": "CRÍTICA",
+        "dimensión_afectada": "IOM Financiero (5%), afecta IAT (38)",
+        "descripción": "Presupuesto operativo comunitario = $0 USD. Fondo de reserva no existe. Acceso a crédito muy restringido.",
+        "evidencia": "Revisión de registros financieros. Imposibilidad de obtener crédito (sin colateral).",
+        "plazo_resolución": "Depende de disponibilidad de donante/inversor",
+        "solubilidad": "DEPENDE DE FINANCIAMIENTO EXTERNO - No es soluble por comunidad sola"
+      }
+    ],
+    
+    "activos": [
+      {
+        "activo": "Identidad cultural fuerte y valorada",
+        "tipo": "Cognitivo",
+        "potencia": 72,
+        "aprovechamiento_actual": 15,
+        "descripción": "Comunidad tiene orgullo territorial alto (72/100), participación en eventos culturales (73%), saberes ancestrales vivos sobre ciclos naturales, gastronomía local, artesanía.",
+        "aplicacion_proyecto": "Usar identidad como NARRATIVA del proyecto - 'Energía con identidad local', integrar saberes en diseño, validar territorialmente antes de implementar, crear empleo en cadenas culturales"
+      },
+      
+      {
+        "activo": "Liderazgo comunitario identificado",
+        "tipo": "Relacional",
+        "potencia": 60,
+        "aprovechamiento_actual": 30,
+        "descripción": "3 líderes formales identificados, con aceptación comunitaria. Aunque hay rotación, existen para iniciar procesos.",
+        "aplicacion_proyecto": "Fortalecer con capacitación formal, visitas a otros proyectos, participación en decisiones estratégicas. Crear comisión de transición para retención."
+      },
+      
+      {
+        "activo": "Experiencia agrícola y gestión de agua comunitaria",
+        "tipo": "Operativo",
+        "potencia": 65,
+        "aprovechamiento_actual": 50,
+        "descripción": "Comunidad tiene 50+ años manejando sistemas de riego comunitario, junta de agua con reglas informales pero funcionales. Saben cooperar para recursos comunes.",
+        "aplicacion_proyecto": "Usar JUNTA DE AGUA como modelo de gobernanza para proyecto energía. La lógica de participación ya existe."
+      },
+      
+      {
+        "activo": "Recursos naturales para generación renovable",
+        "tipo": "Territorial",
+        "potencia": 70,
+        "aprovechamiento_actual": 5,
+        "descripción": "Zona de altiplano tropical: radiación solar 4.5-5.0 kWh/m²/día (excelente), río permanente (mini-hidro potencial), vientos moderados, biomasa disponible.",
+        "aplicacion_proyecto": "Evaluar combinación solar + micro-hidro + biogas. Potencial técnico está disponible."
+      },
+      
+      {
+        "activo": "Mercado local cautivo para energía",
+        "tipo": "Económico",
+        "potencia": 65,
+        "aprovechamiento_actual": 0,
+        "descripción": "450 hogares en zona. Gasto actual en energía (compra + combustible) = ~$80/mes = $43k/año comunitario. Demanda está asegurada.",
+        "aplicacion_proyecto": "Modelo de negocio viable si se estructura bien. Mercado no es problema."
+      },
+      
+      {
+        "activo": "Capacidad de organización colectiva",
+        "tipo": "Institucional",
+        "potencia": 60,
+        "aprovechamiento_actual": 40,
+        "descripción": "Existe junta de acción comunal, grupos de mujeres, grupos de jóvenes. Hay base de organización, aunque débil.",
+        "aplicacion_proyecto": "Fortalecer grupos existentes + crear comisión energía con representación de todos"
+      },
+      
+      {
+        "activo": "Disponibilidad de tiempo comunitario",
+        "tipo": "Humano",
+        "potencia": 70,
+        "aprovechamiento_actual": 20,
+        "descripción": "Comunidad tiene tiempo disponible (no es zona industrial). Disposición a participar en asambleas y capacitaciones.",
+        "aplicacion_proyecto": "Aprovechar para capacitación intensiva en operación + mantenimiento"
+      }
+    ],
+    
+    "interdependencias_clave": [
+      {
+        "from": "ICI (confianza)",
+        "to": "Todas las otras dimensiones",
+        "tipo": "PRECONDICIÓN",
+        "strength": "FUERTE",
+        "explicacion": "Si ICI sigue baja (28), es imposible avanzar en Fase 1B (evaluación técnica). La comunidad no participará en diagnóstico si no confía. ICI es la PUERTA de entrada."
+      },
+      {
+        "from": "IOM Financiero ($0)",
+        "to": "IAT (tecnología), IOM general",
+        "tipo": "BLOQUEADOR",
+        "strength": "FUERTE",
+        "explicacion": "Sin capital inicial, no hay infraestructura digital. Sin infraestructura, IAT no subirá. Sin dinero, TODA la IOM permanece en 21%."
+      },
+      {
+        "from": "IVC (identidad fuerte)",
+        "to": "IA (aspiraciones), IME (emprendimiento)",
+        "tipo": "ACELERADOR",
+        "strength": "FUERTE",
+        "explicacion": "Si diseñamos proyecto respetando identidad, la gente se sentirá parte. Esto puede acelerar subida en IA e IME."
+      },
+      {
+        "from": "Liderazgo débil",
+        "to": "IOM Gobernanza (25%), Capacitación (0 horas)",
+        "tipo": "BLOQUEADOR",
+        "strength": "MEDIA",
+        "explicacion": "Sin liderazgo fuerte, procesos no se formalizan. Capacitación no se sostienes. Necesitamos fortalecer liderazgo en paralelo."
+      },
+      {
+        "from": "IPRA (conciencia climática 41%)",
+        "to": "IME (emprendimiento), Demanda de energía",
+        "tipo": "ACELERADOR",
+        "strength": "MEDIA",
+        "explicacion": "Si subimos conciencia climática con datos (sequía documentada), la comunidad ve valor de energía renovable. Esto potencia demanda y apoyo."
+      }
+    ],
+    
+    "costo_transicion": {
+      "time": {
+        "duracion_semanas": 26,
+        "inicio_recomendado": "2024-02-01",
+        "hitos": [
+          {
+            "hito": "Semana 1-4: Diálogos de reparación (comunidad + ext-facilitador)",
+            "semana": 4,
+            "objetivo": "Reconstruir confianza mínima (ICI target >= 35)"
+          },
+          {
+            "hito": "Semana 5-8: Capacitación de liderazgo (gestión de proyecto + finanzas)",
+            "semana": 8,
+            "objetivo": "3 líderes capacitados, comisión energía formada"
+          },
+          {
+            "hito": "Semana 9-12: Diagnóstico técnico de potencial (solar, hidro, biogas)",
+            "semana": 12,
+            "objetivo": "Estudio factibilidad completado"
+          },
+          {
+            "hito": "Semana 13-18: Capacitación digital básica + acciones infra (si $ disponibles)",
+            "semana": 18,
+            "objetivo": "Primer acceso internet establecido, IAT target >= 50"
+          },
+          {
+            "hito": "Semana 19-24: Co-diseño de modelo con comunidad (negocio, gobernanza, tarifa)",
+            "semana": 24,
+            "objetivo": "Acuerdos suscritos en documento"
+          },
+          {
+            "hito": "Semana 25-26: Evaluación de gate 1A → 1B",
+            "semana": 26,
+            "objetivo": "Decisión de proceder a Fase 1B"
+          }
+        ],
+        "ruta_critica": "ICI reconstrucción (semanas 1-4) es crítica. Si ICI no sube a >=35, todo lo demás se detiene. En paralelo: liderazgo + diagnóstico técnico (semanas 5-12)."
+      },
+      
+      "resources": {
+        "financiero": {
+          "facilitacion_externa_diálogos": "$8,000",
+          "capacitacion_liderazgo": "$5,000",
+          "diagnostico_tecnico": "$7,000",
+          "capacitacion_digital_basica": "$3,000",
+          "equipamiento_inicial_internet": "$15,000",
+          "imprevistos_10pct": "$3,800",
+          "total": "$41,800",
+          "rango_realista": "$35,000 - $50,000",
+          "fuente_recomendada": "Donante internacional (ONG energías renovables) O Banco Mundial / CAF (financiamiento climático) O Gobierno nacional (PDET tiene presupuesto)"
+        },
+        
+        "humano": {
+          "facilitadores_externos_horas": "160 horas (facilitador de diálogos + técnico)",
+          "dedicacion_comunitaria_horas": "450 horas (3 líderes x 150h cada uno)",
+          "carga_administrativa_horas": "200 horas (coordinador local)",
+          "requiere_nuevos_roles": true,
+          "nuevos_roles_sugeridos": ["Coordinador local (1 persona)", "Tesorero comisión energía (1 persona)", "Operador técnico futuro (2 personas)"],
+          "estimacion_personas_dedicadas": "6 personas parcialmente (4+ meses)"
+        },
+        
+        "institucional": [
+          "Acuerdo de confidencialidad + transparencia en manejo de fondos (debido a histórico 2022)",
+          "Formalización de comisión energía en estatutos de junta de acción comunal",
+          "Validación con alcaldía municipal (para alineación política)",
+          "Permisos ambientales preliminares (para sitios de solar/hidro)",
+          "Afiliación a red de proyectos energéticos comunitarios (para aprendizaje)"
+        ]
+      },
+      
+      "risk": [
+        {
+          "riesgo": "Cambio político municipal en octubre 2024 puede desalinear al nuevo gobierno",
+          "probabilidad": "60%",
+          "impacto": "MAYOR - Podría perder apoyo político y acceso a recursos municipales",
+          "mitigacion": "Involucrar a AMBOS candidatos en diálogos previos (antes de elecciones). Hacer pacto de continuidad que sea vinculante al ganador.",
+          "riesgo_residual": "20%"
+        },
+        
+        "riesgo": "Nueva sequía durante implementación (ciclo 3-4 años) desmoralize proyecto",
+          "probabilidad": "30%",
+          "impacto": "MAYOR - Comunidad prioriza sobrevivencia, no proyecto",
+          "mitigacion": "Incluir componente de adaptación climática EN el proyecto (tanques de agua, diversificación cultivos). Usar sequía como CATALIZADOR para energía renovable, no como competencia.",
+          "riesgo_residual": "15%"
+        },
+        
+        {
+          "riesgo": "Recaída en desconfianza si no hay primeras acciones visibles en primeras 8 semanas",
+          "probabilidad": "50%",
+          "impacto": "CRÍTICO - Vuelve a 0 todo el trabajo",
+          "mitigacion": "Planear acciones DEMOSTRABLES en semanas 1-8: internet en escuela (visible), reuniones con alcalde (transparencia), publicación de plan (comunicación). Mostrar dinero moviéndose.",
+          "riesgo_residual": "25%"
+        },
+        
+        {
+          "riesgo": "Rotación de líderes durante proceso (muy común en zona)",
+          "probabilidad": "40%",
+          "impacto": "MAYOR - Pierde continuidad de conocimiento",
+          "mitigacion": "Capacitar 2 personas por rol (redundancia). Documentar TODO. Sistema de sucesión planificada. Incentivos de permanencia (reconocimiento, capacitación).",
+          "riesgo_residual": "20%"
+        }
+      ]
+    },
+    
+    "estado_gate": "BLOCKED",
+    
+    "justificacion_gate": "La micro-red COMUNIDAD_F1_1A está BLOQUEADA para proceder a Fase 1B por TWO factores irresolubles en corto plazo SIN pre-inversión: (1) ICI=28 CRÍTICO (confianza erosionada por fracaso 2022), muy por debajo del umbral mínimo de 40 para participación genuina. La comunidad no participará en diagnóstico técnico sin confianza reconstruida. (2) IOM operativa = 21% (prácticamente inexistente), imposible de elevar sin inversión de $35-50K USD en infraestructura. Panel 0 readiness = 35% (por debajo de 40% requerido). PERO no es un 'bloqueo final'; es un 'bloqueo CONDICIONAL' que se puede deshacer en 6 meses con acciones focalizadas: diálogos reparación (8 semanas), capacitación liderazgo (paralelo), movilización de fondos para infraestructura. Comunidad TIENE activos (identidad, liderazgo, mercado, recursos naturales). Lo que necesita es CONFIANZA RECONSTRUIDA + RECURSOS OPERATIVOS. Ambos son alcanzables si hay voluntad política y financiera externa.",
+    
+    "recomendaciones": [
+      {
+        "prioridad": 1,
+        "recomendacion": "FASE PRE-PROYECTO: 6-8 semanas de diálogos de reparación con facilitador externo experto en conflictos. Objetivo: reconstruir ICI de 28 a >=35.",
+        "dirigida_a": "Facilitador externo + Gobierno local + Organización donante",
+        "plazo": "8 semanas (inmediato, antes de cualquier actividad técnica)",
+        "recurso_requerido": "$8,000",
+        "resultado_esperado": "ICI sube de 28 a 40+, comunidad firma acuerdo de transparencia, comisión energía formalizada"
+      },
+      
+      {
+        "prioridad": 1,
+        "recomendacion": "MOVILIZACIÓN DE FONDOS para inversión inicial en infraestructura ($35-50K USD). Contactar donantes internacionales especializados en energía renovable comunitaria.",
+        "dirigida_a": "Gobierno municipal + ONG ejecutora + Intermediario de recursos",
+        "plazo": "4-8 semanas (en paralelo con diálogos, no se espera)",
+        "recurso_requerido": "$35,000 - $50,000 USD",
+        "resultado_esperado": "Fondos confirmados, contrato firmado, liberación de primer desembolso"
+      },
+      
+      {
+        "prioridad": 2,
+        "recomendacion": "Capacitación de liderazgo comunitario (gestión de proyectos, finanzas básicas, gobernanza). Mínimo 3 líderes, 150 horas cada uno.",
+        "dirigida_a": "3 líderes identificados + facilitador técnico",
+        "plazo": "8-12 semanas (semanas 5-12 del plan)",
+        "recurso_requerido": "$5,000",
+        "resultado_esperado": "Líderes certificados, comisión energía funcional, capacidad de gestionar presupuesto"
+      },
+      
+      {
+        "prioridad": 2,
+        "recomendacion": "Diagnóstico técnico de potencial energético (solar, micro-hidro, biogas). Contratar ingeniero especializado.",
+        "dirigida_a": "Ingeniero especializado en energías renovables",
+        "plazo": "6-8 semanas (semanas 9-16 del plan)",
+        "recurso_requerido": "$7,000",
+        "resultado_esperado": "Informe de factibilidad técnica, mapa de recursos, opciones de diseño"
+      },
+      
+      {
+        "prioridad": 3,
+        "recomendacion": "Capacitación digital básica (internet, herramientas colaborativas, seguridad digital). Aprovechar el acceso que se instale.",
+        "dirigida_a": "Jóvenes + líderes comunitarios",
+        "plazo": "8-12 semanas (semanas 13-20 del plan)",
+        "recurso_requerido": "$3,000",
+        "resultado_esperado": "IAT sube a 50+, comunidad usa plataformas para comunicación"
+      },
+      
+      {
+        "prioridad": 3,
+        "recomendacion": "Diseño participativo del modelo de negocio y gobernanza. Co-crear con comunidad (no imponer). Validar tarifa, distribución de beneficios, reglas de participación.",
+        "dirigida_a": "Comisión energía + facilitador externo",
+        "plazo": "8-10 semanas (semanas 19-28 del plan)",
+        "recurso_requerido": "$4,000",
+        "resultado_esperado": "Documento de acuerdos firmado, modelo validado localmente, preparado para Fase 1B"
+      }
+    ],
+    
+    "alertas": [
+      {
+        "alerta": "CONFIANZA INSTITUCIONAL CRÍTICA (ICI=28). Histórico de incumplimiento documentado.",
+        "severidad": "ROJA",
+        "accion_inmediata": "NO proceder con evaluación técnica (1B) hasta reconstruir confianza. Paralizar cualquier promesa. Iniciar diálogos de reparación CON facilitador externo (no solo con gobierno local que ya perdió credibilidad)."
+      },
+      
+      {
+        "alerta": "CAPACIDAD OPERATIVA INEXISTENTE (IOM=21%). Comunidad no puede auto-gestionar proyecto sin asistencia externa.",
+        "severidad": "ROJA",
+        "accion_inmediata": "Presupuestar 12-18 meses de asistencia técnica externa + paquete de fortalecimiento institucional. No esperar autonomía rápida."
+      },
+      
+      {
+        "alerta": "DESCENSO SOSTENIDO EN 4 DIMENSIONES (IA, IAT, IME, IPRA) en 2 años. Tendencia negativa.",
+        "severidad": "AMARILLA",
+        "accion_inmediata": "Investigar por qué caída continua (climática, política, económica). Usar diálogos de reparación para entender factores de desmoralización. Diseñar intervención que direction esos factores específicos."
+      },
+      
+      {
+        "alerta": "ELECCIONES MUNICIPALES OCTUBRE 2024. Riesgo de cambio de prioridades políticas.",
+        "severidad": "AMARILLA",
+        "accion_inmediata": "Contactar a AMBOS candidatos principales. Construir consenso PRE-electoral sobre continuidad del proyecto. Generar documento de pacto que sea vinculante."
+      },
+      
+      {
+        "alerta": "CICLO CLIMÁTICO CÍCLICO (sequía cada 3-4 años, última 2023). Próxima sequía esperada 2026-2027.",
+        "severidad": "AMARILLA",
+        "accion_inmediata": "INTEGRAR adaptación climática EN el proyecto (no como componente secundario). Usar sequía documentada como razón PARA hacer energía renovable. Esto convierte 'problema' en 'solución'."
+      }
+    ],
+    
+    "supuestos_clave": [
+      "Supuesto 1: Los fondos para pre-inversión ($8-15K USD en diálogos + capacitación) estarán disponibles en próximo mes. Si no, todo se detiene.",
+      "Supuesto 2: El gobierno local (alcaldía) se alineará después de diálogos reparación. Si nueva administración (oct 2024) no apoya, proyecto pierde legitimidad oficial.",
+      "Supuesto 3: Comunidad responderá positivamente a primeras acciones visibles (internet en escuela, fondos moviéndose). Si no ve cambio en 8 semanas, recae en desconfianza.",
+      "Supuesto 4: El facilitador de diálogos será EXTERNO (credibilidad neutral), no del gobierno. Si es government-led, pierde legitimidad.",
+      "Supuesto 5: Se encontrará ingeniero técnico capacitado en energías renovables comunitarias (no solar industrial). Talento escaso en zona."
+    ],
+    
+    "nivel_confianza": 75,
+    "justificacion_confianza": "ALTO. La evaluación está basada en: (1) Datos cognitivos rigurosos (encuesta N=45, Likert estandarizado). (2) Contexto territorial verificable (DANE oficial). (3) Historial documentado (eventos 2022-2024 confirmados). (4) IOM observada directamente. (5) Interdependencias lógicamente fundamentadas. BAJA en: (1) Proyecciones futuras (sequía, cambios políticos) tienen incertidumbre. (2) Hipótesis de cambio (si invertimos $X en infraestructura, IAT sube Y%) no están yet empirically proven en este territorio. (3) Datos históricos anterior 2022 son fragmentarios (solo 2-3 años de serie).",
+    
+    "datos_faltantes": [
+      "Datos de energía consumida actual (no disponible; comunidad compra parcialmente del grid, parcialmente diesel, parcialmente no tiene)",
+      "Registro formal de ingresos comunitarios 2022-2023 (no existe contabilidad formal, todo es estimado)",
+      "Nombre específico de los 3 intermediarios acusados en proyecto 2022 (información sensible, evitar por seguridad)",
+      "Detalles de quién se benefició y quién perdió en proyecto 2022 (información que genera división; necesaria pero sensible)",
+      "Mediciones de radiación solar y recursos hidro específicos (no hay estación meteorológica local; se usa datos regional IDEAM)",
+      "Encuesta de disposición a pagar por energía comunitaria (ausente; necesaria para modelo financiero)",
+      "Análisis de género detallado (sabemos 35% participación laboral fem pero no barreras específicas)",
+      "Mapeo de conflictos de tierra subyacentes (puede afectar implementación pero es tabú local)"
+    ],
+    
+    "proxima_medicion": "2024-04-01",
+    "indicadores_a_monitorear": [
+      "ICI (confianza) - meta 40+ en mes 3",
+      "Asistencia a diálogos de reparación (%)",
+      "Número de acuerdos suscritos",
+      "Internet disponible en comunidad (%)",
+      "Número de personas capacitadas en liderazgo",
+      "IOM operativa general (meta 50+ en mes 6)",
+      "Readiness Panel 0 (meta 40+ en mes 3)",
+      "Presencia de fondos confirmados ($)",
+      "IA (aspiraciones) - monitore tendencia (target: detener caída, idealmente subir a 50+)",
+      "Aceptación de nuevo model de transparencia (sí/no)"
+    ]
+  }
+}
+
+════════════════════════════════════════════════════════════════════════════════
+
+FIN DEL ANÁLISIS JSON - MODELO 2.0

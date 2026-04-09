@@ -1,0 +1,617 @@
+REPROCESSAMIENTO: PROPUESTA HÍBRIDA SIMPLIFICADA + PANEL N°0 PROTAGONISTAS
+═════════════════════════════════════════════════════════════════════════════
+
+ELEMENTOS TRANSVERSALES DESCUBIERTOS
+════════════════════════════════════════════════════════════════════════════
+
+Durante el análisis, hemos identificado FACTORES TRANSVERSALES que atraviesan
+TODAS las fases y requieren visualización paralela a las fases lineales:
+
+TRANSVERSAL 1: STAKEHOLDERS / PROTAGONISTAS
+  ¿Quiénes son los actores clave?
+  ¿Qué rol juegan en cada fase?
+  ¿Cuál es su "readiness"?
+  
+TRANSVERSAL 2: GOBERNANZA / TOMA DE DECISIONES
+  ¿Quién decide qué?
+  ¿Cómo se resuelven conflictos?
+  ¿Qué mecanismos de equidad existen?
+
+TRANSVERSAL 3: FLUJOS FINANCIEROS / NEGOCIO
+  ¿De dónde viene el dinero?
+  ¿Quién se beneficia?
+  ¿Cómo se distribuyen costos?
+
+TRANSVERSAL 4: CADENAS PRODUCTIVAS
+  ¿Cómo se integra energía con economía local?
+  ¿Qué actividades se benefician?
+  ¿Cómo crece el valor?
+
+
+════════════════════════════════════════════════════════════════════════════════
+PANEL N°0: PROTAGONISTAS Y SUS CARACTERÍSTICAS
+════════════════════════════════════════════════════════════════════════════════
+
+CONCEPTO CENTRAL:
+Antes de iniciar cualquier fase, necesitas MAPEAR A LOS PROTAGONISTAS.
+Este mapping es DINÁMICO (evoluciona con las fases) pero PERMANENTE.
+
+ESTRUCTURA DEL PANEL N°0:
+┌─────────────────────────────────────────────────────────────────────────┐
+│ PANEL 0: PROTAGONISTAS DEL PROYECTO DE ENERGÍA COMUNITARIA             │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                         │
+│ SELECTOR DE VISTA:                                                      │
+│  ☐ Vista por Categoría de Actor    ☑ Vista por Capacidad   ☐ Matriz   │
+│                                                                         │
+│ ┌─────────────────────────────────────────────────────────────────────┐│
+│ │ CATEGORÍAS DE PROTAGONISTAS (de Koirala Table 4)                   ││
+│ ├─────────────────────────────────────────────────────────────────────┤│
+│ │                                                                     ││
+│ │ 1. COMUNIDAD LOCAL (Households + Community)                        ││
+│ │    ├─ Características:                                            ││
+│ │    │  • Consumidores → Prosumidores                               ││
+│ │    │  • Dueños de techos/terrenos                                 ││
+│ │    │  • Potencialmente propietarios del sistema                   ││
+│ │    │  • Generadores de valor local                                ││
+│ │    │                                                              ││
+│ │    ├─ Intereses:                                                  ││
+│ │    │  ✓ Acceso a energía asequible                                ││
+│ │    │  ✓ Reducción de costos energéticos                           ││
+│ │    │  ✓ Participación en decisiones                               ││
+│ │    │  ✓ Beneficios económicos de actividades productivas          ││
+│ │    │                                                              ││
+│ │    ├─ Capacidades:                                                ││
+│ │    │  ☐ Financiamiento                                            ││
+│ │    │  ☑ Mano de obra                                              ││
+│ │    │  ☑ Conocimiento local                                        ││
+│ │    │  ☐ Expertise técnica                                         ││
+│ │    │  ☑ Compromiso a LP                                           ││
+│ │    │  ☐ Autoridad legal/regulatoria                               ││
+│ │    │                                                              ││
+│ │    ├─ Barreras:                                                   ││
+│ │    │  ⚠ Aversión al riesgo financiero                             ││
+│ │    │  ⚠ Falta de confianza en instituciones                       ││
+│ │    │  ⚠ Falta de conocimiento técnico                             ││
+│ │    │  ⚠ Conflictos intra-comunitarios                             ││
+│ │    │                                                              ││
+│ │    └─ Readiness Actual: [████░░░░░] 4/10                          ││
+│ │                                                                     ││
+│ │ 2. GOBIERNO LOCAL (Municipal, Provincial)                          ││
+│ │    ├─ Características:                                            ││
+│ │    │  • Autoridad regulatoria                                     ││
+│ │    │  • Facilitador de políticas                                  ││
+│ │    │  • Potencial financiador (subsidios)                         ││
+│ │    │  • Supervisor de cumplimiento                                ││
+│ │    │                                                              ││
+│ │    ├─ Intereses:                                                  ││
+│ │    │  ✓ Reducción de demanda en red centralizada                  ││
+│ │    │  ✓ Cumplimiento de metas de energías renovables              ││
+│ │    │  ✓ Reducción de inversión en infraestructura                 ││
+│ │    │  ✓ Empleo local                                              ││
+│ │    │  ✓ Equidad social (acceso energético)                        ││
+│ │    │                                                              ││
+│ │    ├─ Capacidades:                                                ││
+│ │    │  ☑ Autoridad regulatoria                                     ││
+│ │    │  ☑ Financiamiento (subsidios, créditos)                      ││
+│ │    │  ☐ Expertise técnica                                         ││
+│ │    │  ☑ Convocatoria comunitaria                                  ││
+│ │    │  ☐ Mantenimiento operacional                                 ││
+│ │    │                                                              ││
+│ │    ├─ Barreras:                                                   ││
+│ │    │  ⚠ Restricciones fiscales                                    ││
+│ │    │  ⚠ Cambios político-administrativos                          ││
+│ │    │  ⚠ Conflictos con utilities centralizadas                    ││
+│ │    │  ⚠ Lentitud burocrática                                      ││
+│ │    │                                                              ││
+│ │    └─ Readiness Actual: [██░░░░░░░] 2/10                          ││
+│ │                                                                     ││
+│ │ 3. PROVEEDORES TÉCNICOS (Instaladores, Integradores, Diseñadores)  ││
+│ │    ├─ Características:                                            ││
+│ │    │  • Expertise técnica                                         ││
+│ │    │  • Acceso a proveedores y equipamiento                       ││
+│ │    │  • Experiencia en implementación                             ││
+│ │    │  • Capacidad de capacitación técnica                         ││
+│ │    │                                                              ││
+│ │    ├─ Intereses:                                                  ││
+│ │    │  ✓ Ingresos por servicios/instalación                        ││
+│ │    │  ✓ Construcción de portafolio (referencias)                  ││
+│ │    │  ✓ Replicación en otros proyectos                            ││
+│ │    │  ✗ Evitar ser reemplazados por operación local               ││
+│ │    │                                                              ││
+│ │    ├─ Capacidades:                                                ││
+│ │    │  ☑ Expertise técnica profunda                                ││
+│ │    │  ☑ Acceso a proveedores y materiales                         ││
+│ │    │  ☑ Capacitación en instalación                               ││
+│ │    │  ☐ Sostenibilidad financiera a LP                            ││
+│ │    │  ☐ Compromiso comunitario                                    ││
+│ │    │                                                              ││
+│ │    ├─ Barreras:                                                   ││
+│ │    │  ⚠ Costo de servicios vs presupuestos comunitarios            ││
+│ │    │  ⚠ Falta de experiencia en proyectos comunitarios             ││
+│ │    │  ⚠ Conflicto de incentivos (quieren mantener dependencia)    ││
+│ │    │                                                              ││
+│ │    └─ Readiness Actual: [██████░░░] 6/10                          ││
+│ │                                                                     ││
+│ │ 4. ACTORES ECONÓMICOS (Cooperativas, ONGs, Empresas Locales)       ││
+│ │    ├─ Características:                                            ││
+│ │    │  • Capacidad de organización colectiva                       ││
+│ │    │  • Acceso a financiamiento (microcrédito, donaciones)        ││
+│ │    │  • Experiencia en gestión comunitaria                        ││
+│ │    │  • Potencial para operación a LP                             ││
+│ │    │                                                              ││
+│ │    ├─ Intereses:                                                  ││
+│ │    │  ✓ Viabilidad económica del proyecto                         ││
+│ │    │  ✓ Oportunidades de negocio colateral                        ││
+│ │    │  ✓ Empoderamiento comunitario                                ││
+│ │    │  ✓ Sustentabilidad a largo plazo                             ││
+│ │    │                                                              ││
+│ │    ├─ Capacidades:                                                ││
+│ │    │  ☑ Organización comunitaria                                  ││
+│ │    │  ☑ Acceso a financiamiento alternativo                       ││
+│ │    │  ☑ Gestión empresarial                                       ││
+│ │    │  ☐ Expertise técnica                                         ││
+│ │    │  ☑ Visión a largo plazo                                      ││
+│ │    │                                                              ││
+│ │    ├─ Barreras:                                                   ││
+│ │    │  ⚠ Capacidad técnica limitada                                ││
+│ │    │  ⚠ Vulnerabilidad a cambios macroeconómicos                  ││
+│ │    │  ⚠ Conflictos internos de gobernanza                         ││
+│ │    │                                                              ││
+│ │    └─ Readiness Actual: [███░░░░░░] 3/10                          ││
+│ │                                                                     ││
+│ │ 5. ACTORES EXTERNOS (Donantes, Agregadores, TSO/DSO, Regulador)    ││
+│ │    ├─ Características:                                            ││
+│ │    │  • Acceso a capital                                          ││
+│ │    │  • Poder regulatorio/técnico                                 ││
+│ │    │  • Perspectiva sistémica                                     ││
+│ │    │  • Posible desalineación con intereses locales                ││
+│ │    │                                                              ││
+│ │    ├─ Intereses:                                                  ││
+│ │    │  ✓ ROI y retorno de inversión                                ││
+│ │    │  ✓ Cumplimiento de objetivos institucionales                 ││
+│ │    │  ✗ Posible conflicto con economía local                      ││
+│ │    │                                                              ││
+│ │    ├─ Capacidades:                                                ││
+│ │    │  ☑ Financiamiento significativo                              ││
+│ │    │  ☑ Expertise técnica y regulatoria                           ││
+│ │    │  ☐ Compromiso con empoderamiento local                       ││
+│ │    │                                                              ││
+│ │    └─ Readiness Actual: [██░░░░░░░] 2/10                          ││
+│ │                                                                     ││
+│ └─────────────────────────────────────────────────────────────────────┘│
+│                                                                         │
+│ SÍNTESIS DE READINESS COMUNITARIA:                                      │
+│ ┌─────────────────────────────────────────────────────────────────────┐│
+│ │ Necesario para Fase 0 (Exploración): 40% readiness mínimo          ││
+│ │ Readiness actual: 17% (CRÍTICO - Inversión en capacitación)        ││
+│ │                                                                     ││
+│ │ ⚠ BRECHA CRÍTICA: Gobierno local + Actores externos no preparados  ││
+│ │                                                                     ││
+│ │ RECOMENDACIÓN: Antes de Fase 0, invertir en:                       ││
+│ │  1. Diálogos de alineación política (gobierno)                     ││
+│ │  2. Fortalecimiento de actores económicos (cooperativas)            ││
+│ │  3. Evaluación de viabilidad técnica (proveedores)                 ││
+│ │  4. Facilitación de financiamiento (donantes)                      ││
+│ │                                                                     ││
+│ └─────────────────────────────────────────────────────────────────────┘│
+└─────────────────────────────────────────────────────────────────────────┘
+```
+
+════════════════════════════════════════════════════════════════════════════
+
+MATRIZ DINÁMICA: PROTAGONISTAS × FASES
+═════════════════════════════════════════════════════════════════════════════
+
+El Panel N°0 es ESTÁTICO (quiénes son), pero la MATRIZ es DINÁMICA.
+
+Muestra CÓMO EVOLUCIONAN los roles de cada stakeholder según la fase:
+
+┌────────────────────┬────────────────┬────────────────┬────────────────┬────────────────┐
+│ PROTAGONISTA       │ FASE 0         │ FASE 1         │ FASE 2         │ FASE 3         │
+│                    │ EXPLORACIÓN    │ ESTIMACIÓN     │ IMPLEMENTACIÓN │ OPERACIÓN      │
+├────────────────────┼────────────────┼────────────────┼────────────────┼────────────────┤
+│                    │                │                │                │                │
+│ COMUNIDAD LOCAL    │ Informante     │ Co-diseñador   │ Ejecutor       │ Operador       │
+│ (Households)       │ Decisor        │ Investidor     │ Capacitado     │ Propietario    │
+│                    │                │ Propietario    │ Beneficiario   │ Beneficiario   │
+│                    │ Readiness: ██  │ Readiness: ███ │ Readiness: ████│ Readiness: ████│
+│                    │                │                │                │                │
+├────────────────────┼────────────────┼────────────────┼────────────────┼────────────────┤
+│                    │                │                │                │                │
+│ GOBIERNO LOCAL     │ Facilitador    │ Regulador      │ Fiscalizador   │ Supervisor     │
+│                    │ Validador      │ Inversor       │ Inversor       │ Aliado         │
+│                    │                │ (subsidios)    │ (infraestructura)              │
+│                    │ Readiness: ██  │ Readiness: ██░ │ Readiness: ███ │ Readiness: ███ │
+│                    │                │                │                │                │
+├────────────────────┼────────────────┼────────────────┼────────────────┼────────────────┤
+│                    │                │                │                │                │
+│ PROVEEDORES        │ Asesor         │ Diseñador      │ Instalador     │ Consultor      │
+│ TÉCNICOS           │ Evaluador      │ Especificador  │ Capacitador    │ Soporte técnico│
+│                    │                │                │ Supervisor     │ Mejora         │
+│                    │ Readiness: ███ │ Readiness: ████│ Readiness: ████│ Readiness: ███ │
+│                    │                │                │                │                │
+├────────────────────┼────────────────┼────────────────┼────────────────┼────────────────┤
+│                    │                │                │                │                │
+│ ACTORES            │ Consejero      │ Socio          │ Ejecutor       │ Gerente        │
+│ ECONÓMICOS         │ Evaluador      │ Diseñador      │ Implementador  │ Operador       │
+│ (Cooperativas)     │                │                │                │                │
+│                    │ Readiness: ███ │ Readiness: ███ │ Readiness: ███ │ Readiness: ████│
+│                    │                │                │                │                │
+├────────────────────┼────────────────┼────────────────┼────────────────┼────────────────┤
+│                    │                │                │                │                │
+│ ACTORES EXTERNOS   │ Asesor         │ Inversor       │ Proveedor      │ Socio          │
+│ (Donantes,         │ (condicional)  │ Validador      │ capital        │ Monitoreo      │
+│  Reguladores)      │                │                │                │ Evaluación     │
+│                    │ Readiness: ██  │ Readiness: ██░ │ Readiness: ███ │ Readiness: ████│
+│                    │                │                │                │                │
+└────────────────────┴────────────────┴────────────────┴────────────────┴────────────────┘
+
+════════════════════════════════════════════════════════════════════════════════
+PROPUESTA HÍBRIDA REPROCESSADA (SIMPLIFICADA)
+════════════════════════════════════════════════════════════════════════════════
+
+ORIGINAL: 4 fases con 3 subdivisiones = 12 elementos
+SIMPLIFICADO: 3 fases con 3 capas = 9 elementos (+ Panel N°0 transversal)
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                                                                              │
+│  PANEL 0: PROTAGONISTAS (Stakeholders + Readiness)                           │
+│  ├─ Quiénes son los actores clave                                            │
+│  ├─ Qué capacidades tienen                                                  │
+│  ├─ Qué intereses/barreras enfrentan                                        │
+│  ├─ Readiness actual vs requerido                                           │
+│  └─ Brechas a cerrar                                                        │
+│                                                                              │
+│  ─────────────────────────────────────────────────────────────────────────  │
+│                                                                              │
+│  FASE 1: PREPARACIÓN (Discover & Design)                                     │
+│  ─────────────────────────────────────────────────────────────────────────  │
+│                                                                              │
+│  SUBCAPA 1A: RECONOCIMIENTO DE REALIDAD                                      │
+│   ¿Qué tenemos? ¿Qué queremos? ¿Quiénes somos?                             │
+│   - Inventario de DERs disponibles                                          │
+│   - Análisis de necesidades energéticas                                     │
+│   - Mapeo de stakeholders y capacidades                                     │
+│   - Identificación de activos productivos locales                           │
+│                                                                              │
+│   PROTAGONISTAS CLAVE EN ESTA SUBCAPA:                                       │
+│   ☑ Comunidad local (informante, decisor)                                   │
+│   ☑ Actores económicos (consejero, evaluador)                               │
+│   ☐ Proveedores técnicos (asesor)                                           │
+│   ☐ Gobierno (facilitador)                                                  │
+│                                                                              │
+│  SUBCAPA 1B: EVALUACIÓN INTEGRAL DE VIABILIDAD                               │
+│   ¿Qué es viable?                                                           │
+│   - Evaluación 5 Pilares (Espitia-Mesa):                                    │
+│     • DERs (tecnología, potencial, acceso)                                  │
+│     • Social (aceptación, líderes, participación)                           │
+│     • Económica (cadenas productivas, financiamiento)                       │
+│     • Legal/regulatoria (marcos, incentivos, seguridad)                     │
+│     • Ambiental (impactos, mitigación, sostenibilidad)                      │
+│   - Identificación de barreras vs oportunidades                             │
+│   - Análisis de conflictos de intereses (split-incentives)                  │
+│                                                                              │
+│   PROTAGONISTAS CLAVE EN ESTA SUBCAPA:                                       │
+│   ☑ Proveedores técnicos (evaluador, diseñador)                             │
+│   ☑ Actores económicos (evaluador, socio)                                   │
+│   ☑ Gobierno local (validador regulatorio)                                  │
+│   ☐ Comunidad (validador final)                                             │
+│                                                                              │
+│  SUBCAPA 1C: ALINEACIÓN Y CONSENSO                                           │
+│   ¿Estamos todos de acuerdo?                                                │
+│   - Diálogos de alineación política (gobierno)                              │
+│   - Talleres de co-diseño (comunidad + técnicos)                            │
+│   - Definición de visión compartida                                         │
+│   - Formalización de intención de colaboración                              │
+│   - Establecimiento de mecanismos de gobernanza                             │
+│                                                                              │
+│   PROTAGONISTAS CLAVE EN ESTA SUBCAPA:                                       │
+│   ☑ Comunidad local (co-diseñador, decisor)                                 │
+│   ☑ Gobierno local (negociador, facilitador)                                │
+│   ☑ Actores económicos (negociador, socio)                                  │
+│   ☑ Proveedores técnicos (facilitador)                                      │
+│                                                                              │
+│   GATE 1: ¿Es viable y hay consenso? → Proceder a FASE 2                    │
+│                                                                              │
+│  ─────────────────────────────────────────────────────────────────────────  │
+│                                                                              │
+│  FASE 2: EJECUCIÓN (Build & Learn)                                           │
+│  ─────────────────────────────────────────────────────────────────────────  │
+│                                                                              │
+│  SUBCAPA 2A: DISEÑO DETALLADO Y FINANCIAMIENTO                               │
+│   ¿Exactamente cómo y con cuánta plata?                                     │
+│   - Diseño técnico detallado (DERs, almacenamiento, smart grids)            │
+│   - Business model canvas (Koirala)                                         │
+│   - Identificación de fuentes de financiamiento                             │
+│   - Estructura de propiedad y gobernanza                                    │
+│   - Mecanismos de asignación de costos/beneficios                           │
+│                                                                              │
+│   PROTAGONISTAS CLAVE EN ESTA SUBCAPA:                                       │
+│   ☑ Proveedores técnicos (diseñador, especificador)                         │
+│   ☑ Actores económicos (socio, diseñador financiero)                        │
+│   ☑ Gobierno (inversor, facilitador)                                        │
+│   ☑ Actores externos (inversor, validador)                                  │
+│                                                                              │
+│  SUBCAPA 2B: ADQUISICIÓN, INSTALACIÓN Y CAPACITACIÓN                         │
+│   ¿Compramos, instalamos y aprendemos?                                      │
+│   - Procura de equipamiento y servicios                                     │
+│   - Construcción e instalación física                                       │
+│   - Capacitación en operación y mantenimiento                               │
+│   - Integración de sistemas (smart grids locales)                           │
+│   - Pruebas de funcionamiento                                               │
+│                                                                              │
+│   PROTAGONISTAS CLAVE EN ESTA SUBCAPA:                                       │
+│   ☑ Proveedores técnicos (instalador, capacitador)                          │
+│   ☑ Comunidad local (ejecutor, aprendiz)                                    │
+│   ☑ Actores económicos (supervisor, ejecutor)                               │
+│   ☑ Gobierno (fiscalizador)                                                 │
+│                                                                              │
+│  SUBCAPA 2C: PUESTA EN MARCHA Y OPERACIONALIZACIÓN                           │
+│   ¿Funciona? ¿La comunidad lo maneja?                                       │
+│   - Activación del sistema completo                                         │
+│   - Mercados locales de energía (compra/venta)                              │
+│   - Activación de cadenas productivas                                       │
+│   - Flujos financieros operacionales                                        │
+│   - Transferencia de responsabilidad                                        │
+│                                                                              │
+│   PROTAGONISTAS CLAVE EN ESTA SUBCAPA:                                       │
+│   ☑ Comunidad local (operador, propietario)                                 │
+│   ☑ Actores económicos (gerente, operador)                                  │
+│   ☑ Proveedores técnicos (soporte, consultor)                               │
+│   ☑ Gobierno (supervisor)                                                   │
+│                                                                              │
+│   GATE 2: ¿Sistema operativo, aceptado, y capacidades locales instaladas?   │
+│           → Proceder a FASE 3                                               │
+│                                                                              │
+│  ─────────────────────────────────────────────────────────────────────────  │
+│                                                                              │
+│  FASE 3: SOSTENIBILIDAD Y ESCALADO (Operate & Scale)                        │
+│  ─────────────────────────────────────────────────────────────────────────  │
+│                                                                              │
+│  SUBCAPA 3A: OPERACIÓN CONFIABLE Y MANTENIMIENTO                             │
+│   ¿Los equipos duran? ¿La comunidad puede mantener?                         │
+│   - Plan de mantenimiento preventivo y correctivo                           │
+│   - Gestión de repuestos y cadena de suministro                             │
+│   - Entrenamiento continuo de operadores                                    │
+│   - Fondo de reserva para reemplazos                                        │
+│   - Monitoreo de confiabilidad y disponibilidad                             │
+│                                                                              │
+│   PROTAGONISTAS CLAVE EN ESTA SUBCAPA:                                       │
+│   ☑ Comunidad local (operador, mantenedor)                                  │
+│   ☑ Actores económicos (gerente, supervisor)                                │
+│   ☑ Proveedores técnicos (soporte técnico, consultor)                       │
+│   ☐ Gobierno (supervisión)                                                  │
+│                                                                              │
+│  SUBCAPA 3B: MONITOREO, EVALUACIÓN Y MEJORA CONTINUA                         │
+│   ¿Cómo estamos yendo? ¿Qué mejoramos?                                      │
+│   - Monitoreo de KPIs técnicos (producción, eficiencia, reliability)         │
+│   - Monitoreo de KPIs socio-económicos (empleo, ingresos, equidad)           │
+│   - Monitoreo de KPIs ambientales (emisiones evitadas, impactos)             │
+│   - Evaluación participativa de impactos comunitarios                        │
+│   - Ciclos de mejora continua (PDCA)                                        │
+│   - Adaptación a cambios contextuales                                       │
+│                                                                              │
+│   PROTAGONISTAS CLAVE EN ESTA SUBCAPA:                                       │
+│   ☑ Comunidad local (evaluador participante, decisor)                       │
+│   ☑ Actores económicos (analista, comunicador)                              │
+│   ☑ Proveedores técnicos (evaluador técnico)                                │
+│   ☑ Actores externos (auditor, evaluador externo)                           │
+│   ☑ Gobierno (validador de impactos)                                        │
+│                                                                              │
+│  SUBCAPA 3C: EVOLUCIÓN, ESCALADO Y REPLICACIÓN                               │
+│   ¿Crecemos? ¿Replicamos en otros territorios?                              │
+│   - Expansión territorial (más comunidades beneficiadas)                    │
+│   - Integración con otras ICESs                                             │
+│   - Innovación en tecnologías y modelos de negocio                          │
+│   - Documentación y sistematización de aprendizajes                         │
+│   - Transferencia a otras comunidades                                       │
+│   - Contribución al conocimiento global                                     │
+│                                                                              │
+│   PROTAGONISTAS CLAVE EN ESTA SUBCAPA:                                       │
+│   ☑ Comunidad local (innovador, facilitador de replicación)                 │
+│   ☑ Actores económicos (entrepreneur, escalador)                            │
+│   ☑ Proveedores técnicos (innovador, capacitador)                           │
+│   ☑ Actores externos (socio en escalado)                                    │
+│   ☑ Gobierno (promotor de replicación)                                      │
+│                                                                              │
+│   GATE 3: ¿Sistema sostenible, con impactos validados, listo para escalar?   │
+│           → Continuo en modo de sostenibilidad a LP                         │
+│                                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+
+════════════════════════════════════════════════════════════════════════════════
+NUEVOS ELEMENTOS TRANSVERSALES QUE EMERGEN
+════════════════════════════════════════════════════════════════════════════════
+
+TRANSVERSAL 1: GOBERNANZA LOCAL
+────────────────────────────────
+NO ES UNA FASE, ES UN SISTEMA que se DISEÑA en 1C y EVOLUCIONA en 3B
+
+Incluye:
+- Estructura de toma de decisiones
+- Mecanismos de resolución de conflictos
+- Sistemas de equidad y distribución de beneficios
+- Rendición de cuentas
+- Participación comunitaria
+
+
+TRANSVERSAL 2: CADENAS PRODUCTIVAS LOCALES
+─────────────────────────────────────────────
+CONECTA la energía con la economía local
+
+La energía generada se usa para:
+- Iluminación (hogares, calles, escuelas)
+- Transporte (vehículos eléctricos, carga)
+- Pequeños negocios (tiendas, talleres)
+- Agricultura (riego, procesamiento)
+- Salud (refrigeración de medicinas, equipamiento)
+- Educación (computadoras, conectividad)
+
+Esto es crítico porque:
+- Genera empleos locales
+- Justifica el ROI del proyecto
+- Mejora calidad de vida
+- Crea valor comunitario
+- Amortiza la inversión
+
+
+TRANSVERSAL 3: BUSINESS MODEL CANVAS EVOLUTIVO
+────────────────────────────────────────────────
+El modelo de negocio CAMBIA según la fase:
+
+FASE 1: Canvas CONCEPTUAL (qué queremos ser)
+FASE 2: Canvas OPERACIONAL (qué construimos)
+FASE 3: Canvas EVOLUCIONADO (qué nos convertimos)
+
+Este canvas debe estar visible en TODAS las fases, no solo en diseño.
+
+
+TRANSVERSAL 4: INDICADORES DE ÉXITO COMUNITARIO
+─────────────────────────────────────────────────
+NO solo indicadores técnicos, sino COMUNITARIOS:
+
+TÉCNICOS:
+- Producción de energía (kWh/año)
+- Eficiencia del sistema
+- Confiabilidad/disponibilidad
+- Emisiones evitadas (tCO2/año)
+
+SOCIALES:
+- Participación comunitaria (%)
+- Empoderamiento (escala 1-10)
+- Equidad de acceso (% de población)
+- Satisfacción comunitaria
+
+ECONÓMICOS:
+- Reducción de costo energético (%)
+- Empleos creados (#)
+- Ingresos generados en cadenas productivas
+- Viabilidad financiera (NPV, TIR)
+
+AMBIENTALES:
+- Reducción de contaminación local
+- Impacto en biodiversidad
+- Gestión de residuos
+- Sostenibilidad de recursos
+
+
+════════════════════════════════════════════════════════════════════════════════
+CÓMO SE VISUALIZARÍA EN STREAMLIT (PROPUESTA)
+════════════════════════════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ S-LCA Timeline Analysis                                                 │
+│ Evaluación Integral de Ciclo de Vida Social - Sistemas de Energía       │
+│                                                                          │
+│ [📊 Análisis]  [📤 Cargar Datos]  [⚙️ Configuración]  [👥 Panel N°0]  │
+└─────────────────────────────────────────────────────────────────────────┘
+
+    ┌─────────────────────────────────────────────────────────────┐
+    │ 👥 PANEL 0: PROTAGONISTAS Y GOBERNANZA (Pestaña Nueva)      │
+    └─────────────────────────────────────────────────────────────┘
+    
+    [VISTA] Protagonistas | Readiness | Matriz Fases | Gobernanza
+    
+    Cuando selecciona PROTAGONISTAS:
+    ├─ Tabla interactiva de actores
+    ├─ Carácterísticas de cada actor
+    ├─ Intereses vs Barreras
+    ├─ Readiness actual
+    └─ Recomendaciones de fortalecimiento
+    
+    Cuando selecciona READINESS:
+    ├─ Gráfico radar de 5 actores
+    ├─ Brecha readiness actual vs requerido
+    ├─ Acciones para cerrar brechas
+    └─ Timeline de capacitación
+    
+    Cuando selecciona MATRIZ FASES:
+    ├─ Tabla dinámica: Actores × Fases
+    ├─ Roles evolucionantes
+    ├─ Transiciones de responsabilidad
+    └─ Riesgos de desalineación
+    
+    Cuando selecciona GOBERNANZA:
+    ├─ Estructura de toma de decisiones
+    ├─ Mecanismos de resolución de conflictos
+    ├─ Sistema de equidad
+    └─ Rendición de cuentas
+
+    ┌─────────────────────────────────────────────────────────────┐
+    │ Timeline: [0]──[1]──[2]──[3]                                │
+    │           PREP  EJEC SOST LEG                               │
+    └─────────────────────────────────────────────────────────────┘
+    
+    Selecciona FASE 1:
+    
+    ┌─────────────────────────────────────────────────────────────┐
+    │ FASE 1: PREPARACIÓN (Discover & Design)                     │
+    │                                                              │
+    │ [Subcapa 1A: Reconocimiento] [Subcapa 1B: Evaluación]      │
+    │  [Subcapa 1C: Alineación]                                   │
+    │                                                              │
+    │ SUBCAPA 1A SELECCIONADA:                                     │
+    │ ─────────────────────────────────────                        │
+    │                                                              │
+    │ 📌 ¿QUÉ HACEMOS?                                             │
+    │ Inventariamos recursos, analizamos necesidades,             │
+    │ identificamos stakeholders, detectamos oportunidades        │
+    │                                                              │
+    │ 👥 PROTAGONISTAS CLAVE:                                      │
+    │                                                              │
+    │ ☑ COMUNIDAD LOCAL (Informante, Decisor)                     │
+    │   Readiness: ██░░░░░░░ 2/10                                 │
+    │   Rol: Proporcionar información, validar prioridades        │
+    │                                                              │
+    │ ☑ ACTORES ECONÓMICOS (Consejero, Evaluador)                 │
+    │   Readiness: ███░░░░░░ 3/10                                 │
+    │   Rol: Evaluar viabilidad económica, proponer modelos       │
+    │                                                              │
+    │ ☐ PROVEEDORES TÉCNICOS (Asesor)                             │
+    │   Readiness: ████░░░░░ 4/10                                 │
+    │   Rol: Evaluar factibilidad técnica                         │
+    │                                                              │
+    │ ☐ GOBIERNO (Facilitador)                                    │
+    │   Readiness: ██░░░░░░░ 2/10                                 │
+    │   Rol: Facilitar diálogos, validar políticas                │
+    │                                                              │
+    │ [CADENAS PRODUCTIVAS]                                        │
+    │ Identific. de actividades beneficiadas:                     │
+    │  • Agricultura (riego, procesamiento)  [Sí/No/Investigar]   │
+    │  • Pequeños negocios                   [Sí/No/Investigar]   │
+    │  • Servicios locales                   [Sí/No/Investigar]   │
+    │                                                              │
+    │ [INDICADORES A MONITOREAR]                                   │
+    │ • Participación comunitaria en diagnóstico _____ %          │
+    │ • Número de stakeholders identificados _____ actores        │
+    │ • Claridad sobre oportunidades de valor _____ (1-10)        │
+    │                                                              │
+    └─────────────────────────────────────────────────────────────┘
+    
+    Selecciona [Métricas] | [Territorios] | [Hotspots] | [Tendencias]
+    (Las 4 pestañas originales funcionan igual)
+
+
+════════════════════════════════════════════════════════════════════════════════
+RESUMEN DE SIMPLIFICACIONES Y MEJORAS
+════════════════════════════════════════════════════════════════════════════════
+
+SIMPLIFICACIONES:
+  ✓ 4 fases → 3 fases principales (PREP, EJEC, SOST)
+  ✓ 3 subcapas consistentes por fase (reconocimiento/diseño/acción)
+  ✓ Panel N°0 TRANSVERSAL (no es "otra fase")
+  ✓ Lenguaje más simple y operativo
+  ✓ Gates claros de decisión (3 gates principales)
+
+MEJORAS:
+  ✓ Énfasis explícito en PROTAGONISTAS en CADA SUBCAPA
+  ✓ Visualización de EVOLUCIÓN de roles (matriz dinámicas)
+  ✓ Integración de CADENAS PRODUCTIVAS como transversal
+  ✓ Business Model Canvas como elemento visible siempre
+  ✓ Indicadores COMUNITARIOS (no solo técnicos)
+  ✓ Gobernanza como sistema, no como tarea
+  ✓ Aplicable a contextos muy diferentes (desarrollado/en desarrollo)
+
+════════════════════════════════════════════════════════════════════════════════

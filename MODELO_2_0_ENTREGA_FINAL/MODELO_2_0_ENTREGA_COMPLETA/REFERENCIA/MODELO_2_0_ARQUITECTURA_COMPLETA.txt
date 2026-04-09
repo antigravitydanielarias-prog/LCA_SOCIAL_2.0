@@ -1,0 +1,636 @@
+MODELO 2.0: ARQUITECTURA COMPLETA DE EVALUACIÓN MULTIDIMENSIONAL
+═════════════════════════════════════════════════════════════════════════════════
+
+VERSIÓN: 2.0
+FECHA: 2026-04-06
+ROL: Analista Metodológico de Micro-redes Cognitivo-Territoriales
+OBJETIVO: Evaluación estructurada, verificable y operativa de actores en fases
+
+═════════════════════════════════════════════════════════════════════════════════
+PARTE 1: ARQUITECTURA VISUAL DEL MODELO 2.0
+═════════════════════════════════════════════════════════════════════════════════
+
+                   ┌──────────────────────────────┐
+                   │         PANEL 0              │
+                   │ Actores + readiness global   │
+                   │ historial + alertas          │
+                   └─────────────┬────────────────┘
+                                 │
+              ┌──────────────────┼──────────────────┐
+              │                  │                  │
+        ┌─────▼─────┐      ┌─────▼─────┐      ┌────▼─────┐
+        │  FASE 1   │      │  FASE 2   │      │  FASE 3  │
+        │Preparación│      │Ejecución  │      │Sostenib. │
+        └─────┬─────┘      └─────┬─────┘      └────┬─────┘
+              │                  │                  │
+      ┌───────┼───────┐  ┌───────┼───────┐  ┌───────┼───────┐
+      │       │       │  │       │       │  │       │       │
+   ┌──▼──┐ ┌──▼──┐ ┌──▼──┐   ┌──▼──┐ ┌──▼──┐ ┌──▼──┐ ┌──▼──┐ ┌──▼──┐ ┌──▼──┐
+   │1A   │ │1B   │ │1C   │   │2A   │ │2B   │ │2C   │ │3A   │ │3B   │ │3C   │
+   │Rec. │ │Eva. │ │Ali. │   │Dis. │ │Adi. │ │Pue. │ │Ope. │ │Mon. │ │Evo. │
+   └──┬──┘ └──┬──┘ └──┬──┘   └──┬──┘ └──┬──┘ └──┬──┘ └──┬──┘ └──┬──┘ └──┬──┘
+      │       │       │        │       │       │        │       │       │
+      └───────┴───────┴────────┴───────┴───────┴────────┴───────┴───────┘
+                                 │
+                     ┌───────────▼───────────┐
+                     │      MICRO-RED        │
+                     │ Actor × Fase × Subcapa│
+                     └───────────┬───────────┘
+                                 │
+        ┌────────────────────────┼─────────────────────────┐
+        │                        │                         │
+┌───────▼────────┐      ┌────────▼────────┐       ┌───────▼────────┐
+│ 8 dimensiones   │      │ IOM operativa   │       │ Contexto       │
+│ cognitivas      │      │ material        │       │ territorial    │
+│ (IA,IAT,ICI...) │      │ (infraestructura│       │ (DANE,proxies) │
+│                │      │  equipos,acceso)│       │                │
+└───────┬─────────┘      └────────┬────────┘       └───────┬────────┘
+        │                         │                         │
+        └──────────────┬──────────┴──────────┬──────────────┘
+                       │                     │
+               ┌───────▼───────┐     ┌──────▼─────────┐
+               │ Interpretación │     │ Memoria temporal│
+               │ puente:        │     │ histórico:      │
+               │ Cog ↔ Terr     │     │ ¿cambio o      │
+               │                │     │ estancamiento? │
+               └───────┬───────┘     └──────┬─────────┘
+                       │                     │
+                       └──────────┬──────────┘
+                                  │
+                          ┌───────▼────────┐
+                          │   GATE 2.0     │
+                          │ Bloqueado /    │
+                          │ Condicional /  │
+                          │ Habilitado     │
+                          └───────┬────────┘
+                                  │
+                          ┌───────▼────────┐
+                          │  Salida JSON   │
+                          │ Diagnóstico +  │
+                          │ Recomendación +│
+                          │ Costo tránsito │
+                          └─────────────────┘
+
+
+═════════════════════════════════════════════════════════════════════════════════
+PARTE 2: TRES CAPAS DE ANÁLISIS (MICRO-RED)
+═════════════════════════════════════════════════════════════════════════════════
+
+CAPA 1: COGNITIVA (Modelos mentales)
+─────────────────────────────────────
+8 Índices a medir simultáneamente:
+
+1. IA (Índice de Aspiraciones)
+   Mide: Horizonte educativo, expectativa laboral, autoeficacia, movilidad
+   Rango: 0-100
+   Variable clave: "¿Qué futuro imagina el actor en 5 años?"
+
+2. IAT (Índice de Apropiación Tecnológica)
+   Mide: Utilidad percibida, confianza, facilidad uso, intención adopción
+   Rango: 0-100
+   Variable clave: "¿Confía en tecnología renovable para su contexto?"
+
+3. ICI (Índice de Confianza Institucional)
+   Mide: Confianza autoridades, transparencia, eficacia estatal, participación
+   Rango: 0-100
+   Variable clave: "¿Confía en que el proyecto será equitativo?"
+
+4. IVC (Índice de Valoración Cultural)
+   Mide: Orgullo territorial, valoración local, respeto a costumbres
+   Rango: 0-100
+   Variable clave: "¿La modernidad amenaza o potencia nuestra identidad?"
+
+5. IME (Índice de Mentalidad Emprendedora)
+   Mide: Intención emprender, autoconfianza, capacidad técnica, innovación
+   Rango: 0-100
+   Variable clave: "¿Se ve generando ingresos adicionales con este proyecto?"
+
+6. IIN (Índice de Igualdad Normativa)
+   Mide: Creencias sobre roles género, liderazgo, equidad, participación
+   Rango: 0-100
+   Variable clave: "¿Las mujeres tienen espacio en decisiones del proyecto?"
+
+7. IPRA (Índice de Percepción de Riesgo y Adaptación)
+   Mide: Conciencia climática, vulnerabilidad percibida, adaptación
+   Rango: 0-100
+   Variable clave: "¿Entiende el riesgo climático como motivación?"
+
+8. ICS (Índice de Consumo Sostenible)
+   Mide: Preferencia productos locales, disposición pagar, hábitos
+   Rango: 0-100
+   Variable clave: "¿Compraría/consumiría energía local si es más cara?"
+
+
+CAPA 2: OPERATIVA-MATERIAL (IOM)
+─────────────────────────────────
+Infraestructura Operativa-Material: Lo tangible que SOPORTA el proyecto
+
+Subdimensiones a medir:
+
+A. INFRAESTRUCTURA
+   • Acceso internet (0-100%)
+   • Equipamiento existente (lista de qué hay)
+   • Espacios disponibles (m² para instalación)
+   • Conectividad eléctrica (capacidad red local)
+
+B. CAPACIDAD TÉCNICA
+   • Técnicos locales disponibles (#)
+   • Experiencia previa en proyectos similares (sí/no)
+   • Acceso a proveedores de equipamiento (distancia, costo)
+   • Capacidad de mantenimiento (equipos, herramientas)
+
+C. RECURSOS FINANCIEROS
+   • Fondos propios disponibles (%)
+   • Acceso a crédito/donaciones (sí/no)
+   • Capacidad de cofinanciamiento (%)
+   • Experiencia gestión presupuestal comunitaria (sí/no)
+
+D. RECURSOS HUMANOS
+   • Disponibilidad de tiempo comunitario (horas/semana)
+   • Líderes capacitados para gestionar (#)
+   • Conflictividad histórica que limita colaboración (escala 0-10)
+   • Rotación esperada de líderes (riesgo: alto/medio/bajo)
+
+E. GOBERNANZA OPERATIVA
+   • Estructura formal de toma decisiones (documentada: sí/no)
+   • Mecanismo de resolución de conflictos (existe: sí/no)
+   • Transparencia en cuentas (auditoria: sí/no)
+   • Inclusión de mujeres en decisiones (%)
+
+SCORE IOM: Promedio de A, B, C, D, E normalizado a 0-100
+
+
+CAPA 3: TERRITORIAL-CONTEXTUAL (Anclas de realidad)
+──────────────────────────────────────────────────────
+Datos administrativos/DANE que contextualizan lo cognitivo
+
+Indicadores principales:
+
+A. POBREZA Y DESIGUALDAD
+   • Pobreza multidimensional (%)
+   • Informalidad (%)
+   • Gini de ingresos (0-1)
+   • Acceso a servicios básicos (%)
+
+B. EDUCACIÓN
+   • Años promedio de educación (años)
+   • Tasa neta de matrícula (%)
+   • Tasa de deserción (%)
+   • Brecha género en educación (%)
+
+C. EMPLEO
+   • Tasa de desempleo (%)
+   • Tasa de subempleo (%)
+   • Ingresos promedio ($)
+   • Sectores económicos dominantes (lista)
+
+D. ACCESO DIGITAL
+   • Cobertura internet (%)
+   • Uso de plataformas digitales (%)
+   • Brecha digital por género (sí/no)
+   • Experiencia previa con TIC (sí/no)
+
+E. VULNERABILIDAD AMBIENTAL
+   • Exposición a riesgo climático (bajo/medio/alto)
+   • Experiencia con desastres (# eventos últimos 5 años)
+   • Degradación ambiental local (tipo, severidad)
+   • Dependencia de recursos naturales (% ingresos)
+
+F. HISTORIAL CON PROYECTOS
+   • Proyectos previos en territorio (# últimos 5 años)
+   • Tasa de finalización (%)
+   • Satisfacción comunitaria con proyectos (1-10)
+   • Promesas incumplidas por autoridades (# casos)
+
+
+═════════════════════════════════════════════════════════════════════════════════
+PARTE 3: ELEMENTOS TRANSVERSALES
+═════════════════════════════════════════════════════════════════════════════════
+
+PUENTE INTERPRETATIVO (Conectar Cognitivo ↔ Territorial)
+────────────────────────────────────────────────────────
+
+Ejemplo de lógica de puente:
+
+IF IA (aspiración) = 45/100 AND Contexto = 67% pobreza
+THEN: "Aspiración RACIONAL, no erosionada"
+      "Intervención debe reconstruir horizonte"
+
+IF ICI (confianza) = 28/100 AND Contexto = promesas incumplidas (#3)
+THEN: "Desconfianza JUSTIFICADA por historia"
+      "REQUIERE diálogos de reparación ANTES de 1B"
+
+IF IAT (tecnología) = 38/100 AND Contexto = 25% internet
+THEN: "Brecha es MATERIAL (acceso), no cognitiva (disposición)"
+      "Inversión debe ser infraestructura PRIMERO, capacitación SEGUNDO"
+
+
+MEMORIA TEMPORAL-HISTÓRICO (Cambio en el tiempo)
+──────────────────────────────────────────────────
+
+Si existen datos previos de la MISMA micro-red:
+
+Comparar: Índice actual vs hace 6 meses / hace 1 año
+
+Patrones a detectar:
+
+1. MEJORA CONSISTENTE: ↗ IA mejora + ICI mejora + contexto mejora
+   → Proyecto tiene momentum
+
+2. MEJORA PARCIAL: ↗ IA mejora pero ↘ ICI empeora
+   → Hay conflictos internos que frenan avance
+
+3. ESTANCAMIENTO: → Índices planos + contexto sin cambio
+   → CRÍTICO: revisar si hay inversión suficiente
+
+4. DETERIORO: ↘ Índices caen + contexto empeora
+   → ALARMA: proyecto en riesgo de colapso
+
+5. REVERSIÓN: Había avance (mes 1-3), ahora hay recaída (mes 4-6)
+   → Hay ruptura de confianza o evento disruptivo
+
+
+═════════════════════════════════════════════════════════════════════════════════
+PARTE 4: GATE 2.0 Y ESTADOS
+═════════════════════════════════════════════════════════════════════════════════
+
+Cada micro-red genera UN ESTADO DE GATE:
+
+BLOCKED (Bloqueado)
+───────────────────
+Condiciones:
+• Algún índice COGNITIVO < 30 (crítico)
+• IOM < 40 (infraestructura muy deficiente)
+• Contexto territorial muestra factores bloqueantes críticos
+• Historial temporal muestra DETERIORO
+
+Acción:
+→ NO proceder a siguiente subcapa
+→ Ejecutar intervenciones previas de fortalecimiento
+→ Re-evaluar en 3-6 meses
+
+Ejemplo:
+COMUNIDAD_FASE1A = ICI=28 (< umbral 40) → BLOCKED
+Acción: "Diálogos de reparación de confianza (6 meses)"
+
+
+CONDITIONAL (Condicional)
+──────────────────────────
+Condiciones:
+• Algún índice cognitivo está 40-60 (moderado-bajo)
+• IOM 40-60 (hay infraestructura pero insuficiente)
+• Contexto territorial mixto (hay oportunidades pero también barreras)
+• Historial temporal muestra avance lento pero consistente
+
+Acción:
+→ PROCEDER a siguiente subcapa PERO con condiciones
+→ Ejecutar acciones complementarias paralelas
+→ Monitoreo intenso de indicadores críticos
+→ Re-evaluación en 3 meses
+
+Ejemplo:
+GOBIERNO_FASE1B = IA=55, IAT=45, IOM=52, Contexto=cambios políticos
+→ CONDITIONAL
+Condiciones: "Proceder a 1C SOLO si se asegura continuidad política"
+
+
+ENABLED (Habilitado)
+────────────────────
+Condiciones:
+• Todos los índices cognitivos > 60
+• IOM > 60 (infraestructura sólida)
+• Contexto territorial favorable
+• Historial temporal muestra mejora consistente
+
+Acción:
+→ PROCEDER a siguiente subcapa sin restricciones
+→ Mantener monitoreo regular
+→ Acelerar cronograma si es viable
+
+Ejemplo:
+TÉCNICOS_FASE2A = IA=75, IAT=78, ICI=72, IVC=65, IME=80, IOM=72
+→ ENABLED
+"Listo para implementación acelerada"
+
+
+═════════════════════════════════════════════════════════════════════════════════
+PARTE 5: SALIDA ESTRUCTURA JSON (Compatible Streamlit)
+═════════════════════════════════════════════════════════════════════════════════
+
+ESTRUCTURA OBLIGATORIA:
+
+{
+  "metadata": {
+    "actor": "COMUNIDAD",
+    "fase": "1",
+    "subcapa": "A",
+    "fecha_evaluacion": "2026-04-06",
+    "evaluador": "nombre",
+    "nivel_confianza": 85
+  },
+  
+  "dimensiones_cognitivas": {
+    "IA": {"valor": 45, "tendencia": "→", "comentario": "..."},
+    "IAT": {"valor": 38, "tendencia": "↘", "comentario": "..."},
+    "ICI": {"valor": 28, "tendencia": "↘", "comentario": "..."},
+    "IVC": {"valor": 72, "tendencia": "↗", "comentario": "..."},
+    "IME": {"valor": 32, "tendencia": "→", "comentario": "..."},
+    "IIN": {"valor": 55, "tendencia": "↗", "comentario": "..."},
+    "IPRA": {"valor": 41, "tendencia": "→", "comentario": "..."},
+    "ICS": {"valor": 38, "tendencia": "→", "comentario": "..."}
+  },
+  
+  "iom_operativo_material": {
+    "infraestructura": 35,
+    "capacidad_tecnica": 40,
+    "recursos_financieros": 25,
+    "recursos_humanos": 50,
+    "gobernanza_operativa": 45,
+    "score_iom_promedio": 39,
+    "detalles": {
+      "internet_cobertura": "25%",
+      "tecnicos_disponibles": "2",
+      "fondos_propios": "15%",
+      "conflictividad_historica": "7/10"
+    }
+  },
+  
+  "contexto_territorial": {
+    "pobreza_multidimensional": 67,
+    "informalidad": 83,
+    "educacion_promedio_anos": 4.2,
+    "acceso_internet": 25,
+    "riesgo_climatico": "medio",
+    "proyectos_previos": 2,
+    "tasa_finalizacion_previa": "50%",
+    "promesas_incumplidas": 3
+  },
+  
+  "memoria_temporal": {
+    "tiene_historial": true,
+    "evaluacion_anterior": "2025-10-06",
+    "dias_transcurridos": 182,
+    "cambio_ia": "+5 puntos (mejora lenta)",
+    "cambio_ici": "-8 puntos (deterioro)",
+    "patron": "MEJORA PARCIAL",
+    "analisis": "Aspiraciones suben pero confianza cae. Hay conflictos internos."
+  },
+  
+  "puentes_interpretativos": [
+    {
+      "dimensión": "IA",
+      "valor_cognitivo": 45,
+      "contexto_territorial": "67% pobreza",
+      "interpretacion": "Aspiración RACIONAL. No es erosión, es realismo frente deprivación.",
+      "implicacion": "Intervención debe reconstruir horizonte de futuro"
+    },
+    {
+      "dimensión": "ICI",
+      "valor_cognitivo": 28,
+      "contexto_territorial": "3 promesas incumplidas",
+      "interpretacion": "Desconfianza JUSTIFICADA por historia. No es resistencia irracional.",
+      "implicacion": "CRÍTICO: Diálogos de reparación ANTES de proceder"
+    }
+  ],
+  
+  "barreras_diagnosticadas": [
+    {
+      "barrera": "Confianza institucional erosionada",
+      "dimensión": "ICI",
+      "origen": "Histórico (promesas incumplidas)",
+      "severidad": "crítica",
+      "bloqueante_para_fase": true,
+      "tiempo_estimado_resolucion": "6 meses"
+    },
+    {
+      "barrera": "Apropiación tecnológica baja",
+      "dimensión": "IAT",
+      "origen": "Material (acceso a internet 25%) + Cognitivo (baja confianza)",
+      "severidad": "moderada",
+      "bloqueante_para_fase": false,
+      "tiempo_estimado_resolucion": "3 meses"
+    }
+  ],
+  
+  "activos_diagnosticados": [
+    {
+      "activo": "Identidad cultural fuerte",
+      "dimensión": "IVC",
+      "valor": 72,
+      "aprovechamiento": "Diseñar narrativa del proyecto como 'Energía con identidad local'",
+      "potencial_valor_agregado": "Alto"
+    },
+    {
+      "activo": "Liderazgo local identificado",
+      "dimensión": "IOM",
+      "descripcion": "2 líderes con credibilidad comunitaria",
+      "aprovechamiento": "Entrenarlos como facilitadores del proyecto",
+      "potencial_valor_agregado": "Alto"
+    }
+  ],
+  
+  "interdependencias_clave": [
+    {
+      "from": "ICI (confianza)",
+      "to": "IA (aspiración)",
+      "reason": "Si no confía, no imagina futuro mejor",
+      "criticidad": "alta"
+    },
+    {
+      "from": "IOM (infraestructura)",
+      "to": "IAT (apropiación tecnología)",
+      "reason": "Sin internet, es difícil generar confianza en lo digital",
+      "criticidad": "alta"
+    }
+  ],
+  
+  "costo_transicion": {
+    "tiempo_meses": 6,
+    "tiempo_desglose": {
+      "dialogos_reparacion": 6,
+      "capacitacion_digital": 3,
+      "formacion_gobernanza": 2,
+      "paralelo_con_siguiente_fase": true
+    },
+    "recursos_necesarios": {
+      "facilitador_externo": "Sí (1 persona, 6 meses)",
+      "capacitadores_tecnologia": "Sí (2 personas, 3 meses)",
+      "materiales_capacitacion": "$5,000 USD",
+      "fondos_participacion": "Comunitarios aportan 15%"
+    },
+    "risk_transicion": {
+      "nivel": "alto",
+      "factores": [
+        "Deserción por frustración comunitaria",
+        "Cambio político municipal",
+        "Evento climático disruptivo"
+      ],
+      "mitigacion": [
+        "Comunicación semanal de progreso",
+        "Acuerdos formales con nuevo gobierno",
+        "Fondo de contingencia"
+      ]
+    }
+  },
+  
+  "diagnostico_narrativo": "La comunidad enfrenta una situación de desconfianza histórica justificada por promesas incumplidas previas. Aunque sus aspiraciones son realistas (no erosionadas), la falta de confianza institucional (ICI=28) es BLOQUEANTE para avanzar. La identidad cultural fuerte (IVC=72) es un activo valioso. La brecha tecnológica es material (25% internet) más que cognitiva. Se requiere una inversión de 6 meses en diálogos de reparación y capacitación paralela antes de proceder a evaluación integral (1B).",
+  
+  "estado_gate": "blocked",
+  
+  "recomendaciones": [
+    {
+      "prioridad": "crítica",
+      "accion": "Ejecutar 'Diálogos de Reparación Comunitaria' con facilitador externo",
+      "tiempo": "6 meses",
+      "responsable": "Coordinador local + Facilitador externo",
+      "resultado_esperado": "ICI >= 40"
+    },
+    {
+      "prioridad": "alta",
+      "accion": "Capacitación digital básica (paralelo con diálogos)",
+      "tiempo": "3 meses",
+      "responsable": "2 capacitadores tecnología",
+      "resultado_esperado": "IAT >= 50, cobertura 80% de adultos"
+    },
+    {
+      "prioridad": "media",
+      "accion": "Talleres de reconstrucción de aspiraciones comunitarias",
+      "tiempo": "2 meses",
+      "responsable": "Coordinador local",
+      "resultado_esperado": "IA >= 55"
+    }
+  ],
+  
+  "alertas": [
+    {
+      "tipo": "crítica",
+      "mensaje": "ICI=28 es bloqueante. Proceder sin resolver confianza es alto riesgo de fracaso.",
+      "accion_inmediata": "Pausar evaluación de viabilidad hasta ICI>=40"
+    },
+    {
+      "tipo": "alta",
+      "mensaje": "Patrón temporal muestra deterioro en ICI en últimos 6 meses (-8 puntos)",
+      "accion_inmediata": "Investigar evento disruptivo reciente (conflicto, traición, etc.)"
+    },
+    {
+      "tipo": "moderada",
+      "mensaje": "IOM=39 es insuficiente para implementación de tecnología compleja",
+      "accion_inmediata": "Simplificar diseño técnico o invertir en infraestructura previa"
+    }
+  ],
+  
+  "datos_faltantes": [
+    "Historial de conflictos internos específicos (documentar eventos 2024-2025)",
+    "Capacidad de cofinanciamiento comunitario (encuesta de willingness to pay)",
+    "Experiencia previa específica con energía renovable (cualitativo)",
+    "Distribución de opiniones por género/edad (desagregación IA, IAT, ICI por subgrupos)"
+  ],
+  
+  "siguiente_paso": {
+    "gate_actual": "blocked",
+    "accion": "Re-evaluar en 6 meses",
+    "criterio_desbloqueo": "ICI >= 40 + Acuerdos documentados de participación",
+    "fecha_reevaluacion": "2026-10-06",
+    "responsable_seguimiento": "Coordinador local"
+  }
+}
+
+
+═════════════════════════════════════════════════════════════════════════════════
+PARTE 6: REGLAS DE INTERPRETACIÓN (Obligatorias)
+═════════════════════════════════════════════════════════════════════════════════
+
+1. NO INVENTES DATOS
+   Si falta información crítica, decláralo en "datos_faltantes"
+   Usa "null" en JSON cuando no tengas valor
+
+2. DISTINGUE TRES CAPAS
+   • COGNITIVO: Lo que piensan/sienten (IA, IAT, ICI...)
+   • OPERATIVO-MATERIAL: Lo que tienen/pueden hacer (IOM)
+   • TERRITORIAL: El contexto estructural (DANE, historial)
+   
+   No confundas "baja aspiración por pobreza" (racional) con "baja aspiración por erosión" (problema)
+
+3. INTERPRETA COMO RED, NO COMO VARIABLES AISLADAS
+   • IA baja + ICI baja + contexto pobreza = PATRÓN
+   • IA baja + ICI alta + contexto pobreza = PATRÓN DISTINTO
+   Explica los patrones, no los números
+
+4. CONSIDERA TENDENCIA TEMPORAL
+   • ↗ mejora consistente: POSITIVO
+   • ↘ deterioro: ALARMA
+   • → estancamiento: PREOCUPANTE
+   • ↗↘ vaivén: INESTABILIDAD
+
+5. CLASIFICACIÓN DE GATE
+   Solo uno de tres: blocked | conditional | enabled
+   No "partially blocked" ni "mostly enabled"
+   Justifica el estado en "diagnostico_narrativo"
+
+6. EXPLICA POR QUÉ
+   No digas "ICI=28"
+   Di "ICI=28 porque hay 3 promesas incumplidas en últimos 2 años"
+
+7. LENGUAJE TÉCNICO EN ESPAÑOL
+   Usa términos del modelo: ICI, IOM, puente interpretativo, etc.
+   Sé preciso y verificable
+
+8. NO MEZCLES FASES
+   COMUNIDAD_1A ≠ COMUNIDAD_1B
+   Cada micro-red es independiente (aunque conectadas)
+
+9. EXPLICITA TENSIONES
+   IF Cognitivo ≠ Territorial
+   Declara la tensión
+   Explica qué predomina
+
+10. SALIDA SIEMPRE JSON
+    Estructura obligatoria
+    Validable y Streamlit-compatible
+
+
+═════════════════════════════════════════════════════════════════════════════════
+PARTE 7: CASOS DE USO DEL MODELO 2.0
+═════════════════════════════════════════════════════════════════════════════════
+
+CASO 1: Evaluación de entrada de una nueva micro-red
+───────────────────────────────────────────────────────
+Acción: Ejecutar análisis COMUNIDAD_FASE1A desde cero
+Datos: Panel 0 inicial + 8 dimensiones + IOM + contexto territorial
+Salida: JSON con diagnóstico y estado GATE
+Decisión: ¿Proceder a 1A con este actor o invertir en pre-capacitación?
+
+CASO 2: Re-evaluación después de intervención
+──────────────────────────────────────────────
+Acción: Re-medir COMUNIDAD_FASE1A después de 6 meses de diálogos
+Datos: Nuevas respuestas + historial anterior
+Salida: JSON con cambios, tendencias, patrón temporal
+Decisión: ¿Se abrió el GATE? ¿Proceder a 1B?
+
+CASO 3: Diagnóstico de por qué un proyecto se estancó
+──────────────────────────────────────────────────────
+Acción: Ejecutar análisis TODOS los actores × FASE 2B
+Datos: Mediciones actuales + historial de cambios
+Salida: JSON para cada actor mostrando dónde está el cuello de botella
+Decisión: ¿Es problema de confianza? ¿Infraestructura? ¿Gobernanza?
+
+CASO 4: Comparación de actores en misma fase
+──────────────────────────────────────────────
+Acción: Generar 5 JSONs (COMUNIDAD, GOBIERNO, TÉCNICOS, ECONÓMICOS, EXTERNOS)
+        todos en FASE 2A
+Datos: Mediciones en paralelo
+Salida: Matriz de interdependencias, ver quién bloquea a quién
+Decisión: ¿En qué orden desbloqueamos?
+
+CASO 5: Prueba de viabilidad de escalado
+──────────────────────────────────────────
+Acción: Ejecutar análisis COMUNIDAD_FASE3C en territorio NUEVO
+Datos: Datos del nuevo territorio (similares al primero)
+Salida: JSON mostrando viabilidad de replicación
+Decisión: ¿Se puede replicar el modelo o hay factores locales bloqueantes?
+
+
+═════════════════════════════════════════════════════════════════════════════════
+
+FIN ARQUITECTURA MODELO 2.0
+

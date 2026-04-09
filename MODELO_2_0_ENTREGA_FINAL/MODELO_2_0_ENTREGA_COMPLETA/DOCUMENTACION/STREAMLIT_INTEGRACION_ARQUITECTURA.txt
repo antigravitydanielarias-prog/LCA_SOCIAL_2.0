@@ -1,0 +1,543 @@
+INTEGRACIÓN MODELO 2.0 EN STREAMLIT
+ARQUITECTURA DE LA APLICACIÓN
+═════════════════════════════════════════════════════════════════════════════════
+
+RESUMEN EJECUTIVO
+═════════════════════════════════════════════════════════════════════════════════
+
+La aplicación Streamlit integra los 5 archivos Excel en un PIPELINE que:
+
+1. CARGA los datos automáticamente
+2. CALCULA las micro-redes en tiempo real
+3. VISUALIZA resultados con gráficos interactivos
+4. GENERA reportes JSON estructurados
+5. PERMITE DESCARGAR resultados para análisis posteriores
+
+
+═════════════════════════════════════════════════════════════════════════════════
+ARQUITECTURA DE STREAMLIT
+═════════════════════════════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ APLICACIÓN STREAMLIT: MODELO 2.0 - Evaluación Multidimensional por Micro-R. │
+└─────────────────────────────────────────────────────────────────────────────┘
+                                   │
+                ┌──────────────────┼──────────────────┐
+                │                  │                  │
+        ┌───────▼────────┐  ┌──────▼──────┐  ┌──────▼──────┐
+        │ SIDEBAR (Menú) │  │ MAIN CONTENT │  │ CACHE/STATE │
+        │ Selecciones    │  │ Visualización│  │ Session var │
+        │ Filtros        │  │ Análisis     │  │ Memoria     │
+        └───────┬────────┘  └──────┬──────┘  └──────┬──────┘
+                │                  │                │
+                └──────────────────┼────────────────┘
+                                   │
+        ┌──────────────────────────▼──────────────────────────┐
+        │          PIPELINE DE PROCESAMIENTO                  │
+        │                                                     │
+        │  ┌─────────────┐    ┌──────────────┐   ┌────────┐  │
+        │  │ Cargar      │───→│ Validar      │──→│Calcular│  │
+        │  │ Archivos    │    │ Integridad   │   │Micro-R.│  │
+        │  │ Excel       │    │ Datos        │   │        │  │
+        │  └─────────────┘    └──────────────┘   └────┬───┘  │
+        │                                              │      │
+        │  ┌─────────────┐    ┌──────────────┐   ┌────▼───┐  │
+        │  │ Generar     │◄───│ Generar      │◄──│JSON    │  │
+        │  │ Gráficos    │    │ Recomendac.  │   │Output  │  │
+        │  └─────────────┘    └──────────────┘   └────────┘  │
+        │                                                     │
+        └─────────────────────────────────────────────────────┘
+                                   │
+                    ┌──────────────▼──────────────┐
+                    │   SALIDAS                   │
+                    ├─────────────────────────────┤
+                    │ • Gráficos interactivos     │
+                    │ • Tabla de datos            │
+                    │ • JSON JSON estructurado    │
+                    │ • Descargas (CSV, JSON)     │
+                    └─────────────────────────────┘
+
+
+═════════════════════════════════════════════════════════════════════════════════
+ESTRUCTURA DE PESTAÑAS PRINCIPALES
+═════════════════════════════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ [📊 Dashboard] [👥 Panel 0] [🔬 Micro-Red] [📈 Series] [⚙️ Config] [💾 Export]│
+└─────────────────────────────────────────────────────────────────────────────┘
+
+PESTAÑA 1: DASHBOARD (Visión general)
+   ├─ Matriz de actores × fases × subcapas
+   ├─ Estado de gates (BLOCKED/CONDITIONAL/ENABLED)
+   ├─ Alertas críticas
+   └─ Resumen de readiness comunitaria
+
+PESTAÑA 2: PANEL 0 (Protagonistas)
+   ├─ Tabla de 5 actores con readiness
+   ├─ Gráfico de comparación entre actores
+   ├─ Historial de cambios (últimos 12 meses)
+   ├─ Capacidades y barreras por actor
+   └─ Identificación de alertas
+
+PESTAÑA 3: MICRO-RED (Análisis profundo)
+   ├─ Selector: [Actor] [Fase] [Subcapa]
+   ├─ Radar 8D (8 dimensiones coloreadas)
+   ├─ Tabla de dimensiones cognitivas
+   ├─ Contexto territorial (DANE)
+   ├─ Memoria temporal (gráfico de series)
+   ├─ IOM operativa-material
+   ├─ Puente interpretativo
+   ├─ Estado de GATE + justificación
+   ├─ Costo de transición
+   └─ Recomendaciones
+
+PESTAÑA 4: SERIES TEMPORALES (Seguimiento)
+   ├─ Selector de dimensiones a visualizar
+   ├─ Gráfico de líneas 12 meses (todas las dimensiones)
+   ├─ Anotaciones de shocks/eventos
+   ├─ Análisis de tendencias
+   └─ Proyecciones a corto plazo
+
+PESTAÑA 5: CONFIGURACIÓN
+   ├─ Cargar/actualizar archivos Excel
+   ├─ Validar integridad de datos
+   ├─ Ajustar umbrales de gates
+   ├─ Configurar parámetros de proyección
+   └─ Administración de datos históricos
+
+PESTAÑA 6: EXPORT
+   ├─ Descargar JSON completo de micro-red
+   ├─ Descargar CSV de dimensiones
+   ├─ Generar PDF de reporte
+   ├─ Copiar JSON al portapapeles
+   └─ Historial de exportaciones
+
+
+═════════════════════════════════════════════════════════════════════════════════
+DETALLE: PESTAÑA "DASHBOARD"
+═════════════════════════════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 📊 DASHBOARD - MODELO 2.0                                                  │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│ ┌───────────────────────────────────────────────────────────────────────┐  │
+│ │ 🚨 ALERTAS CRÍTICAS (3 activas)                                       │  │
+│ │                                                                       │  │
+│ │ ❌ BLOQUEADO: Comunidad × Fase 1 × Subcapa 1B                         │  │
+│ │    Razón: ICI=28 < 40 (confianza crítica)                            │  │
+│ │    Acción: Diálogos reparación (6 meses)                             │  │
+│ │    Costo: $62,000                                                    │  │
+│ │                                                                       │  │
+│ │ ⚠️  CONDICIONAL: Gobierno × Fase 1 × Subcapa 1C                       │  │
+│ │    Razón: Marco regulatorio pendiente                                │  │
+│ │    Plazo: 4 meses para cumplir condiciones                           │  │
+│ │                                                                       │  │
+│ │ 🟡 DETERIORO: Actores Externos (Readiness -7 en 6 meses)             │  │
+│ │    Razón: Restricciones nuevas en fondos                             │  │
+│ │    Impacto: Presupuesto proyecto en riesgo                           │  │
+│ │                                                                       │  │
+│ └───────────────────────────────────────────────────────────────────────┘  │
+│                                                                             │
+│ ┌───────────────────────────────────────────────────────────────────────┐  │
+│ │ MATRIZ: ESTADO DE GATES POR ACTOR × FASE                            │  │
+│ │                                                                       │  │
+│ │           FASE 1         FASE 2         FASE 3                        │  │
+│ │        1A  1B  1C     2A  2B  2C     3A  3B  3C                       │  │
+│ │ ─────────────────────────────────────────────────────────────────   │  │
+│ │ COMUNIDAD  ✓   ❌   ❌     ?   ?   ?     ?   ?   ?   ← BLOQUEADO 1B  │  │
+│ │ GOBIERNO   ✓   ✓   ⚠️    ?   ?   ?     ?   ?   ?   ← CONDICIONAL 1C│  │
+│ │ TÉCNICOS   ✓   ✓   ✓     ?   ?   ?     ?   ?   ?   ← LIMPIO         │  │
+│ │ ECONÓMICOS ✓   ✓   ?     ?   ?   ?     ?   ?   ?   ← EN ESPERA      │  │
+│ │ EXTERNOS   ⚠️  ?   ?     ?   ?   ?     ?   ?   ?   ← RIESGO         │  │
+│ │                                                                       │  │
+│ │ Leyenda: ✓=Habilitado  ❌=Bloqueado  ⚠️=Condicional  ?=Pendiente     │  │
+│ └───────────────────────────────────────────────────────────────────────┘  │
+│                                                                             │
+│ ┌───────────────────────────────────────────────────────────────────────┐  │
+│ │ READINESS COMUNITARIA AGREGADA                                       │  │
+│ │                                                                       │  │
+│ │ Actual:     ████░░░░░░  17/100  (CRÍTICO)                            │  │
+│ │ Requerida:  ██████████░ 40/100  (para Fase 1)                        │  │
+│ │ Brecha:     ████████░░░ -23     (inversión necesaria)               │  │
+│ │                                                                       │  │
+│ │ Tendencia (12m):  ↑ Mejora lenta (+12 puntos)                        │  │
+│ │ Proyección (3m):  20/100 (si continúa = mejor)                       │  │
+│ │                                                                       │  │
+│ └───────────────────────────────────────────────────────────────────────┘  │
+│                                                                             │
+│ ┌───────────────────────────────────────────────────────────────────────┐  │
+│ │ COMPARACIÓN POR ACTOR                                                │  │
+│ │                                                                       │  │
+│ │ Comunidad        ███░░░░░░░  17/100  ↑ +12 en 12m                    │  │
+│ │ Gobierno         ██░░░░░░░░   8/100  ↓  -4 en 12m  ⚠️                │  │
+│ │ Técnicos         ███████░░░░ 42/100  ↑  +7 en 12m                    │  │
+│ │ Económicos       ██░░░░░░░░  25/100  ↑  +3 en 12m                    │  │
+│ │ Externos         ██░░░░░░░░  18/100  ↓  -7 en 12m  ⚠️                │  │
+│ │                                                                       │  │
+│ └───────────────────────────────────────────────────────────────────────┘  │
+│                                                                             │
+│ [Acciones] [Descargar CSV] [Detalle por Actor]                            │  │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+
+═════════════════════════════════════════════════════════════════════════════════
+DETALLE: PESTAÑA "MICRO-RED"
+═════════════════════════════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 🔬 MICRO-RED - ANÁLISIS PROFUNDO                                           │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│ ┌─────────────────────────────────────────────────────────────────────┐   │
+│ │ SELECTORES                                                          │   │
+│ │ Actor: [Comunidad        ▼] | Fase: [1        ▼] | Subcapa: [1A ▼]│   │
+│ │                                                                     │   │
+│ │ [⟳ Actualizar] [💾 Guardar] [📋 Copiar JSON] [🔗 Compartir]       │   │
+│ └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                             │
+│ ┌────────────────────────────────┬─────────────────────────────────────┐  │
+│ │ LEFT COLUMN (50%)              │ RIGHT COLUMN (50%)                  │  │
+│ ├────────────────────────────────┼─────────────────────────────────────┤  │
+│ │                                │                                     │  │
+│ │ 📊 RADAR 8D                    │ 📋 TABLA DE DIMENSIONES             │  │
+│ │                                │                                     │  │
+│ │     IA (45)                    │ Dimensión │ Valor │ Estado    │    │  │
+│ │    /    \                      │ ───────────────────────────  │    │  │
+│ │   /      \                     │ IA        │ 45    │ Moderado  │    │  │
+│ │  --------                      │ IAT       │ 38    │ Bajo ⚠️   │    │  │
+│ │ /        \                     │ ICI       │ 28    │ Crítico ❌│    │  │
+│ │ /          \                   │ IVC       │ 72    │ Fuerte ✓  │    │  │
+│ │────────────  ← IAT (38)        │ IME       │ 32    │ Bajo ⚠️   │    │  │
+│ │\          /                    │ IIN       │ 55    │ Neutral   │    │  │
+│ │ \        /                     │ IPRA      │ 41    │ Moderado  │    │  │
+│ │  \      /                      │ ICS       │ 38    │ Bajo ⚠️   │    │  │
+│ │   \    /                       │                                     │  │
+│ │    ────                        │                                     │  │
+│ │      ICI (28) ← CRÍTICO        │                                     │  │
+│ │                                │ IOM Operativa-Material: 42/100     │  │
+│ │                                │ Contexto Territorial: 67% pobreza   │  │
+│ │                                │                                     │  │
+│ └────────────────────────────────┴─────────────────────────────────────┘  │
+│                                                                             │
+│ ┌─────────────────────────────────────────────────────────────────────┐   │
+│ │ 🌍 CONTEXTO TERRITORIAL (DANE 2024)                                │   │
+│ │                                                                     │   │
+│ │ • Pobreza multidimensional: 67% (vs 11.5% nacional)               │   │
+│ │ • Informalidad: 83% (vs 80% rural)                                │   │
+│ │ • Educación promedio: 4.2 años (vs 10.1 nacional)                │   │
+│ │ • Acceso internet: 25% (vs 18% rural)                            │   │
+│ │ • Desempleo juvenil: 22% (vs 20% rural)                          │   │
+│ │ • Participación ciudadana: 12% (baja)                            │   │
+│ │                                                                     │   │
+│ │ INTERPRETACIÓN: Contexto de deprivación severa. Las barreras      │   │
+│ │ cognitivas (ICI=28, IAT=38) son RACIONALES dada la historia.      │   │
+│ │ No son resistencia sino cautela por experiencias negativas.       │   │
+│ │                                                                     │   │
+│ └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                             │
+│ ┌─────────────────────────────────────────────────────────────────────┐   │
+│ │ ⏰ MEMORIA TEMPORAL (últimos 12 meses)                             │   │
+│ │                                                                     │   │
+│ │                     Ago   Nov   Feb   May   Ago                    │   │
+│ │ IA:               35    38    42    44    45   ↑ Mejora lenta     │   │
+│ │ IAT:              38    38    38    38    38   → Estable          │   │
+│ │ ICI:              32    29    25    26    28   ↓ Shock + Recup    │   │
+│ │ IVC:              64    66    69    70    72   ↑ Mejora estable   │   │
+│ │ IME:              30    31    31    32    32   ↑ Mejora lenta     │   │
+│ │ IIN:              53    54    55    55    55   ↑ Mejora lenta     │   │
+│ │ IPRA:             38    41    42    42    41   ↑ Mejora, luego →  │   │
+│ │ ICS:              35    36    37    37    38   ↑ Mejora lenta     │   │
+│ │                                                                     │   │
+│ │ 🚨 SHOCK DETECTADO: Feb 2024 (Promesa no cumplida) → ICI -5      │   │
+│ │ ✓ RECUPERACIÓN: May 2024 (Diálogos reparación) → ICI +1          │   │
+│ │                                                                     │   │
+│ │ PATRÓN: Mejora general pero vulnerable a shocks políticos.        │   │
+│ │         ICI requiere vigilancia continua.                         │   │
+│ │                                                                     │   │
+│ └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                             │
+│ ┌─────────────────────────────────────────────────────────────────────┐   │
+│ │ 🔗 PUENTE INTERPRETATIVO                                          │   │
+│ │                                                                     │   │
+│ │ "La comunidad muestra ASPIRACIONES MODERADAS (IA=45) pero          │   │
+│ │ DESCONFIANZA CRÍTICA (ICI=28). Esto es RACIONAL dado el contexto   │   │
+│ │ de pobreza (67%) e incumplimientos históricos. IDENTIDAD CULTURAL  │   │
+│ │ FUERTE (IVC=72) es activo subutilizado. BARRERA PRINCIPAL no es   │   │
+│ │ falta de voluntad sino FALTA DE CONFIANZA JUSTIFICADA.            │   │
+│ │                                                                     │   │
+│ │ La distancia entre contexto territorial (67% pobreza) y            │   │
+│ │ dimensiones cognitivas sugiere que las barreras cognitivas         │   │
+│ │ son SÍNTOMAS de deprivación, no CAUSAS. Inversión debe ser en    │   │
+│ │ REPARACIÓN DE CONFIANZA (6 meses) antes de proceder a diagnóstico.│   │
+│ │                                                                     │   │
+│ └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                             │
+│ ┌─────────────────────────────────────────────────────────────────────┐   │
+│ │ 🚪 ESTADO DE GATE: BLOQUEADO                                      │   │
+│ │                                                                     │   │
+│ │ CRITERIO: ICI=28 < 40 (umbral mínimo)                             │   │
+│ │ JUSTIFICACIÓN: Sin confianza mínima, diagnóstico será rechazado.   │   │
+│ │              Invertir primero en reparación, luego en evaluación.  │   │
+│ │                                                                     │   │
+│ │ ACCIONES REQUERIDAS PARA DESBLOQUEAR:                             │   │
+│ │  ☐ Diálogos de reparación (6 meses)                              │   │
+│ │  ☐ Re-evaluar ICI (meta: ICI >= 40)                              │   │
+│ │  ☐ Formalizar acuerdos con autoridades                           │   │
+│ │                                                                     │   │
+│ │ COSTO DE TRANSICIÓN: $77,500 (incl. coordinador + talleres)       │   │
+│ │ DURACIÓN: 9 meses (6 prep + 3 ejecución)                         │   │
+│ │ BENEFICIO ESPERADO: Evitar bloqueo permanente (-$500K potential) │   │
+│ │                                                                     │   │
+│ └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                             │
+│ ┌─────────────────────────────────────────────────────────────────────┐   │
+│ │ 💡 RECOMENDACIONES (Priorizado)                                   │   │
+│ │                                                                     │   │
+│ │ 1. [CRÍTICA] Iniciar "Diálogos de Reparación"                    │   │
+│ │    • Responsable: Coordinador + facilitador externo               │   │
+│ │    • Plazo: Iniciar YA, duración 6 meses                         │   │
+│ │    • Indicador: ICI pase a 40+ (encuesta de seguimiento)         │   │
+│ │                                                                     │   │
+│ │ 2. [ALTA] Capacitación Digital Básica                            │   │
+│ │    • Responsable: Proveedor técnico                               │   │
+│ │    • Plazo: 3 meses (paralelo a diálogos)                       │   │
+│ │    • Indicador: IAT mejore a 50+ (60% con email funcional)       │   │
+│ │                                                                     │   │
+│ │ 3. [ALTA] Talleres sobre Aspiraciones & Futuro                   │   │
+│ │    • Responsable: Psicólogo comunitario                           │   │
+│ │    • Plazo: 2 meses (paralelo)                                  │   │
+│ │    • Indicador: IA se mantenga (no descienda)                    │   │
+│ │                                                                     │   │
+│ │ 4. [MEDIA] Integrar Identidad Cultural en Narrativa               │   │
+│ │    • Responsable: Comunicador + líderes locales                   │   │
+│ │    • Plazo: Continuo durante 1A                                 │   │
+│ │    • Indicador: Comunidad reconozca energía como coherente        │   │
+│ │                                                                     │   │
+│ └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                             │
+│ [🔄 Generar Nuevo Análisis] [💾 Guardar JSON] [📥 Descargar PDF]         │  │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+
+═════════════════════════════════════════════════════════════════════════════════
+PESTAÑA "EXPORT" - DESCARGAS Y REPORTES
+═════════════════════════════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 💾 EXPORT - DESCARGAS Y REPORTES                                            │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│ ┌─────────────────────────────────────────────────────────────────────┐   │
+│ │ DESCARGA DE MICRO-RED ACTUAL                                       │   │
+│ │                                                                     │   │
+│ │ Micro-red: [COMUNIDAD × FASE 1 × SUBCAPA 1A]                       │   │
+│ │                                                                     │   │
+│ │ [📄 Descargar JSON Completo]                                       │   │
+│ │   └─ Formato: application/json                                     │   │
+│ │   └─ Tamaño: ~45 KB                                                │   │
+│ │   └─ Nombre: micro_red_comunidad_1_1a_2024_08_15.json             │   │
+│ │                                                                     │   │
+│ │ [📊 Descargar CSV (Dimensiones)]                                   │   │
+│ │   └─ Formato: CSV delimitado                                       │   │
+│ │   └─ Incluye: Valores, tendencias, contexto                        │   │
+│ │                                                                     │   │
+│ │ [📋 Copiar JSON al Portapapeles]                                   │   │
+│ │   └─ Útil para: Compartir vía email, pegar en herramientas         │   │
+│ │                                                                     │   │
+│ │ [🔗 Generar Link Compartible]                                      │   │
+│ │   └─ Genera link único que otros pueden ver sin descargar          │   │
+│ │                                                                     │   │
+│ └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                             │
+│ ┌─────────────────────────────────────────────────────────────────────┐   │
+│ │ REPORTES CONSOLIDADOS                                              │   │
+│ │                                                                     │   │
+│ │ [📄 Reporte Panel 0 (Protagonistas)]                               │   │
+│ │   └─ Incluye: Estado de todos los 5 actores, historiales, alertas  │   │
+│ │   └─ Formato: PDF de 3 páginas                                     │   │
+│ │                                                                     │   │
+│ │ [📊 Reporte de Gates por Fase]                                     │   │
+│ │   └─ Matriz completa de estado de gates (45 micro-redes)           │   │
+│ │   └─ Formato: PDF interactivo                                      │   │
+│ │                                                                     │   │
+│ │ [📈 Reporte de Series Temporales]                                  │   │
+│ │   └─ Gráficos de 12 meses para todas las dimensiones               │   │
+│ │   └─ Análisis de tendencias y volatilidad                          │   │
+│ │   └─ Formato: PDF de 5 páginas                                     │   │
+│ │                                                                     │   │
+│ │ [💰 Reporte de Costos de Transición]                               │   │
+│ │   └─ Desglose de inversión requerida por fase/actor                │   │
+│ │   └─ Formato: Excel con análisis de sensibilidad                   │   │
+│ │                                                                     │   │
+│ │ [📋 Reporte Completo (Todas las Micro-redes)]                      │   │
+│ │   └─ JSON consolidado de 45 micro-redes                            │   │
+│ │   └─ Tamaño: ~2 MB                                                 │   │
+│ │   └─ Tiempo generación: 30 segundos                                │   │
+│ │                                                                     │   │
+│ └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                             │
+│ ┌─────────────────────────────────────────────────────────────────────┐   │
+│ │ HISTORIAL DE EXPORTACIONES                                         │   │
+│ │                                                                     │   │
+│ │ Fecha              │ Tipo              │ Actor × Fase │ Estado    │   │
+│ │ ────────────────────────────────────────────────────────────────  │   │
+│ │ 2024-08-15 14:32   │ JSON Micro-red    │ COMUNIDAD×1A │ ✓        │   │
+│ │ 2024-08-15 13:15   │ PDF Panel 0       │ Global       │ ✓        │   │
+│ │ 2024-08-14 11:45   │ CSV Dimensiones   │ TÉCNICOS×2   │ ✓        │   │
+│ │                                                                     │   │
+│ └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                             │
+│ [⚙️ Configurar exportaciones predeterminadas]                             │  │
+│ [🗑️ Limpiar historial]                                                    │  │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+
+═════════════════════════════════════════════════════════════════════════════════
+FLUJO DE CARGA DE DATOS EN STREAMLIT (Backend)
+═════════════════════════════════════════════════════════════════════════════════
+
+@st.cache_data
+def cargar_panel_0():
+    """Carga archivo PANEL_0_PROTAGONISTAS.xlsx y crea dataframe"""
+    df = pd.read_excel('datos/PANEL_0_PROTAGONISTAS.xlsx', 
+                       sheet_name='PROTAGONISTAS_READINESS')
+    return df
+
+@st.cache_data
+def cargar_dimensiones_cognitivas():
+    """Carga los 8 archivos de dimensiones y consolida en dict"""
+    dimensiones = {}
+    for dim in ['IA', 'IAT', 'ICI', 'IVC', 'IME', 'IIN', 'IPRA', 'ICS']:
+        df = pd.read_excel(f'datos/DIMENSIONES_COGNITIVAS.xlsx', 
+                          sheet_name=f'{dim}_ASPIRACIONES' if dim=='IA' else f'{dim}...')
+        # Calcular índices por actor y fase
+        dimensiones[dim] = calcular_indice(df)
+    return dimensiones
+
+def calcular_micro_red(actor, fase, subcapa):
+    """Calcula micro-red completa para un actor × fase × subcapa"""
+    
+    # 1. Obtener dimensiones cognitivas
+    dimensiones = cargar_dimensiones_cognitivas()
+    
+    # 2. Obtener contexto territorial
+    contexto = cargar_contexto_territorial()
+    
+    # 3. Obtener IOM operativa-material
+    iom = cargar_operativa_material()
+    
+    # 4. Obtener memoria temporal
+    memoria = cargar_memoria_temporal()
+    
+    # 5. Interpretar y generar JSON
+    resultado_json = generar_json_completo(
+        actor, fase, subcapa,
+        dimensiones, contexto, iom, memoria
+    )
+    
+    # 6. Determinar estado de gate
+    gate_state = determinar_gate(resultado_json)
+    
+    # 7. Calcular costo de transición
+    costo = calcular_costo_transicion(actor, gate_state)
+    
+    return resultado_json, gate_state, costo
+
+def determinar_gate(resultado_json):
+    """Determina si gate es BLOCKED, CONDITIONAL o ENABLED"""
+    
+    dimensiones = resultado_json['dimensiones_cognitivas']
+    
+    # Lógica de gates
+    if resultado_json['dimension_operativa_material']['IOM'] < 30:
+        return 'blocked'
+    
+    if dimensiones['ICI']['valor'] < 40:
+        return 'blocked'
+    
+    if any(v['valor'] < 25 for k, v in dimensiones.items()):
+        return 'blocked'
+    
+    # Verificar si hay condiciones
+    if resultado_json['contexto_territorial']['pobreza_multidimensional'] > 50:
+        return 'conditional'
+    
+    return 'enabled'
+
+
+═════════════════════════════════════════════════════════════════════════════════
+VISUALIZACIÓN DE RESULTADOS EN STREAMLIT
+═════════════════════════════════════════════════════════════════════════════════
+
+# En la pestaña MICRO-RED:
+
+col1, col2 = st.columns(2)
+
+with col1:
+    # Radar 8D
+    fig = go.Figure()
+    
+    dimensiones_valores = [
+        resultado['dimensiones_cognitivas']['IA']['valor'],
+        resultado['dimensiones_cognitivas']['IAT']['valor'],
+        # ... etc para todas las 8
+    ]
+    
+    fig.add_trace(go.Scatterpolar(
+        r=dimensiones_valores,
+        theta=['IA', 'IAT', 'ICI', 'IVC', 'IME', 'IIN', 'IPRA', 'ICS'],
+        fill='toself',
+        name=f'{actor} Fase {fase}'
+    ))
+    
+    st.plotly_chart(fig, use_container_width=True)
+
+with col2:
+    # Tabla de dimensiones
+    tabla_dim = pd.DataFrame({
+        'Dimensión': ['IA', 'IAT', 'ICI', 'IVC', 'IME', 'IIN', 'IPRA', 'ICS'],
+        'Valor': dimensiones_valores,
+        'Estado': [
+            'Moderado' if v >= 40 and v <= 60 else 
+            'Bajo' if v < 40 else 
+            'Fuerte'
+            for v in dimensiones_valores
+        ]
+    })
+    
+    st.dataframe(tabla_dim, use_container_width=True)
+
+# Gráfico de series temporales
+fig_series = go.Figure()
+for dim in ['IA', 'IAT', 'ICI', 'IVC', 'IME', 'IIN', 'IPRA', 'ICS']:
+    fig_series.add_trace(go.Scatter(
+        x=resultado['memoria_temporal']['fechas'],
+        y=resultado['memoria_temporal'][dim],
+        mode='lines+markers',
+        name=dim
+    ))
+st.plotly_chart(fig_series, use_container_width=True)
+
+# Estado de GATE
+if resultado['estado_gate'] == 'blocked':
+    st.error(f"🚪 BLOQUEADO: {resultado['justificacion_gate']}")
+elif resultado['estado_gate'] == 'conditional':
+    st.warning(f"🚪 CONDICIONAL: {resultado['justificacion_gate']}")
+else:
+    st.success(f"🚪 HABILITADO: Proceder sin condiciones")
+
+# JSON output
+st.json(resultado)
+
+
+═════════════════════════════════════════════════════════════════════════════════
+
+RESUMEN: Al completar esta arquitectura, el sistema Streamlit es COMPLETAMENTE
+OPERATIVO para analizar cualquier micro-red del Modelo 2.0, generar reportes JSON
+estructurados, y facilitar toma de decisiones informada sobre transiciones entre
+fases en proyectos de energía comunitaria.
+

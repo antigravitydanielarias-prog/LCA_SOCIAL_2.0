@@ -1,0 +1,612 @@
+GUÍA STREAMLIT: INTERFAZ Y FLUJO DE USUARIO MODELO 2.0
+═════════════════════════════════════════════════════════════════════════════════
+
+VERSIÓN: 1.0
+APLICACIÓN: S-LCA Timeline Analysis - Modelo 2.0
+OBJETIVO: Interfaz intuitiva para cargar, analizar y exportar micro-redes
+
+═════════════════════════════════════════════════════════════════════════════════
+PARTE 1: ESTRUCTURA GENERAL DE NAVEGACIÓN
+═════════════════════════════════════════════════════════════════════════════════
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ S-LCA Timeline Analysis - Modelo 2.0                                │
+│ [📊 PANEL 0] [📋 FASE 1] [📋 FASE 2] [📋 FASE 3] [📁 DATOS] [⚙️ CONFIG]
+└──────────────────────────────────────────────────────────────────────┘
+
+
+═════════════════════════════════════════════════════════════════════════════════
+PARTE 2: PESTAÑA 1 - PANEL 0 (PROTAGONISTAS)
+═════════════════════════════════════════════════════════════════════════════════
+
+VISTA INICIAL:
+──────────────
+
+┌─────────────────────────────────────────────────────────────────────┐
+│ 👥 PANEL 0: PROTAGONISTAS Y READINESS GLOBAL                        │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                     │
+│ 📈 READINESS COMUNITARIA TOTAL: [21/100] 🔴 CRÍTICO               │
+│ Requerido para Fase 1: 40/100                                      │
+│ Brecha: -19 puntos                                                  │
+│                                                                     │
+│ ─────────────────────────────────────────────────────────────────  │
+│                                                                     │
+│ [VISTA ACTUAL] 👥 Protagonistas | 📊 Readiness | 📈 Tendencias | 📋 Historial
+│                                                                     │
+│                                                                     │
+├─ VISTA: 👥 PROTAGONISTAS ────────────────────────────────────────┤
+│                                                                     │
+│  TABLA INTERACTIVA:                                                 │
+│  ┌──────────┬────────┬──────┬──────────┬──────────┬─────────┐      │
+│  │ Actor    │ Rol    │Read. │Tendencia │Historial │Alertas  │      │
+│  ├──────────┼────────┼──────┼──────────┼──────────┼─────────┤      │
+│  │COMUNIDAD │Clave   │  17% │ →        │ 17%      │ ⚠️      │      │
+│  │GOBIERNO  │Clave   │  12% │ ↘        │ 18%      │ ⚠️⚠️    │      │
+│  │TÉCNICOS  │Clave   │  42% │ ↗        │ 38%      │ -       │      │
+│  │ECONÓMIC. │Clave   │  25% │ →        │ 25%      │ ⚠️      │      │
+│  │EXTERNOS  │Clave   │   8% │ →        │ 8%       │ ⚠️⚠️⚠️  │      │
+│  └──────────┴────────┴──────┴──────────┴──────────┴─────────┘      │
+│                                                                     │
+│  ACCIONES:                                                          │
+│  [+ Agregar Actor] [🔍 Detalle] [📥 Importar CSV] [📤 Exportar]   │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
+
+VISTA: 📊 READINESS (Gráfico)
+──────────────────────────────
+
+┌─────────────────────────────────────────────────────────────────────┐
+│                                                                     │
+│  GRÁFICO DE BARRAS HORIZONTAL (con colores):                       │
+│                                                                     │
+│  COMUNIDAD   ████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 17%│
+│  GOBIERNO    ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 12%│
+│  TÉCNICOS    ████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 42%│
+│  ECONÓMIC.   █████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 25%│
+│  EXTERNOS    █░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 8% │
+│                                                                     │
+│  Meta: ███████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 40%
+│                                                                     │
+│  [Colores: Rojo <30 | Amarillo 30-60 | Verde >60]                 │
+│                                                                     │
+│  INTERPRETACIÓN:                                                    │
+│  ⚠️ CRÍTICO: Readiness muy por debajo de lo requerido              │
+│  📌 INVERSIÓN PREVIA: Necesario fortalecer capacidades antes de    │
+│     proceder a Fase 1                                              │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
+
+VISTA: 📈 TENDENCIAS (Cambio temporal)
+───────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────────────┐
+│                                                                     │
+│  TABLA CON SPARKLINES:                                              │
+│                                                                     │
+│  Actor      │ 6m atrás │ Actual │ Cambio │ Sparkline │ Patrón    │
+│  ────────────┼──────────┼────────┼────────┼───────────┼─────────  │
+│  COMUNIDAD  │ 17%      │ 17%    │ →      │ ─────     │ Estable   │
+│  GOBIERNO   │ 18%      │ 12%    │ ↘-6pts │ ╲╲╲       │ Deterioro │
+│  TÉCNICOS   │ 38%      │ 42%    │ ↗+4pts │ ╱╱╱       │ Mejora    │
+│  ECONÓMIC.  │ 25%      │ 25%    │ →      │ ─────     │ Estable   │
+│  EXTERNOS   │ 8%       │ 8%     │ →      │ ─────     │ Estable   │
+│                                                                     │
+│  ANÁLISIS TEMPORAL:                                                 │
+│  ⚠️ GOBIERNO está deteriorándose (-6pts)                           │
+│  ✓ TÉCNICOS está mejorando (+4pts)                                 │
+│  → COMUNIDAD, ECONÓMICOS, EXTERNOS están estancados                │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
+
+VISTA: 📋 HISTORIAL (Detalle de cambios)
+───────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────────────┐
+│                                                                     │
+│  TABLA EXPANDIDA:                                                   │
+│                                                                     │
+│  Actor     │ Eval 1    │ Eval 2    │ Eval 3    │ Actual   │ Tendencia
+│  ──────────┼───────────┼───────────┼───────────┼──────────┼────────
+│  COMUNIDAD │ 17% (ago2 │ 16% (dic2 │ 17% (mar2 │ 17% (may) │ →
+│            │ 5)        │ 5)        │ 6)        │          │
+│  GOBIERNO  │ 18% (ago2 │ 15% (dic2 │ 12% (mar2 │ 12% (may) │ ↘
+│            │ 5)        │ 5)        │ 6)        │          │
+│  ...       │           │           │           │          │
+│                                                                     │
+│  [Descargar Historial Completo] [Gráfico temporal] [Análisis]      │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
+
+
+═════════════════════════════════════════════════════════════════════════════════
+PARTE 3: PESTAÑA 2 - ANÁLISIS DE FASES (1, 2, 3)
+═════════════════════════════════════════════════════════════════════════════════
+
+INTERFAZ GENERAL:
+──────────────────
+
+┌─────────────────────────────────────────────────────────────────────┐
+│ 📋 ANÁLISIS POR FASE                                                │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                     │
+│ SELECTORES:                                                         │
+│ Fase: [FASE 1 ▼] Subcapa: [1A: Reconocimiento ▼] Actor: [COMUNIDAD ▼]
+│                                                                     │
+│ [Analizar] [Cargar datos] [Generar JSON] [Exportar PDF]            │
+│                                                                     │
+│ ─────────────────────────────────────────────────────────────────  │
+│                                                                     │
+│ 📊 RESULTADO DEL ANÁLISIS:                                          │
+│                                                                     │
+├─────────────────────────────────────────────────────────────────────┤
+
+CUANDO SELECCIONA FASE 1A - COMUNIDAD:
+
+┌─────────────────────────────────────────────────────────────────────┐
+│ COMUNIDAD × FASE 1 × SUBCAPA A: RECONOCIMIENTO                      │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                     │
+│ 📅 Fecha evaluación: 2026-04-06  │  Evaluador: [nombre]  │ Confianza: 85%
+│                                                                     │
+│ ═══════════════════════════════════════════════════════════════════ │
+│                                                                     │
+│ SECCIÓN 1: DIMENSIONES COGNITIVAS (RADAR + TABLA)                  │
+│                                                                     │
+│  ┌─────────────────────────────┐  ┌──────────────────────────────┐│
+│  │   RADAR 8 DIMENSIONES       │  │  TABLA DE VALORES            ││
+│  │                             │  │                              ││
+│  │         IA●                 │  │ Dimensión │ Valor │ Estado  ││
+│  │    IAT● ●ICI               │  │ ───────────┼───────┼─────────││
+│  │        ●                   │  │ IA        │ 45    │ OK      ││
+│  │ IME●      ●IIN              │  │ IAT       │ 38    │ ALERTA  ││
+│  │   IPRA●   ICS              │  │ ICI       │ 28    │ CRÍTICO ││
+│  │         ●                   │  │ IVC       │ 72    │ OK      ││
+│  │                             │  │ IME       │ 32    │ ALERTA  ││
+│  │ [Rango: 0=exterior 100=centro]  │ IIN       │ 55    │ OK      ││
+│  │                             │  │ IPRA      │ 41    │ OK      ││
+│  │                             │  │ ICS       │ 38    │ ALERTA  ││
+│  └─────────────────────────────┘  └──────────────────────────────┘│
+│                                                                     │
+│  INTERPRETACIÓN DIMENSIONES:                                        │
+│  ✓ IVC (Identidad) = 72: FORTALEZA - Aprovechar en narrativa       │
+│  ✓ IIN (Equidad) = 55: NEUTRO - Monitorear si crecimiento         │
+│  ✓ IPRA (Riesgo climático) = 41: MODERADO - Existe conciencia      │
+│  ⚠️ IAT (Tecnología) = 38: DEFICIENTE - Brecha de acceso 25% int. │
+│  ⚠️ IME (Emprendimiento) = 32: BAJO - Falta confianza en ingresos │
+│  ❌ ICI (Confianza) = 28: CRÍTICO - 3 promesas incumplidas        │
+│  ✓ IA (Aspiraciones) = 45: RACIONAL - No erosionada               │
+│                                                                     │
+│ ─────────────────────────────────────────────────────────────────  │
+│                                                                     │
+│ SECCIÓN 2: INFRAESTRUCTURA OPERATIVA-MATERIAL (IOM)                │
+│                                                                     │
+│  DESGLOSE POR SUBDIMENSIÓN:                                        │
+│                                                                     │
+│  A. Infraestructura (Internet, equipos, espacios): 35%  ──────────│
+│  B. Capacidad técnica (Técnicos, skills, acceso): 40%  ─────────── │
+│  C. Recursos financieros (Fondos, crédito, cof.): 25%  ──────     │
+│  D. Recursos humanos (Tiempo, líderes, rotación): 50%  ──────────── │
+│  E. Gobernanza operativa (Decisiones, transparencia): 45%  ────────│
+│                                                                     │
+│  PROMEDIO IOM: [39/100] 🔴 DEFICIENTE                             │
+│                                                                     │
+│  DETALLES:                                                          │
+│  • Cobertura internet: 25% (brecha material)                       │
+│  • Técnicos disponibles: 2 personas                                │
+│  • Fondos propios: 15%                                             │
+│  • Conflictividad histórica: 7/10 (alto)                           │
+│  • Gobernanza formal: No documentada                               │
+│                                                                     │
+│ ─────────────────────────────────────────────────────────────────  │
+│                                                                     │
+│ SECCIÓN 3: CONTEXTO TERRITORIAL (Anclaje de realidad)              │
+│                                                                     │
+│  INDICADOR            │ VALOR   │ AÑO    │ INTERPRETACIÓN         │
+│  ────────────────────┼─────────┼────────┼────────────────────────│
+│  Pobreza multi-      │ 67%     │ 2024   │ Muy elevada            │
+│  dimensional         │         │        │                        │
+│  Informalidad        │ 83%     │ 2024   │ Crítica para proyecto  │
+│  Educación promedio  │ 4.2 años│ 2024   │ Muy por debajo         │
+│  Acceso internet     │ 25%     │ 2025   │ Brecha digital clara   │
+│  Riesgo climático    │ MEDIO   │ 2025   │ Sequías, inundaciones  │
+│  Proyectos previos   │ 2       │ 5 años│ Cobertura limitada     │
+│  Tasa finalización   │ 50%     │ 5 años│ Media, con abandono    │
+│  Promesas incumplidas│ 3       │ 2024-25│ DOCUMENTO factor crítico│
+│                                                                     │
+│ ─────────────────────────────────────────────────────────────────  │
+│                                                                     │
+│ SECCIÓN 4: PUENTE INTERPRETATIVO (Cognitivo ↔ Territorial)         │
+│                                                                     │
+│  TABLA DE RELACIONES:                                              │
+│                                                                     │
+│  DIMENSIÓN │ VALOR │ CONTEXTO       │ INTERPRETACIÓN           │
+│  ──────────┼───────┼────────────────┼──────────────────────────│
+│  IA        │ 45    │ 67% pobreza    │ RACIONAL (no erosionada)│
+│  (aspiración)     │ (deprivación)  │ Intervención: reconstruir│
+│            │       │                │ horizonte de futuro      │
+│  ──────────┼───────┼────────────────┼──────────────────────────│
+│  ICI       │ 28    │ 3 promesas     │ JUSTIFICADA             │
+│  (confianza)      │ incumplidas    │ Intervención: diálogos de│
+│            │       │ (historial)    │ reparación ANTES de 1B   │
+│  ──────────┼───────┼────────────────┼──────────────────────────│
+│  IAT       │ 38    │ 25% internet   │ BRECHA MATERIAL         │
+│  (tecnología)     │ (acceso)       │ Intervención: infraestr.│
+│            │       │                │ primero, capacitación 2º │
+│                                                                     │
+│ ─────────────────────────────────────────────────────────────────  │
+│                                                                     │
+│ SECCIÓN 5: MEMORIA TEMPORAL-HISTÓRICO                              │
+│                                                                     │
+│  CAMBIOS EN LOS ÚLTIMOS 6 MESES:                                   │
+│                                                                     │
+│  IA:   45 (actual) vs 40 (hace 6m) = +5 ↗ MEJORA                 │
+│  IAT:  38 (actual) vs 38 (hace 6m) = 0  → ESTABLE                │
+│  ICI:  28 (actual) vs 36 (hace 6m) = -8 ↘ DETERIORO              │
+│  IVC:  72 (actual) vs 67 (hace 6m) = +5 ↗ MEJORA                 │
+│  IME:  32 (actual) vs 32 (hace 6m) = 0  → ESTABLE                │
+│  IIN:  55 (actual) vs 52 (hace 6m) = +3 ↗ MEJORA                 │
+│  IPRA: 41 (actual) vs 41 (hace 6m) = 0  → ESTABLE                │
+│  ICS:  38 (actual) vs 38 (hace 6m) = 0  → ESTABLE                │
+│                                                                     │
+│  PATRÓN TEMPORAL: MEJORA PARCIAL ⚠️                                │
+│  • Aspiraciones suben (+5 IA)                                      │
+│  • Pero confianza CADE (-8 ICI) ← CRÍTICO                          │
+│  • Indicador de conflictos internos                                │
+│                                                                     │
+│ ─────────────────────────────────────────────────────────────────  │
+│                                                                     │
+│ SECCIÓN 6: BARRERAS Y ACTIVOS                                      │
+│                                                                     │
+│  🚨 BARRERAS (por severidad):                                       │
+│  ┌─────────────────────────────────────────────────────────────┐ │
+│  │ 1. CONFIANZA EROSIONADA (ICI=28) ← BLOQUEANTE              │ │
+│  │    Origen: Histórico (promesas incumplidas)                │ │
+│  │    Severidad: CRÍTICA                                      │ │
+│  │    Tiempo resolución: 6 meses                              │ │
+│  │                                                             │ │
+│  │ 2. Apropiación tecnológica baja (IAT=38)                   │ │
+│  │    Origen: Material (25% internet) + Cognitivo (confianza) │ │
+│  │    Severidad: MODERADA                                     │ │
+│  │    Tiempo resolución: 3-4 meses                            │ │
+│  │                                                             │ │
+│  │ 3. Mentalidad emprendedora débil (IME=32)                  │ │
+│  │    Origen: Cognitivo (falta autoconfianza)                 │ │
+│  │    Severidad: MODERADA                                     │ │
+│  │    Tiempo resolución: 4-6 meses                            │ │
+│  └─────────────────────────────────────────────────────────────┘ │
+│                                                                     │
+│  ✅ ACTIVOS (por potencial):                                       │
+│  ┌─────────────────────────────────────────────────────────────┐ │
+│  │ 1. IDENTIDAD CULTURAL FUERTE (IVC=72) ✓ APROVECHABLE       │ │
+│  │    Cómo usarlo: Narrativa "Energía con Identidad Local"    │ │
+│  │    Valor agregado: ALTO                                    │ │
+│  │                                                             │ │
+│  │ 2. Liderazgo local identificado                            │ │
+│  │    Detalle: 2 líderes con credibilidad comunitaria         │ │
+│  │    Cómo usarlo: Entrenarlos como facilitadores             │ │
+│  │    Valor agregado: ALTO                                    │ │
+│  │                                                             │ │
+│  │ 3. Disponibilidad de tiempo comunitario                    │ │
+│  │    Detalle: Alto acceso a mano de obra local               │ │
+│  │    Cómo usarlo: Construcción, instalación, mantenimiento   │ │
+│  │    Valor agregado: MEDIO-ALTO                              │ │
+│  └─────────────────────────────────────────────────────────────┘ │
+│                                                                     │
+│ ═══════════════════════════════════════════════════════════════════ │
+│                                                                     │
+│ SECCIÓN 7: GATE 2.0 Y DECISIÓN                                     │
+│                                                                     │
+│  ┌─────────────────────────────────────────────────────────────┐ │
+│  │ ESTADO DEL GATE 1A → 1B:  🔴 BLOCKED                        │ │
+│  │                                                             │ │
+│  │ RAZÓN PRINCIPAL:                                            │ │
+│  │ ICI = 28, por debajo del umbral mínimo de 40               │ │
+│  │ (Confianza institucional crítica)                           │ │
+│  │                                                             │ │
+│  │ TIEMPO ESTIMADO HASTA REEVALUACIÓN:                         │ │
+│  │ 6 meses                                                     │ │
+│  │                                                             │ │
+│  │ ACCIÓN INMEDIATA:                                           │ │
+│  │ Ejecutar "Diálogos de Reparación Comunitaria"              │ │
+│  │ con facilitador externo (6 meses)                           │ │
+│  │                                                             │ │
+│  │ ACCIONES PARALELAS:                                         │ │
+│  │ • Capacitación digital básica (3 meses)                    │ │
+│  │ • Talleres de reconstrucción de aspiraciones (2 meses)     │ │
+│  │ • Formalización de gobernanza (2 meses)                    │ │
+│  │                                                             │ │
+│  │ CRITERIO DE DESBLOQUEO:                                     │ │
+│  │ ICI >= 40 + Acuerdos documentados de participación         │ │
+│  │                                                             │ │
+│  │ FECHA DE REEVALUACIÓN:                                      │ │
+│  │ 2026-10-06 (6 meses desde ahora)                           │ │
+│  │                                                             │ │
+│  │ RESPONSABLE DE SEGUIMIENTO:                                 │ │
+│  │ Coordinador local + Facilitador externo                     │ │
+│  │                                                             │ │
+│  └─────────────────────────────────────────────────────────────┘ │
+│                                                                     │
+│ ═══════════════════════════════════════════════════════════════════ │
+│                                                                     │
+│ SECCIÓN 8: RECOMENDACIONES DETALLADAS                              │
+│                                                                     │
+│  📋 PLAN DE ACCIÓN PARA FASE 1A (COMUNIDAD):                      │
+│                                                                     │
+│  PRIORIDAD CRÍTICA:                                                │
+│  ├─ Acción: "Diálogos de Reparación Comunitaria"                 │
+│  │  Tiempo: 6 meses                                              │
+│  │  Responsable: Coordinador local + Facilitador externo         │
+│  │  Resultado esperado: ICI >= 40                                │
+│  │  Costo estimado: $8,000 USD (facilitador 6 meses)            │
+│  │  Riesgo: Deserción si se percibe como manipulación           │
+│  │  Mitigación: Facilitador externo neutral                      │
+│  │                                                               │
+│  PRIORIDAD ALTA:                                                  │
+│  ├─ Acción: Capacitación digital básica (paralelo con diálogos)  │
+│  │  Tiempo: 3 meses                                              │
+│  │  Responsable: 2 capacitadores de tecnología                   │
+│  │  Resultado esperado: IAT >= 50, cobertura 80% adultos         │
+│  │  Costo estimado: $5,000 USD (materiales + facilitadores)      │
+│  │  Riesgo: Abandono si no hay internet en hogares               │
+│  │  Mitigación: Enfoque centrado en utilidad, no tecnología      │
+│  │                                                               │
+│  PRIORIDAD MEDIA:                                                 │
+│  ├─ Acción: Talleres de reconstrucción de aspiraciones           │
+│  │  Tiempo: 2 meses (paralelo)                                   │
+│  │  Responsable: Coordinador local                               │
+│  │  Resultado esperado: IA >= 55                                 │
+│  │  Costo estimado: $2,000 USD                                   │
+│  │                                                               │
+│  ├─ Acción: Formalización de gobernanza comunitaria              │
+│  │  Tiempo: 2 meses (paralelo)                                   │
+│  │  Responsable: Especialista en gobernanza + líderes locales    │
+│  │  Resultado esperado: Estructura documentada, transparencia     │
+│  │  Costo estimado: $3,000 USD                                   │
+│  │                                                               │
+│  INVERSIÓN TOTAL ESTIMADA: $18,000 USD                           │
+│  TIEMPO TOTAL: 6 meses (actividades en paralelo)                 │
+│                                                                     │
+│ ═══════════════════════════════════════════════════════════════════ │
+│                                                                     │
+│ SECCIÓN 9: ALERTAS Y RIESGOS                                       │
+│                                                                     │
+│  🚨 ALERTAS CRÍTICAS:                                              │
+│                                                                     │
+│  [1] ICI=28 es BLOQUEANTE. Proceder sin resolver confianza       │
+│      es altísimo riesgo de fracaso.                               │
+│      ➜ ACCIÓN: Pausar evaluación técnica (1B) hasta ICI>=40       │
+│                                                                     │
+│  [2] Patrón temporal muestra DETERIORO en ICI (-8 puntos en 6m)   │
+│      Hay evento disruptivo reciente que no fue comunicado.         │
+│      ➜ ACCIÓN: Investigar qué pasó entre ago 2025 y abr 2026      │
+│                                                                     │
+│  [3] IOM=39 es INSUFICIENTE para implementar tecnología compleja  │
+│      Si se procede con design estándar, habrá fallas.             │
+│      ➜ ACCIÓN: Simplificar diseño técnico O invertir en infraest. │
+│                                                                     │
+│  [4] Conflictividad histórica es ALTA (7/10)                      │
+│      Riesgo de sabotaje interno si hay descontentos               │
+│      ➜ ACCIÓN: Mapeo de posibles opositores + estrategia de incluión
+│                                                                     │
+│  ⚠️ ALERTAS MODERADAS:                                             │
+│                                                                     │
+│  [5] IAT=38 + contexto 25% internet = brecha compleja             │
+│      Solución fácil no existe                                      │
+│      ➜ ACCIÓN: Inversión en conectividad PREVIA a capacitación    │
+│                                                                     │
+│  [6] IME=32 significa baja disposición a emprender                │
+│      Difícil generar ingresos colateral del proyecto               │
+│      ➜ ACCIÓN: Fortalecer capacidades de negocio paralelo         │
+│                                                                     │
+│ ═══════════════════════════════════════════════════════════════════ │
+│                                                                     │
+│ SECCIÓN 10: DATOS FALTANTES Y LIMITACIONES                         │
+│                                                                     │
+│  ❓ INFORMACIÓN CRÍTICA FALTANTE:                                   │
+│                                                                     │
+│  • Historial detallado de conflictos (documentar específicamente)  │
+│  • Encuesta de capacidad de cofinanciamiento (willingness to pay)  │
+│  • Experiencia previa con energía renovable (cualitativo)          │
+│  • Desagregación por género/edad (análisis de subgrupos)           │
+│  • Tendencia de migración (¿gente se va del territorio?)           │
+│  • Capacidad de ahorro comunitario (para fondo rotatorio)          │
+│                                                                     │
+│  ⚠️ LIMITACIONES DEL ANÁLISIS:                                      │
+│                                                                     │
+│  • Nivel de confianza: 85% (15% incertidumbre)                     │
+│  • Datos territoriales de 2024-2025 (pueden cambiar)               │
+│  • No incluye variabilidad por subgrupos (mujeres, jóvenes, etc.)  │
+│  • Proyecciones asumen estabilidad política                        │
+│                                                                     │
+│ ═══════════════════════════════════════════════════════════════════ │
+│                                                                     │
+│ BOTONES DE ACCIÓN:                                                 │
+│                                                                     │
+│ [📥 Cargar datos nuevos] [📊 Generar gráficos] [📄 PDF] [JSON]    │
+│ [➕ Agregar comentario] [🔄 Re-evaluar] [📧 Notificar al equipo]  │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
+
+
+═════════════════════════════════════════════════════════════════════════════════
+PARTE 4: PESTAÑA 3 - DATOS (Carga de Excel)
+═════════════════════════════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────────────────┐
+│ 📁 CARGA DE DATOS                                                   │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                     │
+│ [📥 Subir archivo Excel] [📥 Subir CSV]                            │
+│                                                                     │
+│ Archivo cargado: S-LCA_MODELO_2_0.xlsx (12 KB)                    │
+│ Hojas detectadas:                                                   │
+│  ✓ Panel_0                                                          │
+│  ✓ Fase_1A                                                          │
+│  ✓ Fase_1B                                                          │
+│  ✓ Fase_1C                                                          │
+│  ✓ Fase_2A                                                          │
+│  ✓ Fase_2B                                                          │
+│  ✓ Fase_2C                                                          │
+│  ✓ Fase_3A                                                          │
+│  ✓ Fase_3B                                                          │
+│  ✓ Fase_3C                                                          │
+│                                                                     │
+│ [Procesar todas las hojas] [Validar datos] [Generar reportes]     │
+│                                                                     │
+│ VISTA PREVIA: (primeras 10 filas)                                   │
+│                                                                     │
+│ Sheet: Panel_0                                                      │
+│ ┌──────────┬────────┬──────┬──────────┬────────────┬─────────┐    │
+│ │ Actor    │ Rol    │ Read.│Tendencia │ Historial  │ Alertas │    │
+│ ├──────────┼────────┼──────┼──────────┼────────────┼─────────┤    │
+│ │COMUNIDAD │Clave   │  17% │ →        │ 17%        │ Sí      │    │
+│ │GOBIERNO  │Clave   │  12% │ ↘        │ 18%        │ Sí      │    │
+│ │TÉCNICOS  │Clave   │  42% │ ↗        │ 38%        │ No      │    │
+│ └──────────┴────────┴──────┴──────────┴────────────┴─────────┘    │
+│                                                                     │
+│ [Vista completa] [Descargar validación] [Sincronizar con BD]      │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
+
+
+═════════════════════════════════════════════════════════════════════════════════
+PARTE 5: PESTAÑA 4 - EXPORTACIÓN Y REPORTES
+═════════════════════════════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────────────────┐
+│ 📤 EXPORTACIÓN Y REPORTES                                           │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                     │
+│ EXPORTAR COMO:                                                      │
+│                                                                     │
+│ [📄 PDF Reporte Completo] [📋 JSON Estructura] [📊 Excel Análisis] │
+│ [📈 Gráficos PNG] [🔗 URL Compartible]                             │
+│                                                                     │
+│ ─────────────────────────────────────────────────────────────────  │
+│                                                                     │
+│ REPORTES PREDEFINIDOS:                                              │
+│                                                                     │
+│ □ Reporte ejecutivo (2 páginas)                                     │
+│ □ Diagnóstico técnico (10 páginas)                                  │
+│ □ Plan de acción detallado (5 páginas)                              │
+│ □ Seguimiento de gates (1 página)                                   │
+│ □ Comparativa entre fases (3 páginas)                               │
+│ □ Análisis de riesgos (2 páginas)                                   │
+│                                                                     │
+│ [Seleccionar todo] [Generar PDF] [Enviar por correo]               │
+│                                                                     │
+│ ─────────────────────────────────────────────────────────────────  │
+│                                                                     │
+│ HISTORIAL DE EXPORTACIONES:                                         │
+│                                                                     │
+│ 2026-04-06 10:30 | PDF Reporte Ejecutivo | 2.3 MB | Descargar     │
+│ 2026-04-05 15:45 | JSON Full | 450 KB | Copiar                    │
+│ 2026-03-28 09:20 | Excel Análisis | 1.2 MB | Descargar            │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
+
+
+═════════════════════════════════════════════════════════════════════════════════
+PARTE 6: PESTAÑA 5 - CONFIGURACIÓN
+═════════════════════════════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────────────────┐
+│ ⚙️ CONFIGURACIÓN Y PREFERENCIAS                                      │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                     │
+│ CONFIGURACIÓN DE UMBRALES:                                          │
+│                                                                     │
+│ Readiness mínimo para Fase 1: [40] %                               │
+│ Readiness mínimo para Fase 2: [50] %                               │
+│ Readiness mínimo para Fase 3: [60] %                               │
+│                                                                     │
+│ Umbral ICI (confianza) para proceder: [40] (0-100)                 │
+│ Umbral IOM (infraestructura) para proceder: [40] (0-100)           │
+│                                                                     │
+│ ─────────────────────────────────────────────────────────────────  │
+│                                                                     │
+│ COLORES Y VISUALIZACIÓN:                                            │
+│                                                                     │
+│ 🔴 Rojo (crítico) threshold: < [30]                                │
+│ 🟡 Amarillo (alerta) threshold: 30-[60]                            │
+│ 🟢 Verde (óptimo) threshold: > [60]                                │
+│                                                                     │
+│ [Guardar preferencias]                                              │
+│                                                                     │
+│ ─────────────────────────────────────────────────────────────────  │
+│                                                                     │
+│ ACCESO Y PERMISOS:                                                  │
+│                                                                     │
+│ Usuarios autorizados:                                               │
+│  ✓ Analista 1 (admin)                                               │
+│  ✓ Analista 2 (editor)                                              │
+│  □ Usuario local (lector)                                           │
+│  □ Externodonante (lector)                                          │
+│                                                                     │
+│ [Agregar usuario] [Editar permisos]                                │
+│                                                                     │
+│ ─────────────────────────────────────────────────────────────────  │
+│                                                                     │
+│ INFORMACIÓN DEL SISTEMA:                                            │
+│                                                                     │
+│ Versión modelo: 2.0                                                 │
+│ Última actualización: 2026-04-06                                    │
+│ Base de datos: Conectada ✓                                          │
+│ Almacenamiento usado: 125 MB / 500 MB                              │
+│                                                                     │
+│ [Sincronizar BD] [Limpiar cache] [Resetear configuración]         │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
+
+
+═════════════════════════════════════════════════════════════════════════════════
+PARTE 7: FLUJO DE USUARIO - PASO A PASO
+═════════════════════════════════════════════════════════════════════════════════
+
+ESCENARIO: Un evaluador nuevo quiere analizar COMUNIDAD × FASE 1A
+
+PASO 1: Ingresar a Panel 0
+─────────────────────────
+1. Haz clic en pestaña [👥 PANEL 0]
+2. Observa readiness actual (17% para COMUNIDAD - CRÍTICO)
+3. Lee alertas: "Inversión previa requerida"
+
+PASO 2: Ir a análisis específico
+──────────────────────────────────
+1. Haz clic en pestaña [📋 ANÁLISIS POR FASE]
+2. Selecciona: Fase [FASE 1▼], Subcapa [1A▼], Actor [COMUNIDAD▼]
+3. Haz clic en [Analizar]
+
+PASO 3: Revisar diagnóstico automático
+───────────────────────────────────────
+1. Se genera análisis JSON automaticamente
+2. Visualiza RADAR 8D (datos vienen de Excel)
+3. Lee tabla de valores e interpretación
+
+PASO 4: Hacer decisión de GATE
+───────────────────────────────
+1. Desplázate a "SECCIÓN 7: GATE 2.0"
+2. Observa: Estado = BLOCKED, Razón = ICI=28
+3. Lee acción recomendada: "Diálogos de reparación (6 meses)"
+
+PASO 5: Exportar reportes
+──────────────────────────
+1. Haz clic en [📤 EXPORTACIÓN Y REPORTES]
+2. Selecciona [PDF Diagnóstico Técnico]
+3. Haz clic en [Generar PDF]
+4. Descarga archivo: "COMUNIDAD_FASE1A_2026-04-06.pdf"
+
+PASO 6: Compartir con equipo
+────────────────────────────
+1. En Exportación, selecciona [🔗 URL Compartible]
+2. Copia URL generada
+3. Envía por WhatsApp/Slack a coordinador local
+
+═════════════════════════════════════════════════════════════════════════════════
+FIN GUÍA STREAMLIT
+═════════════════════════════════════════════════════════════════════════════════
+
+SIGUIENTE PASO:
+Implementar en Streamlit con código Python (ver archivo CODIGO_STREAMLIT.py)
+

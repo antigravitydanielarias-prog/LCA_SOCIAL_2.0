@@ -1,0 +1,411 @@
+CHECKLIST DE IMPLEMENTACIÓN - MODELO 2.0
+RESUMEN EJECUTIVO Y ROADMAP
+═════════════════════════════════════════════════════════════════════════════════
+
+RESUMEN EJECUTIVO DEL MODELO 2.0
+═════════════════════════════════════════════════════════════════════════════════
+
+El MODELO 2.0 es un SISTEMA DE EVALUACIÓN MULTIDIMENSIONAL que integra:
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 3 CAPAS DE ANÁLISIS:                                                        │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│ 1. COGNITIVA (Cómo piensan/sienten los actores)                            │
+│    └─ 8 dimensiones: IA, IAT, ICI, IVC, IME, IIN, IPRA, ICS               │
+│    └─ 5-6 preguntas Likert por dimensión                                   │
+│    └─ Rango: 0-100                                                         │
+│                                                                             │
+│ 2. OPERATIVA-MATERIAL (Qué infraestructura/recursos existen)               │
+│    └─ Infraestructura física                                               │
+│    └─ Capacidad técnica instalada                                          │
+│    └─ Recursos disponibles                                                 │
+│    └─ Cadenas productivas conectadas                                       │
+│    └─ IOM índice: 0-100                                                    │
+│                                                                             │
+│ 3. TERRITORIAL (Contexto de pobreza, educación, empleo)                    │
+│    └─ Indicadores DANE                                                     │
+│    └─ Proxies administrativos                                              │
+│    └─ Comparativo nacional                                                 │
+│                                                                             │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ ADEMÁS:                                                                     │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│ 4. MEMORIA TEMPORAL (Cómo han cambiado las cosas en 12 meses)              │
+│    └─ Series temporales mensuales                                          │
+│    └─ Detección de shocks/eventos                                          │
+│    └─ Análisis de tendencias                                               │
+│    └─ Proyecciones a corto plazo                                           │
+│                                                                             │
+│ 5. PANEL 0 (5 actores + readiness global)                                  │
+│    └─ Comunidad local                                                      │
+│    └─ Gobierno local                                                       │
+│    └─ Proveedores técnicos                                                 │
+│    └─ Actores económicos                                                   │
+│    └─ Actores externos                                                     │
+│                                                                             │
+│ 6. PUERTAS DE TRANSICIÓN (GATES)                                           │
+│    └─ 3 estados: BLOCKED / CONDITIONAL / ENABLED                           │
+│    └─ Criterios matemáticos claros                                         │
+│    └─ Costo de transición calculado                                        │
+│    └─ Recomendaciones específicas                                          │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+RESULTADO: MATRIZ DE 45 MICRO-REDES (5 actores × 3 fases × 3 subcapas)
+CADA micro-red genera: 1 JSON estructurado con diagnóstico completo
+
+
+═════════════════════════════════════════════════════════════════════════════════
+VENTAJAS DEL MODELO 2.0 vs 1.0
+═════════════════════════════════════════════════════════════════════════════════
+
+MODELO 1.0 (Lo que teníamos):
+  ├─ Panel 0: Readiness de actores ✓
+  ├─ 8 dimensiones cognitivas ✓
+  ├─ 3 fases × 3 subcapas ✓
+  └─ Análisis teórico
+
+MODELO 2.0 (MEJORADO):
+  ├─ Panel 0: Readiness + historiales + alertas ✓✓
+  ├─ 8 dimensiones cognitivas ✓
+  ├─ + IOM operativa-material ✓✓ (NUEVO)
+  ├─ + Contexto territorial (DANE) ✓✓ (MEJORADO)
+  ├─ + Memoria temporal 12 meses ✓✓ (NUEVO)
+  ├─ + Gates con 3 estados ✓✓ (NUEVO)
+  ├─ + Costo de transición ✓✓ (NUEVO)
+  ├─ + JSON estructurado ✓✓ (NUEVO)
+  └─ OPERATIVO Y LISTO PARA IMPLEMENTACIÓN
+
+
+═════════════════════════════════════════════════════════════════════════════════
+CHECKLIST DE IMPLEMENTACIÓN - FASE POR FASE
+═════════════════════════════════════════════════════════════════════════════════
+
+FASE 1: PREPARACIÓN Y DISEÑO (4 semanas)
+═════════════════════════════════════════════════════════════════════════════════
+
+SEMANA 1: Documentación y Setup
+  ☐ Revisar documentación Modelo 2.0 (3 archivos txt)
+  ☐ Configurar ambiente Streamlit (Python 3.9+, reqs.txt)
+  ☐ Crear estructura de carpetas (/datos, /output, /config)
+  ☐ Crear cuenta GitHub para control de versiones
+  ☐ Documento: ROADMAP_INTERNO.md
+
+SEMANA 2: Plantillas Excel
+  ☐ Crear PANEL_0_PROTAGONISTAS.xlsx
+    └─ Pestaña: PROTAGONISTAS_READINESS
+    └─ Pestaña: CAPACIDADES_POR_ACTOR
+    └─ Pestaña: BARRERAS_POR_ACTOR
+  ☐ Crear DIMENSIONES_COGNITIVAS.xlsx
+    └─ 8 pestañas (IA, IAT, ICI, IVC, IME, IIN, IPRA, ICS)
+    └─ Incluir: encuesta + cálculo de índices
+  ☐ Validar estructura con equipo
+
+SEMANA 3: Datos Contextuales
+  ☐ Crear CONTEXTO_TERRITORIAL.xlsx
+    └─ Obtener datos DANE 2024
+    └─ Compilar proxies administrativos
+    └─ Documentar fuentes
+  ☐ Crear MEMORIA_TEMPORAL.xlsx
+    └─ Recolectar datos históricos (si existen)
+    └─ Estructura: 12 meses mensuales
+  ☐ Crear OPERATIVA_MATERIAL.xlsx
+    └─ Inventario de infraestructura
+    └─ Mapeo de cadenas productivas
+
+SEMANA 4: Validación
+  ☐ Revisar integridad de 5 archivos Excel
+  ☐ Test: Cargar cada archivo en Streamlit
+  ☐ Validar: Rangos de datos (0-100, Likert 1-5, etc)
+  ☐ Documentar: Datos faltantes identificados
+  ☐ Reunión de aprobación con stakeholders
+
+SALIDA FASE 1: 5 archivos Excel listos, ambiente configurado
+
+
+FASE 2: DESARROLLO STREAMLIT (6 semanas)
+═════════════════════════════════════════════════════════════════════════════════
+
+SEMANA 1-2: Backend
+  ☐ Crear funciones de carga de datos
+    └─ cargar_panel_0()
+    └─ cargar_dimensiones_cognitivas()
+    └─ cargar_contexto_territorial()
+    └─ cargar_memoria_temporal()
+    └─ cargar_operativa_material()
+  ☐ Implementar validación de integridad
+  ☐ Crear @st.cache_data decorators para optimización
+  ☐ Test: Cargar y procesar todos los datos sin errores
+
+SEMANA 2-3: Lógica de Micro-Redes
+  ☐ Crear función: calcular_micro_red(actor, fase, subcapa)
+  ☐ Implementar: determinar_gate() con 3 estados
+  ☐ Implementar: calcular_costo_transicion()
+  ☐ Crear: generar_json_completo()
+  ☐ Test: Generar JSON para 3-5 micro-redes sample
+
+SEMANA 3-4: Pestaña Dashboard
+  ☐ Crear layout con alertas críticas
+  ☐ Matriz de estados de gates (tabla interactiva)
+  ☐ Gráficos de readiness comunitaria
+  ☐ Tabla de comparación por actor
+  ☐ Test: Dashboard es interactivo y actualiza en tiempo real
+
+SEMANA 4-5: Pestaña Micro-Red
+  ☐ Selectores de [Actor] [Fase] [Subcapa]
+  ☐ Radar 8D (plotly)
+  ☐ Tabla de dimensiones
+  ☐ Contexto territorial (DANE)
+  ☐ Gráfico de memoria temporal
+  ☐ Bloque de interpretación
+  ☐ Estado de gate con justificación
+  ☐ Tabla de recomendaciones
+  ☐ Test: Interactividad completa
+
+SEMANA 5-6: Pestañas Complementarias
+  ☐ Panel 0: Tabla interactiva de 5 actores
+  ☐ Series Temporales: Gráficos de tendencias
+  ☐ Configuración: Carga de archivos, validación
+  ☐ Export: Descarga JSON, CSV, PDF
+  ☐ Test: Todo funciona sin errores
+
+SALIDA FASE 2: Aplicación Streamlit funcional con 6 pestañas
+
+
+FASE 3: PRUEBAS Y VALIDACIÓN (3 semanas)
+═════════════════════════════════════════════════════════════════════════════════
+
+SEMANA 1: Testing Técnico
+  ☐ Pruebas unitarias: Cada función
+  ☐ Pruebas de integración: Pipeline completo
+  ☐ Performance: Cargar datos y calcular micro-red <5 seg
+  ☐ Validación de JSON output: Estructura correcta
+  ☐ Test de descargas: JSON, CSV, PDF generar sin errores
+  ☐ Documento: TEST_REPORT.md
+
+SEMANA 2: Testing Funcional
+  ☐ Prueba con datos reales (muestra)
+  ☐ Validar: Gates clasificados correctamente
+  ☐ Validar: Recomendaciones son sensatas
+  ☐ Validar: Costos de transición son realistas
+  ☐ Revisar: JSON output es legible y completo
+  ☐ Entrevista con 2-3 usuarios potenciales
+
+SEMANA 3: Refinamiento
+  ☐ Ajustar umbrales de gates basado en feedback
+  ☐ Mejorar textos y explicaciones
+  ☐ Optimizar visualizaciones
+  ☐ Documentación final: USER_GUIDE.md
+  ☐ Entrenamiento de usuarios
+
+SALIDA FASE 3: Aplicación validada y lista para producción
+
+
+FASE 4: DESPLIEGUE Y OPERACIÓN (Continuo)
+═════════════════════════════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ SEMANA 1: Despliegue                                                        │
+│                                                                             │
+│  ☐ Opción A: Streamlit Cloud (gratuito, limitado)                          │
+│    └─ Conectar GitHub repo                                                 │
+│    └─ Secrets management para credenciales                                 │
+│    └─ Public URL: https://modelo-2-0-energia.streamlit.app                 │
+│                                                                             │
+│  ☐ Opción B: Servidor local/institución (recomendado)                      │
+│    └─ Instalar Streamlit Server                                            │
+│    └─ Nginx reverse proxy                                                  │
+│    └─ SSL certificates                                                     │
+│    └─ Internal URL: https://energia.institucion.local                      │
+│                                                                             │
+│  ☐ Opción C: AWS/GCP/Azure (escalable)                                     │
+│    └─ Docker containerization                                              │
+│    └─ Auto-scaling                                                         │
+│    └─ Backup automático de datos                                           │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+OPERACIÓN CONTINUA:
+  ☐ Monitoreo: Aplicación disponible, sin errores
+  ☐ Actualización: Datos Excel actualizados mensualmente
+  ☐ Soporte: Help desk para usuarios
+  ☐ Mejoras: Backlog de funcionalidades nuevas
+  ☐ Documentación: Mantener actualizada
+  ☐ Reportes: Generados automáticamente
+
+
+═════════════════════════════════════════════════════════════════════════════════
+DETALLES TÉCNICOS ESPECÍFICOS
+═════════════════════════════════════════════════════════════════════════════════
+
+REQUISITOS DE SOFTWARE:
+  ├─ Python 3.9+
+  ├─ Streamlit 1.28+
+  ├─ Pandas 2.0+
+  ├─ Numpy 1.24+
+  ├─ Plotly 5.17+
+  ├─ Openpyxl 3.1+
+  └─ (Ver requirements.txt completo en repo)
+
+REQUISITOS DE DATOS:
+  ├─ Mínimo 60 encuestas para dimensiones cognitivas
+  ├─ Datos DANE 2024 para contexto territorial
+  ├─ Historial de 6 meses mínimo para memoria temporal
+  ├─ Inventario físico completo de infraestructura
+  └─ Capacidad técnica de 2-3 análisis simultáneos
+
+INFRAESTRUCTURA RECOMENDADA:
+  ├─ Servidor: 2 CPU, 4 GB RAM, 50 GB disco (mínimo)
+  ├─ BD: PostgreSQL (opcional, para escalabilidad)
+  ├─ Backup: Automático diario
+  ├─ Certificado SSL: Obligatorio si es online
+  └─ Ancho banda: 10 Mbps mínimo
+
+
+═════════════════════════════════════════════════════════════════════════════════
+MATRIZ DE DECISIONES CLAVE
+═════════════════════════════════════════════════════════════════════════════════
+
+DECISIÓN 1: ¿Empezar con muestra piloto o datos completos?
+  ➜ RECOMENDACIÓN: Piloto (3 actores, 1 fase)
+  ➜ VENTAJA: Rápido, aprendes el proceso
+  ➜ TIEMPO: 2-3 semanas vs 6-8 semanas
+
+DECISIÓN 2: ¿Encuesta propia o usar datos existentes?
+  ➜ RECOMENDACIÓN: Ambos (triangulación)
+  ➜ ENCUESTA: 60-100 personas (2-3 semanas)
+  ➜ DATOS EXISTENTES: Proyectos previos, estudios locales
+
+DECISIÓN 3: ¿Plataforma: Cloud vs Local vs Servidor?
+  ➜ RECOMENDACIÓN: Depende de:
+  ├─ Cloud: Si <100 usuarios/mes, datos públicos
+  ├─ Local: Si datos sensibles, <20 usuarios
+  ├─ Servidor: Si datos sensibles, >20 usuarios
+
+DECISIÓN 4: ¿Cuántos actores incluir?
+  ➜ RECOMENDACIÓN: Empezar con 3 (Comunidad, Gobierno, Técnicos)
+  ➜ AGREGAR: Actores económicos + externos después
+
+
+═════════════════════════════════════════════════════════════════════════════════
+CRONOGRAMA GENERAL
+═════════════════════════════════════════════════════════════════════════════════
+
+MES 1:  PREPARACIÓN (Semanas 1-4)
+  └─ Documentación, plantillas Excel, setup técnico
+
+MES 2:  DESARROLLO (Semanas 5-10)
+  └─ Backend Streamlit, cálculos, visualizaciones
+
+MES 3:  PRUEBAS (Semanas 11-13)
+  └─ Testing, validación, refinamiento
+
+SEMANA 14+: DESPLIEGUE Y OPERACIÓN
+  └─ Go-live, soporte, mejoras continuas
+
+TIMELINE TOTAL: 14 semanas (3.5 meses) para MVP
+
+
+═════════════════════════════════════════════════════════════════════════════════
+ROI Y BENEFICIOS ESPERADOS
+═════════════════════════════════════════════════════════════════════════════════
+
+BENEFICIOS CUALITATIVOS:
+  ✓ Evaluación rigurosa y reproductible
+  ✓ Identificación temprana de barreras
+  ✓ Decisiones basadas en datos, no intuición
+  ✓ Documentación clara de estado actual
+  ✓ Recomendaciones accionables y priorizadas
+  ✓ Monitoreo continuo de progreso
+
+BENEFICIOS CUANTITATIVOS:
+  ✓ Evitar fallos de proyectos: Ahorro $100K-500K por proyecto
+  ✓ Reducir tiempo de fase en 20-30%: Ahorro $50K-100K
+  ✓ Mejorar toma de decisiones: +30% efectividad
+  ✓ Identificar oportunidades de valor: +$20K-50K por territorio
+
+COSTO INVERSIÓN:
+  ├─ Desarrollo: $15,000 - $25,000
+  ├─ Formación: $5,000 - $10,000
+  ├─ Operación anual: $8,000 - $15,000
+  └─ TOTAL PRIMER AÑO: $28,000 - $50,000
+
+PAYBACK (ROI): 2-4 meses si previene fallos de proyectos
+
+
+═════════════════════════════════════════════════════════════════════════════════
+PRÓXIMOS PASOS INMEDIATOS
+═════════════════════════════════════════════════════════════════════════════════
+
+HOY:
+  ☐ Revisar documentación Modelo 2.0 (este archivo)
+  ☐ Validar con stakeholders que propuesta es correcta
+  ☐ Asignar personas responsables por cada componente
+
+ESTA SEMANA:
+  ☐ Crear repositorio GitHub
+  ☐ Descargar requirements.txt actualizado
+  ☐ Comenzar a llenar PANEL_0_PROTAGONISTAS.xlsx
+  ☐ Diseñar encuesta para dimensiones cognitivas
+
+PRÓXIMAS 2 SEMANAS:
+  ☐ Recolectar datos DANE para contexto territorial
+  ☐ Completar plantillas Excel con datos reales
+  ☐ Setup inicial de Streamlit
+  ☐ Primera reunión de validación
+
+PRÓXIMAS 4 SEMANAS:
+  ☐ Aplicar encuesta (mínimo 60 respuestas)
+  ☐ Procesar datos en Excel
+  ☐ Desarrollo iterativo de Streamlit
+  ☐ Test con muestra de micro-redes
+
+
+═════════════════════════════════════════════════════════════════════════════════
+REFERENCIAS Y DOCUMENTACIÓN
+═════════════════════════════════════════════════════════════════════════════════
+
+DOCUMENTOS PRINCIPALES:
+  1. MODELO_2_0_DOCUMENTACION_COMPLETA.txt
+     └─ Especificación técnica del modelo, Gates, costos
+  
+  2. PLANTILLAS_EXCEL_ESTRUCTURA.txt
+     └─ Cómo estructurar y llenar los 5 archivos Excel
+  
+  3. STREAMLIT_INTEGRACION_ARQUITECTURA.txt
+     └─ Cómo integrar todo a la aplicación web
+
+CÓDIGOS Y SCRIPTS:
+  └─ Disponibles en GitHub (repo privado)
+
+DATOS REQUERIDOS:
+  └─ 5 archivos Excel (Panel 0, Dimensiones, Contexto, Memoria, Operativa)
+
+TRAINING VIDEOS:
+  └─ A ser creados (30-60 min total)
+
+
+═════════════════════════════════════════════════════════════════════════════════
+CONCLUSIÓN
+═════════════════════════════════════════════════════════════════════════════════
+
+El MODELO 2.0 es un SISTEMA OPERATIVO, VERIFICABLE y REPRODUCIBLE para evaluar
+proyectos de energía comunitaria en territorios en desarrollo.
+
+Integra análisis cognitivo, operativo y territorial con rigor metodológico y
+genera recomendaciones accionables que permitirán:
+
+✓ Identificar barreras reales vs percibidas
+✓ Priorizar inversiones de forma inteligente
+✓ Evitar fallos preventivamente
+✓ Documentar progreso de forma objetiva
+✓ Tomar decisiones basadas en datos
+
+IMPLEMENTACIÓN: 14 semanas, $28K-50K inversión
+ROI: 2-4 meses si previene fallos
+
+¿LISTO PARA COMENZAR?
+
+═════════════════════════════════════════════════════════════════════════════════

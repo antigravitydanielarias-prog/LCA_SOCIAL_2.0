@@ -1,0 +1,259 @@
+ANÁLISIS: METODOLOGÍA DE DISEÑO DE SISTEMAS DE ENERGÍA COMUNITARIA
+==================================================================
+
+DOCUMENTO BASE:
+"Integrated approach for energy communities systems design in developing countries"
+Autores: Gabriel Espitia-Mesa, Juan Pablo González-Alzate, et al.
+Universidad EAFIT, Medellín, Colombia
+
+================================================================================
+SECCIÓN 1: CONTEXTO Y JUSTIFICACIÓN
+================================================================================
+
+PROBLEMA IDENTIFICADO:
+- 675 millones de personas en países en desarrollo sin acceso a electricidad (2021)
+- Infraestructura deficiente y centralizada en muchas regiones
+- Necesidad de descentralización energética sostenible
+
+OPORTUNIDAD:
+- Comunidades locales tienen recursos energéticos distribuidos (DERs)
+- Biomasa, solar, eólico, hidro, geotérmica, mareomotriz
+- Pueden formar sistemas autónomos y complementarios
+
+================================================================================
+SECCIÓN 2: LOS 5 PILARES CRÍTICOS
+================================================================================
+
+PILAR 1: DISTRIBUTED ENERGY RESOURCES (DERs)
+- Tecnología renovable disponible localmente
+- Requiere evaluación de potencial energético
+- Desafío en países en desarrollo: acceso a tecnología y costos
+
+PILAR 2: SOCIAL
+- Participación comunitaria CRÍTICA para el éxito
+- En países desarrollados: participación formalizada y estructurada
+- En países en desarrollo: participación informal, menos activa
+- Necesidad de empoderamiento y sentido de pertenencia
+- Integración con cadenas productivas locales
+
+PILAR 3: ECONOMIC
+- Diferencia fundamental entre desarrollados y en desarrollo:
+  * Desarrollados: recursos financieros disponibles, modelos de negocio probados
+  * En desarrollo: limitaciones económicas, necesidad de financiamiento flexible
+  * Soluciones: financiamiento comunitario, ayuda internacional, microfinanzas
+- Integración con actividades productivas locales es CLAVE
+
+PILAR 4: LEGAL/REGULATORY
+- Desarrollados: marcos regulatorios claros, incentivos fiscales
+- En desarrollo: regulaciones fragmentadas, incertidumbre legal
+- En algunas regiones: contextos extrajudiciales (grupos armados)
+- Falta de alineación con estándares internacionales
+
+PILAR 5: ENVIRONMENTAL
+- Desarrollados: énfasis en sostenibilidad, reducción de huella de carbono
+- En desarrollo: prioridad en acceso a energía, luego sostenibilidad
+- Equilibrio entre necesidades inmediatas y sostenibilidad a largo plazo
+
+================================================================================
+SECCIÓN 3: METODOLOGÍA PROPUESTA - 4 FASES
+================================================================================
+
+FASE 1: PREFACTIBILIDAD (Prefeasibility)
+─────────────────────────────────────────
+
+OBJETIVO: Evaluar si el proyecto es viable antes de invertir recursos
+
+ASPECTOS A EVALUAR:
+
+DERs:
+  1. Evaluación de recursos energéticos disponibles
+  2. Cuantificación del potencial energético
+  3. Selección del DER a implementar
+
+SOCIAL:
+  1. Análisis socio-económico e histórico de la región
+  2. Identificación de líderes locales y dinámicas sociales
+  3. Análisis de aceptación y compromiso comunitario
+
+ECONOMIC:
+  1. Reconocimiento de cadenas de producción locales
+  2. Análisis microeconómico de viabilidad
+  3. Integración potencial del proyecto con economía local
+
+LAWS:
+  1. Análisis de política internacional en sistemas de energía comunitaria
+  2. Reconocimiento regulatorio del país
+  3. Análisis de seguridad local (contextos de violencia)
+
+ENVIRONMENTAL:
+  1. Identificación de impactos ambientales potenciales
+  2. Propuesta de estrategias de mitigación
+
+DECISIÓN: Si TODOS los 5 aspectos son favorables → SIGUIENTE FASE
+         Si ALGUNO NO es favorable → VOLVER A EVALUAR O DESCARTAR
+
+
+FASE 2: ESTIMACIÓN (Estimation)
+────────────────────────────────
+
+OBJETIVO: Dimensionar técnica y económicamente el proyecto
+
+NOTA: Excluye legal (ya evaluado en Fase 1)
+
+ASPECTOS A EVALUAR:
+
+DERs:
+  1. Dimensionamiento de sistemas energéticos (modelos matemáticos)
+  2. Selección de equipos según DER elegido y demanda cuantificada
+
+SOCIAL:
+  1. Información a comunidad sobre equipos a instalar
+  2. Fomento del sentido de pertenencia
+  3. Aseguramiento de recursos (cooperativas, subsidios, donaciones)
+
+ECONOMIC:
+  1. Adquisición de recursos económicos
+  2. Desarrollo del modelo de negocio
+  3. Integración con redes productivas
+
+ENVIRONMENTAL:
+  1. Evaluación integral de impactos ambientales
+  2. Cadenas de producción incluidas
+
+DECISIÓN: Si TODOS los 4 aspectos son favorables → SIGUIENTE FASE
+
+
+FASE 3: IMPLEMENTACIÓN (Implementation)
+────────────────────────────────────────
+
+OBJETIVO: Realizar el proyecto físicamente
+
+ASPECTOS A EVALUAR:
+
+DERs:
+  1. Configuración de equipos preseleccionados
+  2. Pruebas operacionales preliminares
+  3. Calibración óptima
+
+SOCIAL:
+  1. Educación comunitaria sobre uso de equipos
+  2. Fomento de sentido de propiedad
+  3. Capacitación en operación
+
+ECONOMIC:
+  1. Compra de sistemas energéticos
+  2. Realineación del modelo de negocio
+  3. Integración en redes productivas
+
+ENVIRONMENTAL:
+  1. Educación sobre prácticas ambientales sostenibles
+  2. Implementación de medidas de mitigación
+
+NOTA: Conclusión teórica de esta fase = equipos funcionando
+      PERO NO garantiza sostenibilidad a largo plazo
+      → NECESARIA FASE 4
+
+
+FASE 4: SEGUIMIENTO (Tracking)
+───────────────────────────────
+
+OBJETIVO: Garantizar sostenibilidad a largo plazo
+
+ASPECTOS A EVALUAR:
+
+DERs:
+  1. Plan de mantenimiento preventivo
+  2. Entrenamiento comunitario en mantenimiento
+  3. Extensión de vida útil de equipos
+
+SOCIAL:
+  1. Estrategias de engagement comunitario
+  2. Responsabilidad compartida del sistema
+
+ECONOMIC:
+  1. Evaluación continua del modelo de negocio
+  2. Adaptación de cadenas productivas
+
+ENVIRONMENTAL:
+  1. Monitoreo riguroso de impactos ambientales
+  2. Formulación de planes de mitigación efectivos
+
+================================================================================
+SECCIÓN 4: CADENAS DE VALOR INCLUIDAS EN EL MODELO
+================================================================================
+
+ENERGÍA GENERADA SE USA PARA:
+- Iluminación
+- Transporte (vehículos eléctricos)
+- Pequeños negocios
+- Actividades agrícolas
+- Preparación de alimentos
+- Sistemas de almacenamiento de energía
+
+→ ESTO genera actividad económica local
+→ Crecimiento económico
+→ Integración social del sistema
+
+================================================================================
+SECCIÓN 5: DIFERENCIAS CLAVE: DESARROLLADOS vs. EN DESARROLLO
+================================================================================
+
+DISTRIBUCIÓN DE RECURSOS (DERs):
+  Desarrollados: Infraestructura avanzada, smart grids, almacenamiento
+  En desarrollo: Infraestructura básica, limitaciones tecnológicas
+
+PARTICIPACIÓN SOCIAL:
+  Desarrollados: Formalizada, alta participación en decisiones
+  En desarrollo: Informal, participación baja, desconexión con proveedores
+
+MODELOS ECONÓMICOS:
+  Desarrollados: Establecidos, con colaboración multi-sector
+  En desarrollo: Necesitan flexibilidad, financiamiento creativo
+
+MARCOS LEGALES:
+  Desarrollados: Claros, con incentivos, procesos ágiles
+  En desarrollo: Fragmentados, inciertos, burocracia pesada
+
+ENFOQUE AMBIENTAL:
+  Desarrollados: Sostenibilidad como prioridad
+  En desarrollo: Acceso energético como prioridad, sostenibilidad secundaria
+
+================================================================================
+SECCIÓN 6: CONCLUSIONES DEL DOCUMENTO
+================================================================================
+
+1. LA VIABILIDAD es contingente en TODOS los factores
+   - Si uno falla, el proyecto completo está en riesgo
+
+2. Los 5 pilares NO son independientes
+   - Interactúan y se afectan mutuamente
+   - Requieren análisis HOLÍSTICO
+
+3. El enfoque PROPUESTO es iterativo y adaptativo
+   - Se ajusta al contexto local
+   - Examina cada factor en profundidad
+   - Garantiza sostenibilidad a largo plazo
+
+4. CLAVE para el ÉXITO en países en desarrollo:
+   - Integración con economía local
+   - Participación genuina de la comunidad
+   - Modelos de negocio flexibles
+   - Marcos legales claros (o propuestos)
+   - Sostenibilidad ambiental realista
+
+================================================================================
+APLICABILIDAD AL S-LCA TIMELINE
+================================================================================
+
+ACTUAL S-LCA TIMELINE (Fases 1-5):
+- Enfocado en ciclo de vida de LCA (Extracción, Manufactura, Transporte, etc)
+- Analiza 3 indicadores: horas_trabajo, salario, accidentes
+
+ENRIQUECIMIENTO POSIBLE:
+- Incorporar los 4 stages de metodología de diseño comunitario
+- Añadir evaluaciones de los 5 pilares (DERs, Social, Economic, Legal, Environmental)
+- Hacer más intuitivo y descriptivo para tomadores de decisión
+- Incluir información de cadenas productivas locales
+- Mostrar interconexiones entre pilares
+
+================================================================================
